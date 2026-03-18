@@ -14,7 +14,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { StackedReels } from "@/components/shared/StackedReels";
 import { WistiaLeadForm } from "@/components/shared/WistiaLeadForm";
-import { LinkedInFeed } from "@/components/shared/LinkedInFeed";
 import { useTypewriter } from "@/hooks/useTypewriter";
 import velauraLogo from "@/assets/brands/velaura.png";
 import pinkstoriesLogo from "@/assets/brands/pinkstories.webp";
@@ -323,11 +322,6 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* LinkedIn Articles */}
-          <div className="max-w-5xl mx-auto mb-16">
-            <LinkedInFeed />
           </div>
 
           {/* Testimonials */}
