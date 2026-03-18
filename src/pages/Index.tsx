@@ -8,7 +8,7 @@ import { CTABanner } from "@/components/shared/CTABanner";
 import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder";
 import { BookingFormDialog } from "@/components/shared/BookingFormDialog";
 import { TirupurTooltip } from "@/components/shared/TirupurTooltip";
-import { ArrowRight, Sparkles, GraduationCap, Briefcase, ShoppingBag, Play } from "lucide-react";
+import { ArrowRight, Sparkles, GraduationCap, Briefcase, ShoppingBag, Play, Linkedin, Instagram, Twitter } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -32,6 +32,14 @@ const trustedBrands = [
   { name: "Lemoon Baby", src: lemoonLogo, href: "https://www.lemoonbaby.in/?utm_source=wepix.in&utm_medium=partner_logo", className: "h-auto w-24 md:w-32" },
   { name: "Fregor", src: fregorLogo, href: "https://fregor.in/?utm_source=wepix.in&utm_medium=partner_logo", className: "h-auto w-16 md:w-24" },
 ];
+
+import heroFashionImage from "@/assets/hero-fashion.png";
+import academyHeroImage from "@/assets/academy-hero.png";
+import businessHeroImage from "@/assets/business-hero.png";
+import sourcingHeroImage from "@/assets/sourcing-hero.png";
+import founderAbdulImage from "@/assets/founder-abdul.png";
+import founderSanthoshImage from "@/assets/founder-santhosh.png";
+import founderVigneshImage from "@/assets/founder-vignesh.png";
 
 const brandCards = [
   {
@@ -59,7 +67,7 @@ const brandCards = [
     icon: Sparkles,
     title: "Sourcing",
     description: (<>Straight from <TirupurTooltip /> — the garment capital. Quality fabrics, honest pricing, no middleman drama.</>),
-    href: "/contact",
+    href: "https://wepixsourcing.com",
     color: "from-orange-500/20 to-orange-500/5"
   }
 ];
@@ -73,12 +81,12 @@ const caseStudies = [
 const Index = () => {
   const { displayText, showCursor } = useTypewriter();
   const [vslOpen, setVslOpen] = useState(false);
+  const [activePillar, setActivePillar] = useState<number | null>(null);
 
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-hero text-hero-foreground relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-hero via-hero to-primary/10" />
+      <section className="bg-white text-hero-foreground relative overflow-hidden">
         <div className="container relative py-24 md:py-36">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -116,28 +124,16 @@ const Index = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="rounded-xl overflow-hidden border border-border shadow-lg cursor-pointer group relative aspect-video"
-              onClick={() => setVslOpen(true)}
+              className="rounded-3xl overflow-hidden border border-border shadow-lg relative aspect-video bg-transparent"
             >
-              <img
-                src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/21eDkPqQcXCF2sJcyeMn/media/68a62b3d280b9e3bebb53f6c.gif"
-                alt="WePix VSL"
-                className="w-full h-full object-cover"
-                loading="eager"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-primary text-primary-foreground rounded-full p-4 shadow-xl">
-                  <Play className="h-8 w-8 ml-1 fill-current" />
-                </div>
-              </div>
+              <iframe
+                src="https://fast.wistia.net/embed/iframe/86i9yszwdd?autoPlay=false&videoFoam=true&playbar=false&fullscreenButton=false&volumeControl=false&smallPlayButton=true&wistiaLogo=false&seo=false"
+                title="WePix Strategy Video"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+                className="w-[101%] h-[101%] -ml-[0.5%] -mt-[0.5%] border-none bg-transparent"
+              ></iframe>
             </motion.div>
-
-            <Dialog open={vslOpen} onOpenChange={setVslOpen}>
-              <DialogContent className="sm:max-w-3xl lg:max-w-4xl p-0 overflow-hidden bg-transparent border-none shadow-none [&>button]:text-white [&>button]:hover:text-primary [&>button]:bg-black/50 [&>button]:backdrop-blur-sm [&>button]:w-8 [&>button]:h-8 [&>button]:rounded-full [&>button]:-right-2 [&>button]:-top-2">
-                <DialogTitle className="sr-only">Strategy Video Access</DialogTitle>
-                <WistiaLeadForm mediaId="86i9yszwdd" />
-              </DialogContent>
-            </Dialog>
           </div>
         </div>
       </section>
@@ -186,16 +182,56 @@ const Index = () => {
             description="We're not your average agency that slaps a logo on everything and calls it a day. WePix runs four distinct verticals — each with its own team, strategy, and unhealthy amount of passion. Think of us as the Avengers of marketing, minus the capes (okay, sometimes capes)." />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {brandCards.map((card, i) =>
+            {brandCards.map((card, i) => (
               <motion.div
                 key={card.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}>
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+              >
                 <Link to={card.href}>
                   <Card className="group h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50">
-                    <ImagePlaceholder label={`${card.title} cover`} aspectRatio="video" className="rounded-t-xl rounded-b-none border-0 border-b-2" />
+                    {card.title === "Fashion" && (
+                      <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
+                        <img
+                          src={heroFashionImage}
+                          alt="Fashion marketing visuals"
+                          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                    {card.title === "Academy" && (
+                      <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
+                        <img
+                          src={academyHeroImage}
+                          alt="Academy learning visuals"
+                          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                    {card.title === "Business" && (
+                      <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
+                        <img
+                          src={businessHeroImage}
+                          alt="Business and growth visuals"
+                          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                    {card.title === "Sourcing" && (
+                      <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
+                        <img
+                          src={sourcingHeroImage}
+                          alt="Sourcing visuals"
+                          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
                     <CardContent className="p-6">
                       <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${card.color} flex items-center justify-center mb-4`}>
                         <card.icon className="text-foreground" size={24} />
@@ -209,7 +245,7 @@ const Index = () => {
                   </Card>
                 </Link>
               </motion.div>
-            )}
+            ))}
           </div>
         </div>
       </section>
@@ -251,6 +287,107 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Pillars */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container">
+          <SectionHeading
+            tag="How We Scale"
+            title="Our 4 Secret Pillars"
+            description="Explore the four secret pillars essential for scaling your brand. From nailing your foundations and tracking, to deploying our MCS framework and driving profitable traffic, each pillar is designed to systematically grow your revenue, margins, and brand equity."
+          />
+
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+            {[
+              {
+                label: "Pillar 1",
+                title: "Brand & Offer Foundations",
+                body: "Dial in your positioning, pricing, and creative direction so your brand actually stands for something in the market.",
+              },
+              {
+                label: "Pillar 2",
+                title: "Tracking & Infrastructure",
+                body: "Clean tracking, dashboards, and systems so every rupee spent can be traced back to revenue — in real time.",
+              },
+              {
+                label: "Pillar 3",
+                title: "Content & Acquisition",
+                body: "Scroll-stopping creatives, high-converting funnels, and media buying that makes paid traffic your growth engine.",
+              },
+              {
+                label: "Pillar 4",
+                title: "Retention & Scale",
+                body: "Email, remarketing, and offer stacking to increase LTV, stabilize cash flow, and scale without burning out your brand.",
+              },
+            ].map((pillar, i) => {
+              const isActive = activePillar === i;
+              return (
+                <motion.button
+                  key={pillar.label}
+                  type="button"
+                  onClick={() => setActivePillar(activePillar === i ? null : i)}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.55, delay: i * 0.08 }}
+                  className="text-left"
+                >
+                  <div
+                    className={`relative h-full rounded-[2rem] border overflow-hidden transition-colors duration-400 ${
+                      isActive ? "bg-foreground text-background border-foreground/70" : "bg-muted/70 border-border/60"
+                    }`}
+                  >
+                    <div
+                      className={`absolute inset-x-0 top-0 h-6 transition-opacity duration-400 ${
+                        isActive ? "opacity-0" : "opacity-100 bg-gradient-to-r from-primary/18 via-primary/6 to-transparent"
+                      }`}
+                    />
+                    <div className="relative flex flex-col justify-between h-full p-5 md:p-6 gap-4">
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between text-[0.75rem] font-semibold tracking-[0.12em] uppercase">
+                          <span className={isActive ? "text-primary-foreground/80" : "text-muted-foreground"}>
+                            {pillar.label}
+                          </span>
+                          <span
+                            className={`flex h-6 w-6 items-center justify-center rounded-full border text-[0.7rem] leading-none transition-colors duration-300 ${
+                              isActive
+                                ? "border-background/80 bg-background/15 text-background"
+                                : "border-border/80 bg-background/40 text-muted-foreground"
+                            }`}
+                          >
+                            +
+                          </span>
+                        </div>
+                        <h3
+                          className={`font-display text-lg md:text-xl font-semibold leading-snug ${
+                            isActive ? "" : "text-foreground"
+                          }`}
+                        >
+                          {pillar.title}
+                        </h3>
+                        <motion.p
+                          className={`text-[0.8125rem] leading-relaxed ${
+                            isActive ? "text-primary-foreground/85" : "text-muted-foreground"
+                          }`}
+                          initial={false}
+                          animate={{
+                            opacity: isActive ? 1 : 0,
+                            height: isActive ? "auto" : 0,
+                            marginTop: isActive ? 4 : 0,
+                          }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          {pillar.body}
+                        </motion.p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.button>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Manifesto Teaser */}
       <section className="py-16 md:py-20">
         <div className="container max-w-3xl text-center">
@@ -273,30 +410,116 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "N Abdul Navas",
+                name: "Abdul",
                 role: "Founder & CEO, Fashion brand expert and growth consultant",
-                bio: (<>Grew up in <TirupurTooltip /> (The garment capital) breathing cotton and hustle. Broke out of the traditional textile matrix to build a digital empire because seeing fire products with trash marketing physically hurt him. Superpower? Scaling D2C fashion brands from 'who?' to sold-out faster than a sneaker drop. Oh, and his ROAS predictions? Lowkey psychic.</>)
+                bio: (<>Grew up in <TirupurTooltip /> (The garment capital) breathing cotton and hustle. Broke out of the traditional textile matrix to build a digital empire because seeing fire products with trash marketing physically hurt him. Superpower? Scaling D2C fashion brands from 'who?' to sold-out faster than a sneaker drop. Oh, and his ROAS predictions? Lowkey psychic.</>),
+                photo: founderAbdulImage,
+                social: {
+                  linkedin: "https://www.linkedin.com/in/abdulnavas/",
+                  instagram: "https://instagram.com/talkswithabdul",
+                  x: "https://x.com/talkswithabdul",
+                },
               },
               {
-                name: "R Santhosh",
+                name: "Santhosh",
                 role: "Co-Founder & CFO - Finance Controller, Principal Consultant for Brands",
-                bio: "The guy holding the bag (in a good way). While Abdul is out plotting world domination, Santhosh is the one making sure the math actually maths. Budgets, scaling cash flow, financial ops — he guards the treasury like it's his life. He literally loves Excel sheets more than most people love their pets. Total goat at keeping the agency and our clients highly profitable."
+                bio: "The guy holding the bag (in a good way). While Abdul is out plotting world domination, Santhosh is the one making sure the math actually maths. Budgets, scaling cash flow, financial ops — he guards the treasury like it's his life. He literally loves Excel sheets more than most people love their pets. Total goat at keeping the agency and our clients highly profitable.",
+                photo: founderSanthoshImage,
+                social: {
+                  linkedin: "https://linkedin.com/in/santhosh-wepix",
+                  instagram: "https://instagram.com/wepix",
+                  x: "https://x.com/wepix",
+                },
               },
               {
-                name: "B Vignesh",
+                name: "Vignesh",
                 role: "COO at WePix Business (Lead Gen Expert)",
-                bio: "Basically the cheat code for B2B growth. Vignesh doesn't just 'generate leads,' he builds absolute machines that make your sales team sweat trying to keep up. While everyone else is crying over algorithm changes, he's out here securing the bag for clients using high-level systems that actually convert. The definition of 'talk is cheap, show me the leads.'"
+                bio: "Basically the cheat code for B2B growth. Vignesh doesn't just 'generate leads,' he builds absolute machines that make your sales team sweat trying to keep up. While everyone else is crying over algorithm changes, he's out here securing the bag for clients using high-level systems that actually convert. The definition of 'talk is cheap, show me the leads.'",
+                social: {
+                  linkedin: "https://linkedin.com/company/wepix",
+                  instagram: "https://instagram.com/wepix",
+                  x: "https://x.com/wepix",
+                },
+                photo: founderVigneshImage,
               }
             ].map((founder) =>
               <Card key={founder.name} className="border-border/50 overflow-hidden">
-                <ImagePlaceholder label={`${founder.name} photo`} aspectRatio="square" className="rounded-none border-0 border-b-2" />
+                {founder.photo ? (
+                  <div className="aspect-square w-full overflow-hidden border-0 border-b-2">
+                    <img
+                      src={founder.photo}
+                      alt={founder.name}
+                      className="w-full h-full object-cover object-top"
+                      loading="lazy"
+                    />
+                  </div>
+                ) : (
+                  <ImagePlaceholder
+                    label={`${founder.name} photo`}
+                    aspectRatio="square"
+                    className="rounded-none border-0 border-b-2"
+                  />
+                )}
                 <CardContent className="p-8">
                   <h3 className="font-display text-lg font-semibold">{founder.name}</h3>
                   <p className="text-[0.8125rem] text-primary font-medium mt-1">{founder.role}</p>
                   <p className="text-[0.8125rem] text-muted-foreground mt-3 leading-relaxed">{founder.bio}</p>
+                  <div className="mt-4">
+                    <Link
+                      to={
+                        founder.name.includes("Abdul")
+                          ? "/abdul"
+                          : founder.name.includes("Santhosh")
+                          ? "/santhosh"
+                          : "/vignesh"
+                      }
+                      className="inline-flex items-center text-[0.8125rem] font-medium text-primary hover:text-primary/80"
+                    >
+                      Know more about {founder.name.split(" ")[0]} <ArrowRight size={14} className="ml-1" />
+                    </Link>
+                  </div>
+                  <div className="mt-5 flex items-center gap-3">
+                    <a
+                      href={founder.social?.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${founder.name} LinkedIn`}
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-muted/50 hover:bg-muted/80 transition-colors"
+                    >
+                      <Linkedin size={18} className="text-[#0A66C2]" />
+                    </a>
+                    <a
+                      href={founder.social?.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${founder.name} Instagram`}
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-muted/50 hover:bg-muted/80 transition-colors"
+                    >
+                      <Instagram size={18} className="text-[#E4405F]" />
+                    </a>
+                    <a
+                      href={founder.social?.x}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${founder.name} X`}
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-muted/50 hover:bg-muted/80 transition-colors"
+                    >
+                      <Twitter size={18} className="text-[#000000]" />
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
             )}
+          </div>
+          <div className="mt-10 text-center">
+            <p className="text-[0.875rem] md:text-base text-muted-foreground mb-4">
+              “Agencies show you decks. Our crew shows you dashboards that actually move.”
+            </p>
+            <Link to="/people">
+              <Button variant="outline" className="font-display font-medium gap-2">
+                Meet the entire crew <ArrowRight size={16} />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

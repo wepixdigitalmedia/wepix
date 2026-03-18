@@ -53,8 +53,13 @@ export function Footer() {
       <div className="container py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
           <div className="lg:col-span-2">
-            <Link to="/" className="font-display text-2xl font-bold tracking-tight">
-              WePix
+            <Link to="/" className="inline-flex items-center gap-2 font-display text-2xl font-bold tracking-tight">
+              <img
+                src="/favicon.ico"
+                alt="WePix logo"
+                className="h-7 w-7"
+              />
+              <span>WePix</span>
             </Link>
             <p className="mt-3 text-muted-foreground text-[0.8125rem] max-w-xs leading-relaxed">
               Digital Media. Built Different.

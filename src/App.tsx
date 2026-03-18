@@ -10,6 +10,9 @@ import About from "./pages/About";
 import Manifesto from "./pages/Manifesto";
 import Contact from "./pages/Contact";
 import People from "./pages/People";
+import Abdul from "./pages/Abdul";
+import Santhosh from "./pages/Santhosh";
+import Vignesh from "./pages/Vignesh";
 import Handbook from "./pages/Handbook";
 import Careers from "./pages/Careers";
 import Perennial from "./pages/Perennial";
@@ -49,6 +52,9 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/people" element={<People />} />
+            <Route path="/abdul" element={<Abdul />} />
+            <Route path="/santhosh" element={<Santhosh />} />
+            <Route path="/vignesh" element={<Vignesh />} />
             <Route path="/handbook" element={<Handbook />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/digital-store" element={<DigitalStore />} />

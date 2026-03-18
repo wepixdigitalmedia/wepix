@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const categories = [
   "Fashion",
+  "Sourcing",
   "Business",
   "Academy",
   "Ai",
@@ -28,7 +29,7 @@ export function AnimatedLogo() {
       className="flex items-center font-display text-xl tracking-tight text-foreground"
     >
       <span className="font-bold">WePix.</span>
-      <span className="relative inline-flex overflow-hidden h-[1.5em] items-center ml-1 md:ml-1.5">
+      <span className="relative inline-flex overflow-hidden h-[1.5em] items-center ml-0.5 md:ml-1">
         <AnimatePresence mode="wait">
           <motion.span
             key={categories[index]}
