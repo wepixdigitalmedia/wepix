@@ -90,7 +90,7 @@ const Index = () => {
                 Digital Media Group
               </span>
               <div className="min-h-[8rem] md:min-h-[8rem] lg:min-h-[7.5rem] w-full">
-                <h1 className="font-display text-2xl md:text-3xl lg:text-[2.75rem] xl:text-5xl font-bold leading-[1.15] break-words hyphens-auto">
+                <h1 className="font-display text-2xl md:text-3xl lg:text-[2.75rem] xl:text-5xl font-bold leading-[1.15] break-words hyphens-none">
                   We don't just run ads.{" "}
                   <span className="text-gradient">{displayText}</span>
                   <span className={`inline-block w-[3px] h-[0.85em] bg-foreground ml-0.5 align-middle rounded-sm transition-opacity duration-100 ${showCursor ? "opacity-100" : "opacity-0"}`} />

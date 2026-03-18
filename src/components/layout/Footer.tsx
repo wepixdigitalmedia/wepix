@@ -62,9 +62,9 @@ export function Footer() {
             <a href="mailto:hello@wepix.in" className="inline-block mt-3 text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors">
               hello@wepix.in
             </a>
-            <a href="tel:+917540080090" className="flex items-center gap-1.5 mt-2 text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors">
+            <a href="tel:+91987654321" className="flex items-center gap-1.5 mt-2 text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors">
               <Phone size={14} />
-              +91 7540080090
+              +91 987654321
             </a>
             <div className="flex gap-4 mt-6">
               {socialLinks.map((social) => (

@@ -18,14 +18,17 @@ export function AnimatedLogo() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % categories.length);
-    }, 2000);
+    }, 2200);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <Link to="/" className="flex items-center font-display text-xl tracking-[0.04em] text-foreground">
+    <Link
+      to="/"
+      className="flex items-center font-display text-xl tracking-tight text-foreground"
+    >
       <span className="font-bold">WePix.</span>
-      <span className="relative inline-flex overflow-hidden h-[1.5em] items-center ml-1.5 md:ml-2">
+      <span className="relative inline-flex overflow-hidden h-[1.5em] items-center ml-1 md:ml-1.5">
         <AnimatePresence mode="wait">
           <motion.span
             key={categories[index]}
@@ -34,8 +37,8 @@ export function AnimatedLogo() {
             exit={{ y: "-100%", opacity: 0 }}
             transition={{
               type: "spring",
-              stiffness: 400,
-              damping: 30,
+              stiffness: 320,
+              damping: 32,
             }}
             className="inline-block text-primary whitespace-nowrap font-medium tracking-tight"
           >
