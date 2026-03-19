@@ -41,7 +41,14 @@ export default function AIAgents() {
                 <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">AI agents that work while you sleep. And while you're awake. Basically always.</h1>
                 <p className="gsap-hero-desc mt-4 text-lg text-muted-foreground opacity-0">Forget basic chatbots that respond with 'sorry, I didn't understand that' every five seconds. Our AI agents are custom-built for YOUR business, trained on YOUR data, and integrated with YOUR tools. They understand context, learn from conversations, and actually take actions — not just pretend to be helpful.</p>
               </div>
-              <ImagePlaceholder label="AI Agent interface demo" aspectRatio="square" className="gsap-hero-cta opacity-0" />
+              <div className="gsap-hero-cta opacity-0 rounded-xl border-2 border-dashed border-border bg-muted/40 aspect-square overflow-hidden">
+                <img
+                  src="/business-ai-agent-hero.png"
+                  alt="AI agent interface and workflow intelligence dashboard"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -50,7 +57,14 @@ export default function AIAgents() {
           <div className="container max-w-3xl">
             <h2 className="font-display text-3xl font-semibold mb-4">What makes our AI Agents different?</h2>
             <p className="text-lg text-muted-foreground mb-8">Most 'AI chatbots' are glorified FAQ pages with a text bubble. Ours are different. They're trained on your company data, they integrate with your CRM, email, and WhatsApp, they learn from every conversation, and they can actually DO things — book appointments, send follow-ups, update databases. They're basically the perfect employee minus the coffee breaks.</p>
-            <ImagePlaceholder label="AI Agent architecture diagram" aspectRatio="wide" />
+            <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[21/9] overflow-hidden">
+              <img
+                src="/ai-agent-architecture.png"
+                alt="AI agent architecture diagram connecting CRM, database, WhatsApp, ads and email"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
           </div>
         </section>
 

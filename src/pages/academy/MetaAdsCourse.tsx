@@ -51,7 +51,14 @@ export default function MetaAdsCourse() {
                 <BookingFormDialog triggerLabel="Enroll Now" showArrow triggerClassName="px-8 text-base" />
               </div>
               <div className="mt-10 max-w-2xl mx-auto">
-                <ImagePlaceholder label="Course preview video thumbnail" aspectRatio="video" />
+                <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                  <img
+                    src="/ai-mentorship-hero.png"
+                    alt="Course preview hero showing smart systems for brand growth"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
           </section>
@@ -61,7 +68,14 @@ export default function MetaAdsCourse() {
               <h2 className="font-display text-3xl md:text-4xl font-semibold">Tired of wasting money on ads that get zero results?</h2>
               <p className="mt-6 text-lg text-muted-foreground">You've watched all the YouTube videos. You've tried boosting posts. You've even asked that one friend who 'knows digital marketing.' And your ROAS is still looking sadder than a Monday morning. This course fixes that. For real this time.</p>
               <div className="mt-10">
-                <ImagePlaceholder label="Ad dashboard before vs after" aspectRatio="wide" />
+                <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] overflow-hidden">
+                  <img
+                    src="/ad-dashboard-before-after.png"
+                    alt="Ad dashboard showing wasted effort and campaign loss"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
           </section>

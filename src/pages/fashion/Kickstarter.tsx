@@ -43,7 +43,13 @@ export default function Kickstarter() {
             <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">From zero to selling in 60 days. No, seriously.</h1>
             <p className="gsap-hero-desc mt-4 text-lg text-muted-foreground opacity-0">The all-in-one launch program for D2C fashion brands who are done with the 'I'll figure it out myself' approach. We've launched dozens of brands from scratch — store, content, ads, strategy — everything you need to go from 'I have products in my room' to 'omg we just got 50 orders.'</p>
             <div className="mt-10">
-              <ImagePlaceholder label="Kickstarter program timeline infographic" aspectRatio="wide" />
+              <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 overflow-hidden aspect-[21/9]">
+                <img
+                  src="/kickstarter-timeline.png"
+                  alt="Kickstarter program timeline infographic"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>

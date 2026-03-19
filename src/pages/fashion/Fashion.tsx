@@ -63,7 +63,13 @@ export default function Fashion() {
                   </span>
                 </div>
               </div>
-              <ImagePlaceholder label="Fashion hero image" aspectRatio="square" className="gsap-hero-cta opacity-0" />
+              <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-square gsap-hero-cta opacity-0 overflow-hidden">
+                <img
+                  src="/fashion-hero.png"
+                  alt="Fashion e-commerce hero visual"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -72,9 +78,99 @@ export default function Fashion() {
         <section className="py-12 border-t border-border">
           <div className="container">
             <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
-              {Array.from({ length: 6 }).map((_, i) => (
-                <ImagePlaceholder key={i} label={`Work ${i + 1}`} aspectRatio="portrait" />
-              ))}
+              {Array.from({ length: 6 }).map((_, i) => {
+                if (i === 0) {
+                  return (
+                    <div
+                      key={i}
+                      className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden"
+                    >
+                      <img
+                        src="/velaura-work-1.png"
+                        alt="Velaura saree collection"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  );
+                }
+
+                if (i === 1) {
+                  return (
+                    <div
+                      key={i}
+                      className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden"
+                    >
+                      <img
+                        src="/velaura-work-2.png"
+                        alt="Velaura saree collection 2"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  );
+                }
+
+                if (i === 2) {
+                  return (
+                    <div
+                      key={i}
+                      className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden"
+                    >
+                      <img
+                        src="/pearloze-work-3.png"
+                        alt="Pearloze fashion brand layout"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  );
+                }
+
+                if (i === 3) {
+                  return (
+                    <div
+                      key={i}
+                      className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden"
+                    >
+                      <img
+                        src="/travel-drops-work-6.png"
+                        alt="Travel drops collection"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  );
+                }
+
+                if (i === 4) {
+                  return (
+                    <div
+                      key={i}
+                      className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden"
+                    >
+                      <img
+                        src="/yazhli-work-5.png"
+                        alt="Yazhli festive collection"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  );
+                }
+
+                if (i === 5) {
+                  return (
+                    <div
+                      key={i}
+                      className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden"
+                    >
+                      <img
+                        src="/ankarkali-work-6.png"
+                        alt="Anarkali / sharara collection"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  );
+                }
+
+                return <ImagePlaceholder key={i} label={`Work ${i + 1}`} aspectRatio="portrait" />;
+              })}
             </div>
           </div>
         </section>
@@ -94,7 +190,33 @@ export default function Fashion() {
                 <div key={s.title} className="gsap-service-card opacity-0">
                   <Link to={s.href}>
                     <Card className="h-full hover:shadow-md transition-all rounded-xl border-border group overflow-hidden">
-                      <ImagePlaceholder label={s.img} aspectRatio="video" className="rounded-none border-0 border-b-2" />
+                      {s.title === "Kickstarter Program" ? (
+                        <div className="aspect-video rounded-none border-0 border-b-2 overflow-hidden bg-muted/40">
+                          <img
+                            src="/kickstarter-program.png"
+                            alt="Kickstarter program strategy visual"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      ) : s.title === "WePixStudio" ? (
+                        <div className="aspect-video rounded-none border-0 border-b-2 overflow-hidden bg-muted/40">
+                          <img
+                            src="/wepixstudio-hero.png"
+                            alt="WePix AI Studio"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      ) : s.title === "Meta Ads Management" ? (
+                        <div className="aspect-video rounded-none border-0 border-b-2 overflow-hidden bg-muted/40">
+                          <img
+                            src="/meta-ads-dashboard.png"
+                            alt="Meta ads dashboard"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      ) : (
+                        <ImagePlaceholder label={s.img} aspectRatio="video" className="rounded-none border-0 border-b-2" />
+                      )}
                       <CardContent className="p-6">
                         <s.icon className="text-foreground mb-4" size={24} />
                         <h3 className="font-display text-lg font-semibold mb-2">{s.title}</h3>
@@ -115,8 +237,34 @@ export default function Fashion() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {mcsSteps.map((step) => (
                 <div key={step.step} className="gsap-mcs-step text-center opacity-0">
-                  <div className="w-14 h-14 rounded-xl bg-muted flex items-center justify-center mx-auto mb-4">
-                    <span className="font-display text-xl font-semibold">{step.step}</span>
+                  <div className="w-14 h-14 rounded-xl bg-muted flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                    {step.step === "M" ? (
+                      <img
+                        src="/mcs-media-icon.png"
+                        alt="Media step icon"
+                        className="w-8 h-8 object-contain"
+                      />
+                    ) : step.step === "C" ? (
+                      <img
+                        src="/mcs-creative-icon.png"
+                        alt="Creative step icon"
+                        className="w-8 h-8 object-contain"
+                      />
+                    ) : step.step === "S" ? (
+                      <img
+                        src="/mcs-strategy-icon.png"
+                        alt="Strategy step icon"
+                        className="w-8 h-8 object-contain"
+                      />
+                    ) : step.step === "4" ? (
+                      <img
+                        src="/mcs-iterate-icon.png"
+                        alt="Iterate step icon"
+                        className="w-8 h-8 object-contain"
+                      />
+                    ) : (
+                      <span className="font-display text-xl font-semibold">{step.step}</span>
+                    )}
                   </div>
                   <h3 className="font-display text-base font-semibold">{step.title}</h3>
                   <p className="text-sm text-muted-foreground mt-2">{step.description}</p>

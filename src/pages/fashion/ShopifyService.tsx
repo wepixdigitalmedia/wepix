@@ -30,7 +30,7 @@ const process = [
 const plans = [
   {
     name: "Starter Store",
-    price: "₹49,999",
+    price: "Unlock Price → Contact Us",
     desc: "For new D2C brands launching their first Shopify store.",
     features: [
       "Premium theme customization",
@@ -43,7 +43,7 @@ const plans = [
   },
   {
     name: "Growth Store",
-    price: "₹99,999",
+    price: "Unlock Price → Contact Us",
     badge: "Popular",
     desc: "For brands ready to scale with a conversion-optimized store.",
     features: [
@@ -59,7 +59,7 @@ const plans = [
   },
   {
     name: "Enterprise Store",
-    price: "₹1,99,999+",
+    price: "Unlock Price → Contact Us",
     desc: "For established brands needing a fully custom, high-performance store.",
     features: [
       "Fully custom design & dev",
@@ -148,7 +148,33 @@ export default function ShopifyService() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {["Fashion Brand Store", "D2C Lifestyle Store", "Premium Apparel Store"].map((label) => (
                 <Card key={label} className="border-border overflow-hidden">
-                  <ImagePlaceholder label={label} aspectRatio="portrait" className="rounded-none border-0" />
+                  {label === "Fashion Brand Store" ? (
+                    <div className="aspect-[3/4] rounded-none border-0 overflow-hidden bg-muted/40">
+                      <img
+                        src="/fashion-brand-store.png"
+                        alt="Fashion brand store homepage preview"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ) : label === "D2C Lifestyle Store" ? (
+                    <div className="aspect-[3/4] rounded-none border-0 overflow-hidden bg-muted/40">
+                      <img
+                        src="/d2c-lifestyle-store.png"
+                        alt="D2C lifestyle store preview"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ) : label === "Premium Apparel Store" ? (
+                    <div className="aspect-[3/4] rounded-none border-0 overflow-hidden bg-muted/40">
+                      <img
+                        src="/premium-apparel-store.png"
+                        alt="Premium apparel store preview"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <ImagePlaceholder label={label} aspectRatio="portrait" className="rounded-none border-0" />
+                  )}
                 </Card>
               ))}
             </div>
@@ -174,7 +200,6 @@ export default function ShopifyService() {
                         <h3 className="font-display text-lg font-semibold">{plan.name}</h3>
                         {plan.badge && <Badge className="text-xs bg-primary text-primary-foreground">{plan.badge}</Badge>}
                       </div>
-                      <span className="font-display text-2xl font-bold">{plan.price}</span>
                       <p className="text-sm text-muted-foreground mt-1 mb-4">{plan.desc}</p>
                       <ul className="space-y-2 flex-1 mb-5">
                         {plan.features.map((f) => (
@@ -214,8 +239,20 @@ export default function ShopifyService() {
                 </a>
               </div>
               <div className="grid grid-cols-2 gap-3">
-                <ImagePlaceholder label="Raw iPhone shot" aspectRatio="portrait" />
-                <ImagePlaceholder label="AI-generated result" aspectRatio="portrait" />
+                <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden">
+                  <img
+                    src="/raw-iphone-shot-2.png"
+                    alt="Raw iPhone garment flat lay"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden">
+                  <img
+                    src="/ai-generated-result-1.png"
+                    alt="AI-generated fashion model result"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>

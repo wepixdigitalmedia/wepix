@@ -32,7 +32,14 @@ export default function Community() {
             <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">Your marketing crew. Always online. Always helpful. Always slightly chaotic.</h1>
             <p className="gsap-hero-desc mt-4 text-lg text-muted-foreground opacity-0">Imagine having 500+ marketers and brand owners in your pocket — ready to help, share insights, and hype you up when your campaign finally hits 3x ROAS at 2 AM. That's the WePix Skool community. It's the group chat you wish you had.</p>
             <div className="mt-10">
-              <ImagePlaceholder label="Community screenshot from Skool" aspectRatio="wide" />
+              <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] overflow-hidden">
+                <img
+                  src="/academy-community-hero.png"
+                  alt="Marketing community chat bubbles discussing growth strategies"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </section>

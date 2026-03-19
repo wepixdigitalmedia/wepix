@@ -161,7 +161,45 @@ export default function Careers() {
                 transition={{ delay: i * 0.08, duration: 0.5 }}
               >
                 <Card className="h-full border-border/50">
-                  <ImagePlaceholder label={job.title} aspectRatio="video" className="rounded-t-xl rounded-b-none border-0 border-b-2" />
+                  {job.title === "Performance Marketer" ? (
+                    <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video border-dashed border-border bg-muted/40 flex items-center justify-center">
+                      <img
+                        src="/performance-marketer-hero.png"
+                        alt="Performance marketing dashboards for Meta and Google ads"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : job.title === "Shopify Developer" ? (
+                    <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video border-dashed border-border bg-muted/40 flex items-center justify-center">
+                      <img
+                        src="/shopify-developer-hero-3.png"
+                        alt="Shopify storefronts across devices with winter collection"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : job.title === "Social Media Manager" ? (
+                    <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video border-dashed border-border bg-muted/40 flex items-center justify-center">
+                      <img
+                        src="/social-media-manager-hero.png"
+                        alt="Social media manager dashboard with multiple platforms"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : job.title === "Video Editor" ? (
+                    <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video border-dashed border-border bg-muted/40 flex items-center justify-center">
+                      <img
+                        src="/video-editor-hero.png"
+                        alt="Video editor creative workspace interface"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : (
+                    <ImagePlaceholder label={job.title} aspectRatio="video" className="rounded-t-xl rounded-b-none border-0 border-b-2" />
+                  )}
                   <CardContent className="p-6">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
                       <Briefcase size={20} className="text-primary" />

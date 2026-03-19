@@ -267,7 +267,36 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}>
                 <Card className="h-full border-border/50">
-                  <ImagePlaceholder label={`${study.brand} results`} aspectRatio="video" className="rounded-t-xl rounded-b-none border-0 border-b-2" />
+                  {study.brand === "Taasza" ? (
+                    <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
+                      <img
+                        src="/taasza-results.png"
+                        alt="Taasza performance dashboard"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : study.brand === "BoonBabies" ? (
+                    <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
+                      <img
+                        src="/boonbabies-results.png"
+                        alt="BoonBabies performance dashboard"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : study.brand === "Nutmeg" ? (
+                    <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
+                      <img
+                        src="/nutmeg-results.png"
+                        alt="Nutmeg performance dashboard"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : (
+                    <ImagePlaceholder label={`${study.brand} results`} aspectRatio="video" className="rounded-t-xl rounded-b-none border-0 border-b-2" />
+                  )}
                   <CardContent className="p-6">
                     <span className="text-[0.6875rem] font-display font-semibold uppercase tracking-[0.15em] text-primary">{study.brand}</span>
                     <p className="font-display text-xl font-semibold mt-2">{study.stat}</p>
@@ -559,7 +588,36 @@ const Index = () => {
                 <Card key={n} className="border-border/50">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-3 mb-4">
-                      <ImagePlaceholder label={`Profile ${n}`} aspectRatio="square" className="rounded-full w-12 h-12 shrink-0" />
+                      {n === 1 ? (
+                        <div className="rounded-full w-12 h-12 shrink-0 overflow-hidden border border-border/40 bg-muted/40">
+                          <img
+                            src="/testimonial-profile-1.png"
+                            alt="Client profile"
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : n === 2 ? (
+                        <div className="rounded-full w-12 h-12 shrink-0 overflow-hidden border border-border/40 bg-muted/40">
+                          <img
+                            src="/testimonial-profile-2.png"
+                            alt="Client profile"
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : n === 3 ? (
+                        <div className="rounded-full w-12 h-12 shrink-0 overflow-hidden border border-border/40 bg-muted/40">
+                          <img
+                            src="/testimonial-profile-3.png"
+                            alt="Client profile"
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : (
+                        <ImagePlaceholder label={`Profile ${n}`} aspectRatio="square" className="rounded-full w-12 h-12 shrink-0" />
+                      )}
                       <div>
                         <h4 className="font-display text-[0.8125rem] font-semibold">Client Name</h4>
                         <p className="text-[0.6875rem] text-muted-foreground">Role, Company</p>

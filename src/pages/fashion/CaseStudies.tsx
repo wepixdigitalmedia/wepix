@@ -6,15 +6,15 @@ import { useGSAP, heroReveal, scrollFadeIn } from "@/hooks/useGSAP";
 import { TrendingUp } from "lucide-react";
 
 const studies = [
-  { brand: "Taasza", category: "Ethnic Wear", stat: "3x ROAS", description: "From local saree shop to thriving D2C brand with a gorgeous Shopify store and Meta Ads using our MCS Framework." },
-  { brand: "BoonBabies", category: "Kids Fashion", stat: "₹10L+ / mo", description: "Complete brand refresh and premium content strategy targeting millennial parents. Consistency is king (or queen)." },
-  { brand: "Nutmeg", category: "Premium Menswear", stat: "2.5x Growth", description: "Repositioned the brand from 'invisible' to 'irresistible.' Luxury content + conversion campaigns that actually convert." },
-  { brand: "ThreadCraft", category: "Sustainable Fashion", stat: "4x ROAS", description: "Eco-conscious brand that needed the world to know about their mission. We made sustainability look as good as it feels." },
-  { brand: "Kalakriti", category: "Handloom Sarees", stat: "₹8L+ / mo", description: "Heritage handloom brand taken digital. AI-generated model shots via WePixStudio turned raw product images into showstoppers." },
-  { brand: "UrbanKnot", category: "Streetwear", stat: "5x ROAS", description: "Bold streetwear brand with zero paid strategy. We built a full Meta funnel and scaled from ₹0 to ₹1L/day ad spend profitably." },
-  { brand: "LilBloom", category: "Baby Accessories", stat: "₹12L+ / mo", description: "Cute products, chaotic branding. We unified everything — content, store, ads — and turned them into a category leader." },
-  { brand: "Maison Luxe", category: "Luxury Ethnic", stat: "3.8x ROAS", description: "High-ticket ethnic wear brand. Premium Shopify store + catalog ads targeting NRI audiences across the US and UK." },
-  { brand: "DapperDen", category: "Men's Grooming", stat: "60% CPA ↓", description: "Grooming brand burning cash on ads. We restructured campaigns, refreshed creatives, and cut their CPA by more than half." },
+  { brand: "Yazhli", category: "Ethnic Wear", stat: "3x ROAS", description: "From local saree shop to thriving D2C brand with a gorgeous Shopify store and Meta Ads using our MCS Framework." },
+  { brand: "Thugiil", category: "Kids Fashion", stat: "₹10L+ / mo", description: "Complete brand refresh and premium content strategy targeting millennial parents. Consistency is king (or queen)." },
+  { brand: "Pearloze", category: "Premium Menswear", stat: "2.5x Growth", description: "Repositioned the brand from 'invisible' to 'irresistible.' Luxury content + conversion campaigns that actually convert." },
+  { brand: "Lemoonbaby", category: "Sustainable Fashion", stat: "4x ROAS", description: "Eco-conscious brand that needed the world to know about their mission. We made sustainability look as good as it feels." },
+  { brand: "Teebuy", category: "Handloom Sarees", stat: "₹8L+ / mo", description: "Heritage handloom brand taken digital. AI-generated model shots via WePixStudio turned raw product images into showstoppers." },
+  { brand: "Thedori", category: "Streetwear", stat: "5x ROAS", description: "Bold streetwear brand with zero paid strategy. We built a full Meta funnel and scaled from ₹0 to ₹1L/day ad spend profitably." },
+  { brand: "Pinkstories", category: "Baby Accessories", stat: "₹12L+ / mo", description: "Cute products, chaotic branding. We unified everything - content, store, ads - and turned them into a category leader." },
+  { brand: "Alankarchennai", category: "Luxury Ethnic", stat: "3.8x ROAS", description: "High-ticket ethnic wear brand. Premium Shopify store + catalog ads targeting NRI audiences across the US and UK." },
+  { brand: "Cloudyfit", category: "Men's Grooming", stat: "60% CPA ↓", description: "Grooming brand burning cash on ads. We restructured campaigns, refreshed creatives, and cut their CPA by more than half." },
 ];
 
 export default function CaseStudies() {
@@ -40,7 +40,45 @@ export default function CaseStudies() {
               {studies.map((study) => (
                 <div key={study.brand} className="gsap-study opacity-0">
                   <Card className="rounded-xl border-border overflow-hidden h-full hover:shadow-lg transition-shadow duration-300">
-                    <ImagePlaceholder label={`${study.brand} brand imagery`} aspectRatio="square" className="rounded-none border-0" />
+                    {study.brand === "Yazhli" ? (
+                      <div className="aspect-square rounded-none border-0 overflow-hidden">
+                        <img src="/case-studies/taasza-analytics.png" alt="Yazhli analytics dashboard" className="w-full h-full object-cover" loading="lazy" />
+                      </div>
+                    ) : study.brand === "Thugiil" ? (
+                      <div className="aspect-square rounded-none border-0 overflow-hidden">
+                        <img src="/case-studies/thugiil-analytics.png" alt="Thugiil analytics dashboard" className="w-full h-full object-cover" loading="lazy" />
+                      </div>
+                    ) : study.brand === "Pearloze" ? (
+                      <div className="aspect-square rounded-none border-0 overflow-hidden">
+                        <img src="/case-studies/pearloze-analytics.png" alt="Pearloze analytics dashboard" className="w-full h-full object-cover" loading="lazy" />
+                      </div>
+                    ) : study.brand === "Lemoonbaby" ? (
+                      <div className="aspect-square rounded-none border-0 overflow-hidden">
+                        <img src="/case-studies/lemoonbaby-analytics.png" alt="Lemoonbaby analytics dashboard" className="w-full h-full object-cover" loading="lazy" />
+                      </div>
+                    ) : study.brand === "Teebuy" ? (
+                      <div className="aspect-square rounded-none border-0 overflow-hidden">
+                        <img src="/case-studies/teebuy-analytics.png" alt="Teebuy analytics dashboard" className="w-full h-full object-cover" loading="lazy" />
+                      </div>
+                    ) : study.brand === "Thedori" ? (
+                      <div className="aspect-square rounded-none border-0 overflow-hidden">
+                        <img src="/case-studies/thedori-analytics.png" alt="Thedori analytics dashboard" className="w-full h-full object-cover" loading="lazy" />
+                      </div>
+                    ) : study.brand === "Pinkstories" ? (
+                      <div className="aspect-square rounded-none border-0 overflow-hidden">
+                        <img src="/case-studies/pinkstories-analytics.png" alt="Pinkstories analytics dashboard" className="w-full h-full object-cover" loading="lazy" />
+                      </div>
+                    ) : study.brand === "Alankarchennai" ? (
+                      <div className="aspect-square rounded-none border-0 overflow-hidden">
+                        <img src="/case-studies/alankarchennai-analytics.png" alt="Alankarchennai analytics dashboard" className="w-full h-full object-cover" loading="lazy" />
+                      </div>
+                    ) : study.brand === "Cloudyfit" ? (
+                      <div className="aspect-square rounded-none border-0 overflow-hidden">
+                        <img src="/case-studies/cloudyfit-analytics.png" alt="Cloudyfit analytics dashboard" className="w-full h-full object-cover" loading="lazy" />
+                      </div>
+                    ) : (
+                      <ImagePlaceholder label={`${study.brand} brand imagery`} aspectRatio="square" className="rounded-none border-0" />
+                    )}
                     <CardContent className="p-5">
                       <div className="flex items-center justify-between mb-3">
                         <span className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">{study.category}</span>

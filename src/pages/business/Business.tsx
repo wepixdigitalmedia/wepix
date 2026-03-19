@@ -95,14 +95,28 @@ export default function Business() {
                   <Button size="lg" className="rounded-lg font-medium gap-2">Learn About AI Agents <ArrowRight size={16} /></Button>
                 </Link>
               </div>
-              <ImagePlaceholder label="AI Agent demo screenshot" aspectRatio="video" />
+              <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                <img
+                  src="/ai-agent-demo-5.png"
+                  alt="AI assistant handing off intelligence to a human"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </section>
 
         <section className="py-24">
           <div className="container max-w-3xl text-center gsap-mentorship opacity-0">
-            <ImagePlaceholder label="Mentorship session photo" aspectRatio="wide" className="mb-10" />
+            <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] mb-10 overflow-hidden">
+              <img
+                src="/mentorship-session-photo.png"
+                alt="Business mentorship session reviewing ad performance"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
             <SectionHeading tag="Premium" title="1:1 Business Mentorship" description="For founders who are done with guesswork. Strategy sessions, accountability, and execution support from people who've actually built stuff." />
             <Link to="/business/mentorship">
               <Button variant="outline" className="rounded-lg font-medium gap-2">Learn More <ArrowRight size={14} /></Button>

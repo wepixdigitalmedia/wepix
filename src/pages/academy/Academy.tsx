@@ -55,7 +55,14 @@ export default function Academy() {
                   </Link>
                 </div>
               </div>
-              <ImagePlaceholder label="Academy hero — instructor photo" aspectRatio="square" className="gsap-hero-cta opacity-0" />
+              <div className="gsap-hero-cta opacity-0 rounded-xl overflow-hidden aspect-square border-2 border-dashed border-border bg-muted/40">
+                <img
+                  src="/academy-hero-instructor-2.png"
+                  alt="WePix Academy instructor with brand-building tools"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </section>
