@@ -96,10 +96,10 @@ const InstagramEmbed = ({ url, isActive }: { url: string; isActive: boolean }) =
 // Real Instagram Reels provided by user
 const reels = [
   "https://www.instagram.com/reel/DNp9gcjPwDV",
-  "https://www.instagram.com/reel/DNvbR9XZM3e",
-  "https://www.instagram.com/reel/DNx8hjb5hYl",
   "https://www.instagram.com/reel/DN3fale5hKt",
+  "https://www.instagram.com/reel/DNx8hjb5hYl",
   "https://www.instagram.com/reel/DN8XF1fE1vZ",
+  "https://www.instagram.com/reel/DNvbR9XZM3e",
 ];
 
 export function StackedReels() {

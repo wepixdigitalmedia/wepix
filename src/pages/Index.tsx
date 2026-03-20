@@ -197,7 +197,7 @@ const Index = () => {
                         <img
                           src={heroFashionImage}
                           alt="Fashion marketing visuals"
-                          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                          className="w-full h-full object-cover transition-all duration-500"
                           loading="lazy"
                         />
                       </div>
@@ -207,7 +207,7 @@ const Index = () => {
                         <img
                           src={academyHeroImage}
                           alt="Academy learning visuals"
-                          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                          className="w-full h-full object-cover transition-all duration-500"
                           loading="lazy"
                         />
                       </div>
@@ -217,7 +217,7 @@ const Index = () => {
                         <img
                           src={businessHeroImage}
                           alt="Business and growth visuals"
-                          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                          className="w-full h-full object-cover transition-all duration-500"
                           loading="lazy"
                         />
                       </div>
@@ -227,7 +227,7 @@ const Index = () => {
                         <img
                           src={sourcingHeroImage}
                           alt="Sourcing visuals"
-                          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                          className="w-full h-full object-cover transition-all duration-500"
                           loading="lazy"
                         />
                       </div>

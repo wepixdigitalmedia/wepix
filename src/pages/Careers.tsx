@@ -87,8 +87,19 @@ export default function Careers() {
       <section id="why-join" className="py-20 md:py-28 scroll-mt-32">
         <div className="container">
           <SectionHeading tag="Careers" title="Why Join WePix" />
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto items-center">
-            <ImagePlaceholder label="Team collaboration" aspectRatio="video" className="rounded-xl" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto items-center">
+            <div
+              className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center overflow-hidden"
+              style={{ aspectRatio: "1 / 1" }}
+            >
+              <img
+                src="/careers-team-collaboration.png"
+                alt="WePix team collaboration"
+                style={{ objectFit: "contain" }}
+                className="w-full h-full"
+                loading="lazy"
+              />
+            </div>
             <div className="space-y-4 text-muted-foreground">
               <p>Working at WePix is not about finishing tasks inside a rigid agency system. It is about building real digital systems that help businesses grow.</p>
               <p>The company was founded by Abdul Navas and Santhosh with a belief that businesses deserve better growth systems than generic marketing services.</p>
@@ -139,7 +150,90 @@ export default function Careers() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.04, duration: 0.4 }}
                 >
-                  <ImagePlaceholder label={item} aspectRatio="video" className="rounded-xl" />
+                  {item === "Team party" ? (
+                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                      <img
+                        src="/careers-team-party.png"
+                        alt="Team party at WePix"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : item === "Office brainstorming" ? (
+                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                      <img
+                        src="/careers-office-brainstorming.png"
+                        alt="Office brainstorming session at WePix"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : item === "Campaign review" ? (
+                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                      <img
+                        src="/careers-campaign-review.png"
+                        alt="Campaign review meeting at WePix"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : item === "Late night builds" ? (
+                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                      <img
+                        src="/careers-late-night-builds.png"
+                        alt="Late night builds team selfie"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : item === "Team celebration" ? (
+                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                      <img
+                        src="/careers-team-celebration.png"
+                        alt="Team celebration at WePix"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : item === "Workshop day" ? (
+                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                      <img
+                        src="/careers-workshop-day.png"
+                        alt="Workshop day at WePix"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : item === "Product shoot day" ? (
+                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                      <img
+                        src="/careers-product-shoot-day.png"
+                        alt="Product shoot day at WePix"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : item === "Creative chaos" ? (
+                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                      <img
+                        src="/careers-creative-chaos.png"
+                        alt="Creative chaos at WePix"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : item === "Launch day" ? (
+                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                      <img
+                        src="/careers-launch-day.png"
+                        alt="Launch day at WePix"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : (
+                    <ImagePlaceholder label={item} aspectRatio="video" className="rounded-xl" />
+                  )}
                 </motion.div>
               ))}
             </div>

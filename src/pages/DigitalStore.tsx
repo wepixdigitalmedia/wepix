@@ -90,8 +90,64 @@ export default function DigitalStore() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05, duration: 0.4 }}
               >
-                <Card className="h-full border-border/50 flex flex-col">
-                  <ImagePlaceholder label={product.title} aspectRatio="video" className="rounded-t-xl rounded-b-none border-0 border-b" />
+                    <Card className="h-full border-border/50 flex flex-col">
+                    {product.title === "Meta Ads Mastery Course" ? (
+                      <div className="aspect-video rounded-t-xl rounded-b-none border-0 border-b overflow-hidden bg-muted/40">
+                        <img
+                          src="/meta-ads-mastery.png"
+                          alt="Meta Ads Mastery Course preview"
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : product.title === "D2C Fashion Brand Launch Kit" ? (
+                      <div className="aspect-video rounded-t-xl rounded-b-none border-0 border-b overflow-hidden bg-muted/40">
+                        <img
+                          src="/d2c-fashion-launch-kit.png"
+                          alt="D2C Fashion Brand Launch Kit preview"
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : product.title === "AI Marketing Toolkit" ? (
+                      <div className="aspect-video rounded-t-xl rounded-b-none border-0 border-b overflow-hidden bg-muted/40">
+                        <img
+                          src="/ai-marketing-toolkit.png"
+                          alt="AI Marketing Toolkit preview"
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : product.title === "Advanced Performance Marketing" ? (
+                      <div className="aspect-video rounded-t-xl rounded-b-none border-0 border-b overflow-hidden bg-muted/40">
+                        <img
+                          src="/advanced-performance-marketing.png"
+                          alt="Advanced Performance Marketing preview"
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : product.title === "Social Media Content Calendar" ? (
+                      <div className="aspect-video rounded-t-xl rounded-b-none border-0 border-b overflow-hidden bg-muted/40">
+                        <img
+                          src="/social-media-content-calendar.png"
+                          alt="Social Media Content Calendar preview"
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : product.title === "Shopify Store Setup Masterclass" ? (
+                      <div className="aspect-video rounded-t-xl rounded-b-none border-0 border-b overflow-hidden bg-muted/40">
+                        <img
+                          src="/shopify-store-setup-masterclass.png"
+                          alt="Shopify Store Setup Masterclass preview"
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : (
+                      <ImagePlaceholder label={product.title} aspectRatio="video" className="rounded-t-xl rounded-b-none border-0 border-b" />
+                    )}
                   <CardContent className="p-5 flex flex-col flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <Badge variant="secondary" className="text-xs">{product.type}</Badge>

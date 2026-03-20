@@ -14,7 +14,7 @@ const departments = [
   {
     name: "Leadership",
     members: [
-      { name: "Priya Sharma", role: "Head of Content", bio: "Leads content strategy across all brand verticals." },
+      { name: "Vignesh", role: "Head of Content", bio: "Leads content strategy across all brand verticals." },
       { name: "Meera Nair", role: "Creative Director", bio: "Oversees all visual direction and brand design systems." },
     ],
   },
@@ -61,7 +61,14 @@ export default function People() {
             title="The people behind WePix"
             description="Marketers, designers, developers, and strategists working together to build digital growth systems for brands."
           />
-          <ImagePlaceholder label="Team photo" aspectRatio="wide" className="rounded-xl mb-16 max-w-5xl mx-auto" />
+          <div className="border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] rounded-xl mb-16 max-w-5xl mx-auto overflow-hidden">
+            <img
+              src="/team-photo-logo.png"
+              alt="WePix Digital Media team photo"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
 
           {departments.map((dept, di) => (
             <div key={dept.name} className="mb-16 last:mb-0">
@@ -76,7 +83,36 @@ export default function People() {
                     transition={{ delay: i * 0.04, duration: 0.4 }}
                     className="text-center"
                   >
-                    <ImagePlaceholder label={member.name} aspectRatio="square" className="rounded-xl mb-3" />
+                    {member.name === "Abdul Navas" ? (
+                      <div className="border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-square rounded-xl mb-3 overflow-hidden">
+                        <img
+                          src="/people-abdul-navas.png"
+                          alt="Abdul Navas"
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : member.name === "Santhosh" ? (
+                      <div className="border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-square rounded-xl mb-3 overflow-hidden">
+                        <img
+                          src="/people-santhosh.png"
+                          alt="Santhosh"
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : member.name === "Vignesh" ? (
+                      <div className="border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-square rounded-xl mb-3 overflow-hidden">
+                        <img
+                          src="/people-priya-sharma.png"
+                          alt="Vignesh"
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : (
+                      <ImagePlaceholder label={member.name} aspectRatio="square" className="rounded-xl mb-3" />
+                    )}
                     <h3 className="font-display text-sm font-semibold leading-tight">{member.name}</h3>
                     <p className="text-xs text-muted-foreground mt-0.5">{member.role}</p>
                     <p className="text-xs text-muted-foreground/70 mt-1">{member.bio}</p>

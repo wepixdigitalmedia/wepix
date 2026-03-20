@@ -59,7 +59,14 @@ export default function About() {
                   WePix started because we were frustrated. Frustrated with agencies charging lakhs for mediocre work. Frustrated with marketers who couldn't tell the difference between reach and revenue.
                 </p>
               </div>
-              <ImagePlaceholder label="Team photo" aspectRatio="square" className="gsap-hero-cta opacity-0" />
+              <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-square gsap-hero-cta opacity-0 overflow-hidden">
+                <img
+                  src="/about-team-photo.png"
+                  alt="Team photo"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </section>

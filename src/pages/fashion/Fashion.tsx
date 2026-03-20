@@ -8,6 +8,7 @@ import { BookingFormDialog } from "@/components/shared/BookingFormDialog";
 import { ArrowRight, Camera, Rocket, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useGSAP, heroReveal, scrollFadeIn, gsap } from "@/hooks/useGSAP";
+import { useState } from "react";
 
 const services = [
   { icon: Rocket, title: "Kickstarter Program", description: "60 days. Zero to selling. We build your store, shoot your products, run your ads, and hold your hand through the whole thing. It's like a bootcamp, but for your brand.", href: "/fashion/kickstarter", img: "Kickstarter program" },
@@ -23,6 +24,16 @@ const mcsSteps = [
 ];
 
 export default function Fashion() {
+  const portfolioImages = [
+    { src: "/velaura-work-1.png", alt: "Velaura saree collection" },
+    { src: "/velaura-work-2.png", alt: "Velaura saree collection 2" },
+    { src: "/pearloze-work-3.png", alt: "Pearloze fashion brand layout" },
+    { src: "/travel-drops-work-6.png", alt: "Travel drops collection" },
+    { src: "/yazhli-work-5.png", alt: "Yazhli festive collection" },
+    { src: "/ankarkali-work-6.png", alt: "Anarkali / sharara collection" },
+  ];
+  const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
+
   const containerRef = useGSAP((container) => {
     heroReveal(container);
     scrollFadeIn(".gsap-service-card", container, { stagger: 0.1, y: 30 });
@@ -78,102 +89,63 @@ export default function Fashion() {
         <section className="py-12 border-t border-border">
           <div className="container">
             <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
-              {Array.from({ length: 6 }).map((_, i) => {
-                if (i === 0) {
-                  return (
-                    <div
-                      key={i}
-                      className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden"
-                    >
-                      <img
-                        src="/velaura-work-1.png"
-                        alt="Velaura saree collection"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  );
-                }
-
-                if (i === 1) {
-                  return (
-                    <div
-                      key={i}
-                      className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden"
-                    >
-                      <img
-                        src="/velaura-work-2.png"
-                        alt="Velaura saree collection 2"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  );
-                }
-
-                if (i === 2) {
-                  return (
-                    <div
-                      key={i}
-                      className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden"
-                    >
-                      <img
-                        src="/pearloze-work-3.png"
-                        alt="Pearloze fashion brand layout"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  );
-                }
-
-                if (i === 3) {
-                  return (
-                    <div
-                      key={i}
-                      className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden"
-                    >
-                      <img
-                        src="/travel-drops-work-6.png"
-                        alt="Travel drops collection"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  );
-                }
-
-                if (i === 4) {
-                  return (
-                    <div
-                      key={i}
-                      className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden"
-                    >
-                      <img
-                        src="/yazhli-work-5.png"
-                        alt="Yazhli festive collection"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  );
-                }
-
-                if (i === 5) {
-                  return (
-                    <div
-                      key={i}
-                      className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden"
-                    >
-                      <img
-                        src="/ankarkali-work-6.png"
-                        alt="Anarkali / sharara collection"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  );
-                }
-
-                return <ImagePlaceholder key={i} label={`Work ${i + 1}`} aspectRatio="portrait" />;
-              })}
+              {portfolioImages.map((image, i) => (
+                <button
+                  key={image.src}
+                  type="button"
+                  onClick={() => setActiveImageIndex(i)}
+                  className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden text-left"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              ))}
             </div>
           </div>
         </section>
+        {activeImageIndex !== null && (
+          <div
+            className="fixed inset-0 z-[120] bg-black/85 flex items-center justify-center p-4"
+            onClick={() => setActiveImageIndex(null)}
+          >
+            <button
+              type="button"
+              className="absolute top-4 right-4 text-white text-2xl leading-none"
+              onClick={() => setActiveImageIndex(null)}
+            >
+              ×
+            </button>
+            <button
+              type="button"
+              className="absolute left-4 text-white text-3xl leading-none"
+              onClick={(e) => {
+                e.stopPropagation();
+                setActiveImageIndex((prev) => (prev === null ? 0 : (prev - 1 + portfolioImages.length) % portfolioImages.length));
+              }}
+            >
+              ‹
+            </button>
+            <img
+              src={portfolioImages[activeImageIndex].src}
+              alt={portfolioImages[activeImageIndex].alt}
+              className="max-w-full max-h-[90vh] rounded-xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              type="button"
+              className="absolute right-4 text-white text-3xl leading-none"
+              onClick={(e) => {
+                e.stopPropagation();
+                setActiveImageIndex((prev) => (prev === null ? 0 : (prev + 1) % portfolioImages.length));
+              }}
+            >
+              ›
+            </button>
+          </div>
+        )}
 
         <section className="py-24 border-t border-border">
           <div className="container max-w-3xl text-center gsap-problem opacity-0">

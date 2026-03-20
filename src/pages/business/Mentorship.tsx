@@ -1,7 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { CTABanner } from "@/components/shared/CTABanner";
-import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder";
 import { BookingFormDialog } from "@/components/shared/BookingFormDialog";
 import { Card, CardContent } from "@/components/ui/card";
 import { useGSAP, heroReveal, gsap } from "@/hooks/useGSAP";
@@ -46,7 +45,14 @@ export default function Mentorship() {
               For agency owners who are done with generic advice and LinkedIn gurus. This is a structured mentorship built around WePix's real internal frameworks — the same systems we use to manage ₹2Cr+ in ad spend across 50+ brands. Live Q&A sessions, a private community of operators, and hands-on support from people who've actually built what you're building.
             </p>
             <div className="mt-8">
-              <ImagePlaceholder label="Mentorship session" aspectRatio="wide" />
+              <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] overflow-hidden">
+                <img
+                  src="/business-mentorship-session.png"
+                  alt="Mentorship session"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </section>

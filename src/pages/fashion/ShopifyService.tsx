@@ -10,6 +10,7 @@ import { useGSAP, heroReveal, scrollFadeIn } from "@/hooks/useGSAP";
 import { ArrowRight, Check, ShoppingBag, Palette, Zap, BarChart3, Search, Smartphone, Shield, Headphones } from "lucide-react";
 import { motion } from "framer-motion";
 import shopifyPartnerBadge from "@/assets/shopify-partner.svg";
+import { useState } from "react";
 
 const services = [
   { icon: Palette, title: "Custom Theme Development", desc: "Bespoke Shopify themes designed for fashion — not generic templates that look like everyone else's store." },
@@ -75,6 +76,13 @@ const plans = [
 ];
 
 export default function ShopifyService() {
+  const portfolioImages = [
+    { label: "Fashion Brand Store", src: "/fashion-brand-store.png", alt: "Fashion brand store homepage preview" },
+    { label: "D2C Lifestyle Store", src: "/d2c-lifestyle-store.png", alt: "D2C lifestyle store preview" },
+    { label: "Premium Apparel Store", src: "/premium-apparel-store.png", alt: "Premium apparel store preview" },
+  ];
+  const [activePortfolioIndex, setActivePortfolioIndex] = useState<number | null>(null);
+
   const containerRef = useGSAP((container) => {
     heroReveal(container);
     scrollFadeIn(".gsap-service", container, { stagger: 0.08, y: 20 });
@@ -146,40 +154,64 @@ export default function ShopifyService() {
           <div className="container max-w-5xl">
             <SectionHeading tag="Portfolio" title="Stores we've built" />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {["Fashion Brand Store", "D2C Lifestyle Store", "Premium Apparel Store"].map((label) => (
-                <Card key={label} className="border-border overflow-hidden">
-                  {label === "Fashion Brand Store" ? (
-                    <div className="aspect-[3/4] rounded-none border-0 overflow-hidden bg-muted/40">
-                      <img
-                        src="/fashion-brand-store.png"
-                        alt="Fashion brand store homepage preview"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ) : label === "D2C Lifestyle Store" ? (
-                    <div className="aspect-[3/4] rounded-none border-0 overflow-hidden bg-muted/40">
-                      <img
-                        src="/d2c-lifestyle-store.png"
-                        alt="D2C lifestyle store preview"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ) : label === "Premium Apparel Store" ? (
-                    <div className="aspect-[3/4] rounded-none border-0 overflow-hidden bg-muted/40">
-                      <img
-                        src="/premium-apparel-store.png"
-                        alt="Premium apparel store preview"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ) : (
-                    <ImagePlaceholder label={label} aspectRatio="portrait" className="rounded-none border-0" />
-                  )}
+              {portfolioImages.map((item, i) => (
+                <Card key={item.label} className="border-border overflow-hidden">
+                  <button
+                    type="button"
+                    className="aspect-[3/4] rounded-none border-0 overflow-hidden bg-muted/40 w-full text-left"
+                    onClick={() => setActivePortfolioIndex(i)}
+                  >
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
                 </Card>
               ))}
             </div>
           </div>
         </section>
+        {activePortfolioIndex !== null && (
+          <div
+            className="fixed inset-0 z-[120] bg-black/85 flex items-center justify-center p-4"
+            onClick={() => setActivePortfolioIndex(null)}
+          >
+            <button
+              type="button"
+              className="absolute top-4 right-4 text-white text-2xl leading-none"
+              onClick={() => setActivePortfolioIndex(null)}
+            >
+              ×
+            </button>
+            <button
+              type="button"
+              className="absolute left-4 text-white text-3xl leading-none"
+              onClick={(e) => {
+                e.stopPropagation();
+                setActivePortfolioIndex((prev) => (prev === null ? 0 : (prev - 1 + portfolioImages.length) % portfolioImages.length));
+              }}
+            >
+              ‹
+            </button>
+            <img
+              src={portfolioImages[activePortfolioIndex].src}
+              alt={portfolioImages[activePortfolioIndex].alt}
+              className="max-w-full max-h-[90vh] rounded-xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              type="button"
+              className="absolute right-4 text-white text-3xl leading-none"
+              onClick={(e) => {
+                e.stopPropagation();
+                setActivePortfolioIndex((prev) => (prev === null ? 0 : (prev + 1) % portfolioImages.length));
+              }}
+            >
+              ›
+            </button>
+          </div>
+        )}
 
         {/* Pricing */}
         <section className="py-16 border-t border-border">
@@ -238,19 +270,19 @@ export default function ShopifyService() {
                   <Button variant="outline" className="font-medium gap-2">Try WePixStudio Free <ArrowRight size={16} /></Button>
                 </a>
               </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden">
+              <div className="relative h-[340px] rounded-2xl bg-muted/40 p-4">
+                <div className="absolute left-3 bottom-3 w-[46%] rounded-xl border border-border/50 overflow-hidden shadow-sm">
                   <img
                     src="/raw-iphone-shot-2.png"
                     alt="Raw iPhone garment flat lay"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover aspect-[3/4]"
                   />
                 </div>
-                <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden">
+                <div className="absolute right-3 top-3 w-[46%] rounded-xl border border-border/50 overflow-hidden shadow-sm">
                   <img
                     src="/ai-generated-result-1.png"
                     alt="AI-generated fashion model result"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover aspect-[3/4]"
                   />
                 </div>
               </div>
