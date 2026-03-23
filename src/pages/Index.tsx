@@ -86,7 +86,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-white text-hero-foreground relative overflow-hidden">
+      <section className="bg-hero text-hero-foreground relative overflow-hidden">
         <div className="container relative py-24 md:py-36">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div

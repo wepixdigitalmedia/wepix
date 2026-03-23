@@ -12,7 +12,7 @@ declare global {
 }
 
 const InstagramPlaceholder = ({ isNext }: { isNext?: boolean }) => (
-  <div className={`w-full h-full bg-white flex flex-col items-center justify-center p-6 border border-border/50 rounded-2xl transition-all duration-300 ${isNext ? 'opacity-100 scale-100' : 'opacity-60 scale-95'}`}>
+  <div className={`w-full h-full bg-card flex flex-col items-center justify-center p-6 border border-border/50 rounded-2xl transition-all duration-300 ${isNext ? 'opacity-100 scale-100' : 'opacity-60 scale-95'}`}>
     <div className="flex items-center gap-4 w-full mb-10">
       <div className="w-12 h-12 rounded-full bg-muted/50 animate-pulse" />
       <div className="space-y-3 flex-1">
