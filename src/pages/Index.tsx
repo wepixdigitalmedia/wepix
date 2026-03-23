@@ -165,7 +165,7 @@ const Index = () => {
                 <img
                   src={brand.src}
                   alt={brand.name}
-                  className={`object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 ${brand.className || "h-8 md:h-12 w-auto max-w-[140px] md:max-w-[180px]"}`}
+                  className={`object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 dark:invert transition-all duration-300 ${brand.className || "h-8 md:h-12 w-auto max-w-[140px] md:max-w-[180px]"}`}
                 />
               </a>
             ))}
