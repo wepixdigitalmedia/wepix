@@ -106,7 +106,6 @@ export function Footer() {
             { city: "Tirupur", address: "Sheriff Colony, Tirupur" },
             { city: "Bangalore", address: "HSR Layout, Bangalore" },
             { city: "Chennai", address: "Casagrand Amberly, Navalur, Chennai" },
-            { city: "Dubai", address: "Al Safa St - Downtown Dubai" },
           ].map((loc) => (
             <div key={loc.city} className="flex items-start gap-3">
               <div className="shrink-0 w-8 h-8 rounded-lg bg-muted flex items-center justify-center mt-0.5">
