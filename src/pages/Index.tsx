@@ -73,9 +73,9 @@ const brandCards = [
 ];
 
 const caseStudies = [
-  { brand: "Ethnic Wear, Baby Clothing & Athleisure", stat: "3x ROAS in 60 days", description: "They came to us with zero online presence and a prayer. We gave them a Shopify store, fire content, and Meta Ads that actually slapped. Two months later? ₹5L/month rolling in." },
-  { brand: "BoonBabies", stat: "₹10L+ monthly revenue", description: "A kids' fashion brand with adorable products but zero marketing game. We built everything from scratch — branding, content, store, ads. Now their DMs are busier than a Mumbai local train." },
-  { brand: "Nutmeg", stat: "2.5x revenue growth", description: "Premium menswear brand that was criminally underperforming online. We repositioned them, created chef's-kiss content, and doubled their digital presence. The founder literally sent us biryani." }
+  { brand: "Ethnic Wear", stat: "3x ROAS in 60 days", description: "They came to us with zero online presence and a prayer. We gave them a Shopify store, fire content, and Meta Ads that actually slapped. Two months later? ₹5L/month rolling in." },
+  { brand: "Baby Clothing", stat: "₹10L+ monthly revenue", description: "A kids' fashion brand with adorable products but zero marketing game. We built everything from scratch — branding, content, store, ads. Now their DMs are busier than a Mumbai local train." },
+  { brand: "Athleisure", stat: "2.5x revenue growth", description: "Premium menswear brand that was criminally underperforming online. We repositioned them, created chef's-kiss content, and doubled their digital presence. The founder literally sent us biryani." }
 ];
 
 const Index = () => {
