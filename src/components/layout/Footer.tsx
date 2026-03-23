@@ -101,7 +101,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 pt-8 border-t border-border grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-14 pt-8 border-t border-border flex flex-col sm:flex-row justify-center items-start gap-6 sm:gap-10 lg:gap-16">
           {[
             { city: "Tirupur", address: "Sheriff Colony, Tirupur" },
             { city: "Bangalore", address: "HSR Layout, Bangalore" },
