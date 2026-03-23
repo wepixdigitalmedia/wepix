@@ -267,11 +267,11 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}>
                 <Card className="h-full border-border/50">
-                  {study.brand === "Taasza" ? (
+                  {study.brand === "Ethnic Wear, Baby Clothing & Athleisure" ? (
                     <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
                       <img
                         src="/taasza-results.png"
-                        alt="Taasza performance dashboard"
+                        alt="Case study performance dashboard"
                         className="w-full h-full object-cover"
                         loading="lazy"
                       />
