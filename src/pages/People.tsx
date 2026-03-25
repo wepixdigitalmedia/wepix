@@ -51,6 +51,19 @@ const departments = [
   },
 ];
 
+const memberImageSrc: Record<string, string> = {
+  "Abdul Navas": "/people-abdul-navas.png",
+  "Santhosh": "/people-santhosh.png",
+  "Vignesh": "/people-vignesh.png",
+  "Karthik R.": "/people-karthik-r.png",
+  "Farhan Ahmed": "/people-farhan-ahmed.png",
+  "Rohan Das": "/people-rohan-das.png",
+  "Sneha Reddy": "/people-sneha-reddy.png",
+  "Ananya Iyer": "/people-ananya-iyer.png",
+  "Rahul Menon": "/people-rahul-menon.png",
+  "Vikram S.": "/people-vikram-s.png",
+};
+
 export default function People() {
   return (
     <Layout>
@@ -83,29 +96,11 @@ export default function People() {
                     transition={{ delay: i * 0.04, duration: 0.4 }}
                     className="text-center"
                   >
-                    {member.name === "Abdul Navas" ? (
+                    {memberImageSrc[member.name] ? (
                       <div className="border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-square rounded-xl mb-3 overflow-hidden">
                         <img
-                          src="/people-abdul-navas.png"
-                          alt="Abdul Navas"
-                          className="w-full h-full object-cover"
-                          loading="lazy"
-                        />
-                      </div>
-                    ) : member.name === "Santhosh" ? (
-                      <div className="border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-square rounded-xl mb-3 overflow-hidden">
-                        <img
-                          src="/people-santhosh.png"
-                          alt="Santhosh"
-                          className="w-full h-full object-cover"
-                          loading="lazy"
-                        />
-                      </div>
-                    ) : member.name === "Vignesh" ? (
-                      <div className="border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-square rounded-xl mb-3 overflow-hidden">
-                        <img
-                          src="/people-priya-sharma.png"
-                          alt="Vignesh"
+                          src={memberImageSrc[member.name]}
+                          alt={member.name}
                           className="w-full h-full object-cover"
                           loading="lazy"
                         />

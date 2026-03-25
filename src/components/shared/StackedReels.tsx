@@ -11,40 +11,62 @@ declare global {
   }
 }
 
-const InstagramPlaceholder = ({ isNext }: { isNext?: boolean }) => (
-  <div className={`w-full h-full bg-card flex flex-col items-center justify-center p-6 border border-border/50 rounded-2xl transition-all duration-300 ${isNext ? 'opacity-100 scale-100' : 'opacity-60 scale-95'}`}>
-    <div className="flex items-center gap-4 w-full mb-10">
-      <div className="w-12 h-12 rounded-full bg-muted/50 animate-pulse" />
-      <div className="space-y-3 flex-1">
-        <div className="h-4 w-32 bg-muted/50 animate-pulse rounded" />
-        <div className="h-3 w-20 bg-muted/50 animate-pulse rounded" />
-      </div>
-    </div>
-    
-    <div className="relative group/icon">
-      <div className="absolute inset-0 bg-primary/5 rounded-full blur-2xl scale-150 animate-pulse" />
-      <div className="relative w-16 h-16 text-primary/10 flex items-center justify-center">
-        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-        </svg>
-      </div>
-    </div>
+const InstagramPlaceholder = ({
+  isNext,
+  thumbnailSrc,
+}: {
+  isNext?: boolean;
+  thumbnailSrc?: string;
+}) => (
+  <div
+    className={`w-full h-full bg-card flex flex-col items-center justify-center p-6 border border-border/50 rounded-2xl transition-all duration-300 ${isNext ? "opacity-100 scale-100" : "opacity-60 scale-95"} relative overflow-hidden`}
+  >
+    {thumbnailSrc ? (
+      <>
+        <img src={thumbnailSrc} alt="Reel preview" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="relative mt-auto w-full pb-6 text-center">
+          <div className="text-[0.875rem] font-display font-medium text-white/80 tracking-wide uppercase">
+            Swipe or Click to Play
+          </div>
+        </div>
+      </>
+    ) : (
+      <>
+        <div className="flex items-center gap-4 w-full mb-10">
+          <div className="w-12 h-12 rounded-full bg-muted/50 animate-pulse" />
+          <div className="space-y-3 flex-1">
+            <div className="h-4 w-32 bg-muted/50 animate-pulse rounded" />
+            <div className="h-3 w-20 bg-muted/50 animate-pulse rounded" />
+          </div>
+        </div>
+        
+        <div className="relative group/icon">
+          <div className="absolute inset-0 bg-primary/5 rounded-full blur-2xl scale-150 animate-pulse" />
+          <div className="relative w-16 h-16 text-primary/10 flex items-center justify-center">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+            </svg>
+          </div>
+        </div>
 
-    <div className="mt-12 text-[0.875rem] font-display font-medium text-primary/40 tracking-wide uppercase">
-      Swipe or Click to Play
-    </div>
-    
-    <div className="mt-auto w-full space-y-4 pb-4">
-      <div className="h-3.5 w-[90%] bg-muted/50 animate-pulse rounded" />
-      <div className="h-3.5 w-[70%] bg-muted/50 animate-pulse rounded" />
-    </div>
+        <div className="mt-12 text-[0.875rem] font-display font-medium text-primary/40 tracking-wide uppercase">
+          Swipe or Click to Play
+        </div>
+        
+        <div className="mt-auto w-full space-y-4 pb-4">
+          <div className="h-3.5 w-[90%] bg-muted/50 animate-pulse rounded" />
+          <div className="h-3.5 w-[70%] bg-muted/50 animate-pulse rounded" />
+        </div>
+      </>
+    )}
   </div>
 );
 
-const InstagramEmbed = ({ url, isActive }: { url: string; isActive: boolean }) => {
-  if (!isActive) return <InstagramPlaceholder isNext={true} />;
+const InstagramEmbed = ({ url, isActive, thumbnailSrc }: { url: string; isActive: boolean; thumbnailSrc?: string }) => {
+  if (!isActive) return <InstagramPlaceholder isNext={true} thumbnailSrc={thumbnailSrc} />;
 
   return (
     <blockquote
@@ -122,6 +144,19 @@ export function StackedReels() {
     }
   };
 
+  // Thumbnails for inactive reel cards (keyed by the card index `i`)
+  // Mapping requested by user:
+  // - reel-card-3: first image   -> reel-thumb-1
+  // - reel-card-4: second image  -> reel-thumb-2
+  // - reel-card-1: third image   -> reel-thumb-3
+  // - reel-card-0: fourth image  -> reel-thumb-4
+  const inactiveThumbnailByIndex: Record<number, string> = {
+    0: "/reel-thumb-4.png",
+    1: "/reel-thumb-3.png",
+    3: "/reel-thumb-1.png",
+    4: "/reel-thumb-2.png",
+  };
+
   // Load Instagram embed script and process embeds
   useEffect(() => {
     if (!document.getElementById("instagram-embed-script")) {
@@ -158,6 +193,7 @@ export function StackedReels() {
           // Calculate offset relative to the ACTIVE index, not just the center
           const offset = i - activeIndex; 
           const isActive = i === activeIndex;
+          const thumbnailSrc = inactiveThumbnailByIndex[i];
           
           return (
             <motion.div
@@ -199,7 +235,7 @@ export function StackedReels() {
                 id={`reel-container-${i}`} 
                 className={`w-full h-full bg-muted flex items-center justify-center overflow-y-auto ${activeIndex !== i ? 'pointer-events-none' : ''} [&>iframe]:!min-w-0 [&>iframe]:!w-full [&>iframe]:!h-full [&>iframe]:!m-0 [&>iframe]:!border-none`}
               >
-                <InstagramEmbed url={url} isActive={isActive} />
+                <InstagramEmbed url={url} isActive={isActive} thumbnailSrc={thumbnailSrc} />
               </div>
             </motion.div>
           );

@@ -75,7 +75,36 @@ export default function Academy() {
                 <div key={o.title} className="gsap-offering-card opacity-0">
                   <Link to={o.href}>
                     <Card className="h-full hover:shadow-md transition-all rounded-xl border-border group overflow-hidden">
-                      <ImagePlaceholder label={o.img} aspectRatio="video" className="rounded-none border-0 border-b-2" />
+                      {o.img === "Course preview" ? (
+                        <div className="border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 border-b-2 overflow-hidden">
+                          <img
+                            src="/meta-ads-course.png"
+                            alt="Meta Ads Mastery Course preview"
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : o.img === "Webinar screenshot" ? (
+                        <div className="border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 border-b-2 overflow-hidden">
+                          <img
+                            src="/academy-webinar.png"
+                            alt="Live Webinars preview"
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : o.img === "Community screenshot" ? (
+                        <div className="border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 border-b-2 overflow-hidden">
+                          <img
+                            src="/academy-skool.png"
+                            alt="Skool Community preview"
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : (
+                        <ImagePlaceholder label={o.img} aspectRatio="video" className="rounded-none border-0 border-b-2" />
+                      )}
                       <CardContent className="p-6">
                         <o.icon className="text-foreground mb-4" size={24} />
                         <h3 className="font-display text-lg font-semibold mb-2">{o.title}</h3>
@@ -110,10 +139,33 @@ export default function Academy() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {Array.from({ length: 3 }).map((_, i) => (
                 <Card key={i} className="rounded-xl border-border overflow-hidden">
-                  <ImagePlaceholder label={`Student testimonial ${i + 1}`} aspectRatio="video" className="rounded-none border-0 border-b-2" />
-                  <CardContent className="p-4">
+                  {i === 0 || i === 1 || i === 2 ? (
+                    <div className="border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 border-b-2 overflow-hidden">
+                      <iframe
+                        src={
+                          i === 0
+                            ? "https://www.loom.com/embed/b6079dabb5e2432fab89cc87c38d7311?sid=3331d3a5-0299-4a22-a34e-34e902d2f5a9"
+                            : i === 1
+                              ? "https://www.loom.com/embed/e540819463034fec930b1e8a49500875?sid=f922beb6-2ec5-45f8-9069-5bb2386a9211"
+                              : "https://www.loom.com/embed/87769751460e48c1ae14e3578d463337?sid=b4054c28-543f-4fa6-83f0-f8b87c3f8189"
+                        }
+                        title={`Student testimonial ${i + 1}`}
+                        className="w-full h-full"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      />
+                    </div>
+                  ) : (
+                    <ImagePlaceholder
+                      label={`Student testimonial ${i + 1}`}
+                      aspectRatio="video"
+                      className="rounded-none border-0 border-b-2"
+                    />
+                  )}
+                  {/* <CardContent className="p-4">
                     <p className="text-sm text-muted-foreground">Student testimonial coming soon</p>
-                  </CardContent>
+                  </CardContent> */}
                 </Card>
               ))}
             </div>

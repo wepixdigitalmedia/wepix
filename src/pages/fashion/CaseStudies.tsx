@@ -14,7 +14,7 @@ const studies = [
   { brand: "Thedori", category: "Streetwear", stat: "5x ROAS", description: "Bold streetwear brand with zero paid strategy. We built a full Meta funnel and scaled from ₹0 to ₹1L/day ad spend profitably." },
   { brand: "Pinkstories", category: "Baby Accessories", stat: "₹12L+ / mo", description: "Cute products, chaotic branding. We unified everything - content, store, ads - and turned them into a category leader." },
   { brand: "Alankarchennai", category: "Luxury Ethnic", stat: "3.8x ROAS", description: "High-ticket ethnic wear brand. Premium Shopify store + catalog ads targeting NRI audiences across the US and UK." },
-  { brand: "Cloudyfit", category: "Men's Grooming", stat: "60% CPA ↓", description: "Grooming brand burning cash on ads. We restructured campaigns, refreshed creatives, and cut their CPA by more than half." },
+  { brand: "Cloudyfit", category: "Men's Grooming", stat: "60% CPA ↑", description: "Grooming brand burning cash on ads. We restructured campaigns, refreshed creatives, and cut their CPA by more than half." },
 ];
 
 export default function CaseStudies() {
@@ -82,11 +82,11 @@ export default function CaseStudies() {
                     <CardContent className="p-5">
                       <div className="flex items-center justify-between mb-3">
                         <span className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">{study.category}</span>
-                        <span className="flex items-center gap-1 text-xs font-semibold text-foreground">
+                        {/* <span className="flex items-center gap-1 text-xs font-semibold text-foreground">
                           <TrendingUp size={12} /> {study.stat}
-                        </span>
+                        </span> */}
                       </div>
-                      <h3 className="font-display text-xl font-semibold mb-2">{study.brand}</h3>
+                      <h3 className="font-display text-xl font-semibold mb-2">{study.stat}</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">{study.description}</p>
                     </CardContent>
                   </Card>

@@ -267,11 +267,29 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}>
                 <Card className="h-full border-border/50">
-                  {study.brand === "Ethnic Wear, Baby Clothing & Athleisure" ? (
+                  {study.brand === "Ethnic Wear" ? (
                     <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
                       <img
-                        src="/taasza-results.png"
+                        src="/ethnic-wear-results.png"
                         alt="Case study performance dashboard"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : study.brand === "Baby Clothing" ? (
+                    <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
+                      <img
+                        src="/baby-clothing-results.png"
+                        alt="Baby Clothing performance dashboard"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : study.brand === "Athleisure" ? (
+                    <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
+                      <img
+                        src="/athleisure-results.png"
+                        alt="Athleisure performance dashboard"
                         className="w-full h-full object-cover"
                         loading="lazy"
                       />

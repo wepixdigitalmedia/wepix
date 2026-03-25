@@ -7,10 +7,10 @@ import { useGSAP, heroReveal, scrollFadeIn } from "@/hooks/useGSAP";
 import { Bot, MessageSquare, Users, BarChart3, Clock, ArrowRight } from "lucide-react";
 
 const agents = [
-  { title: "Sales Call Setter Agent", description: "Automatically books qualified sales calls on your calendar. It handles objections, finds the right time slots, and sends confirmations — so your sales team only shows up to close.", img: "Sales call setter interface" },
-  { title: "Lead Qualifier Agent", description: "Scores and qualifies every inbound lead in real-time. Asks the right questions, captures key data, and routes hot prospects straight to your closers. No more chasing dead ends.", img: "Lead qualifier dashboard" },
-  { title: "WhatsApp Chat Agent", description: "Engages customers on WhatsApp 24/7 — answers queries, shares catalogs, processes orders, and escalates when needed. Feels like texting a real person, works like a machine.", img: "WhatsApp chat agent demo" },
-  { title: "Instagram DM Agent", description: "Responds to every DM instantly. Handles product inquiries, captures leads from story replies, and turns casual browsers into paying customers — all on autopilot.", img: "Instagram DM agent interface" },
+  { title: "Sales Call Setter Agent", description: "Automatically books qualified sales calls on your calendar. It handles objections, finds the right time slots, and sends confirmations — so your sales team only shows up to close.", img: "Sales call setter interface", src: "/ai-agent-setter.png" },
+  { title: "Lead Qualifier Agent", description: "Scores and qualifies every inbound lead in real-time. Asks the right questions, captures key data, and routes hot prospects straight to your closers. No more chasing dead ends.", img: "Lead qualifier dashboard", src: "/ai-agent-qualifier.png" },
+  { title: "WhatsApp Chat Agent", description: "Engages customers on WhatsApp 24/7 — answers queries, shares catalogs, processes orders, and escalates when needed. Feels like texting a real person, works like a machine.", img: "WhatsApp chat agent demo", src: "/ai-agent-chat.png" },
+  { title: "Instagram DM Agent", description: "Responds to every DM instantly. Handles product inquiries, captures leads from story replies, and turns casual browsers into paying customers — all on autopilot.", img: "Instagram DM agent interface", src: "/ai-agent-dm.png" },
 ];
 
 const useCases = [
@@ -105,7 +105,7 @@ export default function AIAgents() {
               {agents.map((agent) => (
                 <div key={agent.title} className="gsap-agent opacity-0">
                   <Card className="h-full rounded-xl border-border overflow-hidden">
-                    <ImagePlaceholder label={agent.img} aspectRatio="video" />
+                    <ImagePlaceholder label={agent.img} src={agent.src} alt={agent.title} aspectRatio="video" />
                     <CardContent className="p-4 sm:p-5">
                       <h3 className="font-display text-sm sm:text-base font-semibold">{agent.title}</h3>
                       <p className="text-sm text-muted-foreground mt-2">{agent.description}</p>
