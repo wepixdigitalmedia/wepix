@@ -17,10 +17,10 @@ const services = [
 ];
 
 const mcsSteps = [
-  { step: "M", title: "Media", description: "Where to show up, who to target, and how much to spend without crying. Platform strategy that actually makes sense." },
-  { step: "C", title: "Creative", description: "The stuff that makes people stop scrolling. UGC, product shoots, carousel ads — content so good people screenshot it." },
-  { step: "S", title: "Strategy", description: "Full-funnel thinking: from 'who are you?' to 'take my money!' — awareness, consideration, conversion, retention." },
-  { step: "4", title: "Iterate", description: "Weekly data reviews because ads aren't a 'set it and forget it' crockpot. We optimize obsessively." },
+  { step: "M", title: "Media", description: "We target the right audience with the right budget, so every rupee is well spent." },
+  { step: "C", title: "Creative", description: "We create content that grabs attention and makes people stop, look, and save." },
+  { step: "S", title: "Strategy", description: "We plan the full customer journey—from first impression to purchase." },
+  { step: "4", title: "Iterate", description: "We track results and improve every week. Nothing is left on autopilot." },
 ];
 
 export default function Fashion() {
@@ -60,10 +60,10 @@ export default function Fashion() {
               <div>
                 <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">WePix Fashion</span>
                 <h1 className="gsap-hero-title font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] opacity-0">
-                  Your product is fire. Your marketing? Let's talk about that.
+                  You nailed the product. Now let's nail the marketing!
                 </h1>
                 <p className="gsap-hero-desc mt-5 text-base text-muted-foreground opacity-0">
-                  Here's the thing — you've spent months perfecting your designs, sourcing the best fabric, getting the stitching just right. And then your marketing is... a Canva template with Comic Sans vibes? Nah fam. We help D2C fashion brands create content that stops thumbs, run ads that convert wallets, and build a brand that people actually want to wear.
+                Every stitch, every fabric, every detail, you got it right. So why is your marketing still looking like a 2015 Facebook post? We help D2C fashion brands show up loud, sell hard, and build a brand that people actually talk about.
                 </p>
                 <div className="flex flex-wrap gap-3 mt-8">
                   <Link to="/fashion/kickstarter" className="gsap-hero-cta opacity-0">
@@ -205,7 +205,7 @@ export default function Fashion() {
 
         <section className="gsap-mcs-section py-24">
           <div className="container">
-            <SectionHeading tag="Our Secret Sauce" title="The MCS Framework" description="Media, Creative, Strategy — and never-ending iteration. This is the system behind every successful campaign we've ever run." />
+            <SectionHeading tag="Our Secret Sauce" title="The MCS Framework" description="Media, Creative, Strategy and never stopping until it works. This is the system behind every campaign we have run and every result we have delivered." />
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {mcsSteps.map((step) => (
                 <div key={step.step} className="gsap-mcs-step text-center opacity-0">

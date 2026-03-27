@@ -9,17 +9,17 @@ import { Link } from "react-router-dom";
 import { useGSAP, heroReveal, scrollFadeIn, gsap } from "@/hooks/useGSAP";
 
 const offerings = [
-  { icon: GraduationCap, title: "Meta Ads Mastery Course", description: "The complete, no-BS course on running profitable Meta Ads. Built from thousands of hours of actually running campaigns, not reading about them.", href: "/academy/meta-ads-course", img: "Course preview" },
-  { icon: Video, title: "Live Webinars", description: "Weekly live sessions where we break down real campaigns, share what's working RIGHT NOW, and answer your burning questions. Free to attend, packed with value.", href: "/academy/webinar", img: "Webinar screenshot" },
-  { icon: Users, title: "Skool Community", description: "500+ marketers and brand owners sharing wins, losses, and everything in between. It's like a group chat, but actually useful.", href: "/academy/community", img: "Community screenshot" },
+  { icon: GraduationCap, title: "Meta Ads Mastery Course", description: "Learn the real way to run profitable Meta Ads. This isn't some textbook theory. We’re talking about actual experience from running real campaigns. No fluff, just results.", href: "/academy/meta-ads-course", img: "Course preview" },
+  { icon: Video, title: "Live Webinars", description: "Get direct access to weekly live sessions where we break down what’s working right now. We’ll answer all your burning questions and share the most actionable tips in real-time.", href: "/academy/webinar", img: "Webinar screenshot" },
+  { icon: Users, title: "Skool Community", description: "Join a group of 500+ marketers and brand owners where we share wins, losses, and everything in between. It’s like a group chat, but full of knowledge and support.", href: "/academy/community", img: "Community screenshot" },
 ];
 
 const whoItsFor = [
-  "D2C brand founders who are tired of agencies eating their budget and want to run their own ads (smart move btw)",
-  "Marketing managers who need to level up their Meta Ads game before their boss notices they've been boosting posts",
-  "Freelancers who want to offer ad services to clients and actually deliver results (rare breed)",
-  "Agency owners building or scaling their ad teams who need a proven framework (not another YouTube hack)",
-  "Anyone who's ever looked at their ad dashboard and thought 'what do these numbers even mean?'",
+  "Founders tired of paying agencies and ready to run your own ads (trust us, smart move)",
+  "Marketing managers who wanna level up their Meta Ads game before your boss catches you just boosting posts",
+  "Freelancers who want to offer legit ad services and actually get results (not just talk)",
+  "Agency owners scaling their ad teams but need a solid framework (no more “quick-fix” YouTube hacks)",
+  "Anyone who’s stared at their ad dashboard and thought, “Wait, what are these numbers even telling me?”",
 ];
 
 export default function Academy() {
@@ -41,10 +41,10 @@ export default function Academy() {
               <div>
                 <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">WePix Academy</span>
                 <h1 className="gsap-hero-title font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] opacity-0">
-                  Learn from people who actually run the ads. Not from people who make courses about running ads.
+                Learn from People Actually Running the Ads, Not People Talking About Them
                 </h1>
                 <p className="gsap-hero-desc mt-5 text-base text-muted-foreground opacity-0">
-                  Here's the tea: most marketing courses are taught by people whose main income IS the course. Ours is different. We manage crores in ad spend every month. We run campaigns for real brands. And then we teach you exactly what we learned — mistakes, wins, and all the stuff nobody talks about on YouTube.
+                Here’s the deal: most marketing courses are by people who make bank off the course itself. Ours is different. We’re managing crores in ad spend every month, running legit campaigns for real brands. And we’re giving you the full scoop, mistakes, wins, and all the stuff no one tells you on YouTube.
                 </p>
                 <div className="flex flex-wrap gap-3 mt-8">
                   <Link to="/academy/meta-ads-course" className="gsap-hero-cta opacity-0">
@@ -121,7 +121,7 @@ export default function Academy() {
 
         <section className="py-24 bg-muted/30">
           <div className="container max-w-3xl gsap-checklist">
-            <SectionHeading tag="Is this for you?" title="If any of these sound like you, you're in the right place" align="left" />
+            <SectionHeading tag="Is this for you?" title="Is This You? You’re in the Right Place!" align="left" />
             <div className="space-y-3">
               {whoItsFor.map((item) => (
                 <div key={item} className="gsap-check-item flex items-start gap-3 opacity-0">

@@ -19,8 +19,8 @@ export default function BusinessContact() {
         <section className="gsap-hero-section py-24 md:py-32">
           <div className="container max-w-3xl">
             <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">Business Inquiries</span>
-            <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">Let's grow your business. Together. (Cue dramatic music)</h1>
-            <p className="gsap-hero-desc mt-4 text-lg text-muted-foreground opacity-0">Whether you need AI agents, lead gen, or a complete marketing overhaul — let's start with a conversation. No corporate small talk. No 'let me align with stakeholders.' Just tell us about your goals and we'll tell you how we'd tackle them.</p>
+            <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">Let’s Take Your Business to the Next Level. (Cue the Epic Soundtrack)</h1>
+            <p className="gsap-hero-desc mt-4 text-lg text-muted-foreground opacity-0">Need AI agents, lead gen, or a complete marketing makeover? Forget the formalities. No "let me check with the team" nonsense. Just share your goals, and we’ll tell you how we’ll get there together.</p>
           </div>
         </section>
 

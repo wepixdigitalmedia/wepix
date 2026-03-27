@@ -39,7 +39,7 @@ export default function Perennial() {
 
       {/* Brand Narrative */}
       <section className="py-20">
-        <div className="container max-w-4xl">
+        <div className="container max-w-4xl" style={{ maxWidth: "70rem" }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <img src={wepixTeamImg} alt="WePix team photo" className="rounded-xl w-full h-auto object-cover aspect-square lg:aspect-auto" loading="lazy" />
             <div className="space-y-4 text-muted-foreground leading-relaxed">

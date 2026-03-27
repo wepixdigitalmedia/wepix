@@ -8,7 +8,7 @@ import { CTABanner } from "@/components/shared/CTABanner";
 import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder";
 import { BookingFormDialog } from "@/components/shared/BookingFormDialog";
 import { TirupurTooltip } from "@/components/shared/TirupurTooltip";
-import { ArrowRight, Sparkles, GraduationCap, Briefcase, ShoppingBag, Play, Linkedin, Instagram, Twitter } from "lucide-react";
+import { ArrowRight, Sparkles, GraduationCap, Briefcase, ShoppingBag, Play, Linkedin, Instagram } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -32,6 +32,22 @@ const trustedBrands = [
   { name: "Lemoon Baby", src: lemoonLogo, href: "https://www.lemoonbaby.in/?utm_source=wepix.in&utm_medium=partner_logo", className: "h-auto w-24 md:w-32" },
   { name: "Fregor", src: fregorLogo, href: "https://fregor.in/?utm_source=wepix.in&utm_medium=partner_logo", className: "h-auto w-16 md:w-24" },
 ];
+
+function XLogo({ size = 18, className = "" }: { size?: number; className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M18.244 2h3.308l-7.227 8.26L22.825 22h-6.652l-5.21-6.817L4.999 22H1.69l7.73-8.835L1.286 2h6.82l4.71 6.231L18.244 2Zm-1.16 18h1.833L7.112 3.896H5.146L17.084 20Z" />
+    </svg>
+  );
+}
 
 import heroFashionImage from "@/assets/hero-fashion.png";
 import academyHeroImage from "@/assets/academy-hero.png";
@@ -105,7 +121,7 @@ const Index = () => {
                 </h1>
               </div>
               <p className="mt-5 text-[0.9375rem] md:text-base text-hero-foreground/60 leading-relaxed">
-                Picture this: you've got an amazing product, but your marketing looks like it was done by your cousin's friend who "knows Canva." Yeah, we fix that. Fashion, education, business — one crew that handles everything so you can stop losing sleep over your Instagram reach.
+              Most brands are invisible online and they don't even know it. We fix that. From Meta ads to content to full brand strategy, we make sure your brand shows up, stands out, and brings back real results. One team. Every platform. No cap.
               </p>
               <div className="flex flex-wrap gap-4 mt-10">
                 <Link to="/fashion">
@@ -114,7 +130,7 @@ const Index = () => {
                   </Button>
                 </Link>
                 <BookingFormDialog
-                  triggerLabel="Book a Free Strategy Call"
+                  triggerLabel="Let's Fix My Marketing"
                   triggerClassName="font-display font-medium text-base bg-primary text-primary-foreground hover:bg-primary/90"
                 />
               </div>
@@ -165,7 +181,7 @@ const Index = () => {
                 <img
                   src={brand.src}
                   alt={brand.name}
-                  className={`object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 dark:invert transition-all duration-300 ${brand.className || "h-8 md:h-12 w-auto max-w-[140px] md:max-w-[180px]"}`}
+                  className={`object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 dark:invert dark:hover:invert-0 transition-all duration-300 ${brand.className || "h-8 md:h-12 w-auto max-w-[140px] md:max-w-[180px]"}`}
                 />
               </a>
             ))}
@@ -459,7 +475,8 @@ const Index = () => {
               {
                 name: "Abdul",
                 role: "Founder & CEO, Fashion brand expert and growth consultant",
-                bio: (<>Grew up in <TirupurTooltip /> (The garment capital) breathing cotton and hustle. Broke out of the traditional textile matrix to build a digital empire because seeing fire products with trash marketing physically hurt him. Superpower? Scaling D2C fashion brands from 'who?' to sold-out faster than a sneaker drop. Oh, and his ROAS predictions? Lowkey psychic.</>),
+                bio: (<>
+                Founder & CEO, Fashion Brand Expert & Growth Consultant Grew up in <TirupurTooltip /> where fabric and ambition go hand in hand. Watched incredible products die because of bad marketing and decided that had to stop. Today he turns D2C fashion brands from hidden gems into sold out stories. Numbers, strategy, growth, he feels it before the data even shows it.</>),
                 photo: founderAbdulImage,
                 social: {
                   linkedin: "https://www.linkedin.com/in/abdulnavas/",
@@ -470,7 +487,7 @@ const Index = () => {
               {
                 name: "Santhosh",
                 role: "Co-Founder & CFO - Finance Controller, Principal Consultant for Brands",
-                bio: "The guy holding the bag (in a good way). While Abdul is out plotting world domination, Santhosh is the one making sure the math actually maths. Budgets, scaling cash flow, financial ops — he guards the treasury like it's his life. He literally loves Excel sheets more than most people love their pets. Total goat at keeping the agency and our clients highly profitable.",
+                bio: "Co-Founder & CFO, Principal Brand Consultant Every rupee has a job and he makes sure it does it well. Santhosh keeps the financial engine running clean so the team can focus on delivering results. Budgets balance, cash flows right, and clients stay profitable. The kind of person who finds problems in the numbers before they become actual problems.",
                 photo: founderSanthoshImage,
                 social: {
                   linkedin: "https://linkedin.com/in/santhosh-wepix",
@@ -481,7 +498,7 @@ const Index = () => {
               {
                 name: "Vignesh",
                 role: "COO at WePix Business (Lead Gen Expert)",
-                bio: "Basically the cheat code for B2B growth. Vignesh doesn't just 'generate leads,' he builds absolute machines that make your sales team sweat trying to keep up. While everyone else is crying over algorithm changes, he's out here securing the bag for clients using high-level systems that actually convert. The definition of 'talk is cheap, show me the leads.'",
+                bio: "COO, Lead Gen Expert He does not chase leads. He builds systems that attract the right people, warm them up, and hand them over ready to buy. While others are figuring out what went wrong, Vignesh already has the next pipeline full and moving. Results first, talk later.",
                 social: {
                   linkedin: "https://linkedin.com/company/wepix",
                   instagram: "https://instagram.com/wepix",
@@ -551,7 +568,7 @@ const Index = () => {
                       aria-label={`${founder.name} X`}
                       className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-muted/50 hover:bg-muted/80 transition-colors"
                     >
-                      <Twitter size={18} className="text-[#000000]" />
+                      <XLogo size={18} className="text-black dark:text-white" />
                     </a>
                   </div>
                 </CardContent>

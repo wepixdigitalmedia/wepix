@@ -6,12 +6,12 @@ import { useGSAP, heroReveal, gsap } from "@/hooks/useGSAP";
 import { Users, MessageSquare, BookOpen, ArrowRight, Check } from "lucide-react";
 
 const benefits = [
-  "Daily discussions on ads, content, and growth — like a group chat, but everyone actually knows what they're talking about",
-  "Real campaign breakdowns and case studies — we show the numbers, the strategy, and the mistakes (yes, we share those too)",
-  "Direct access to WePix team members — ask questions, get answers, no gatekeeping",
-  "Weekly challenges and accountability — because sometimes you need someone to say 'did you actually launch that campaign?'",
-  "Template library and resource vault — steal our frameworks, templates, and SOPs. We don't mind.",
-  "Networking with 500+ marketers and founders — your next business partner, client, or bestie might be in here",
+  "Daily convos about ads, content, and growth. It’s like a group chat, but everyone actually knows what’s up.",
+  "Real campaign breakdowns and case studies. We drop the numbers, strategy, and yeah, we share the mistakes too.",
+  "Direct access to WePix team members. Ask your questions, get answers, no gatekeeping.",
+  "Weekly challenges and accountability. Because sometimes you need someone to ask, “Yo, did you launch that campaign yet?”",
+  "Template library and resource vault. Swipe our frameworks, templates, and SOPs. No worries, we got you.",
+  "Networking with 500+ marketers and founders. Your next business partner, client, or bestie could be in here.",
 ];
 
 export default function Community() {
@@ -29,8 +29,8 @@ export default function Community() {
         <section className="gsap-hero-section py-24 md:py-32">
           <div className="container max-w-3xl">
             <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">Community</span>
-            <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">Your marketing crew. Always online. Always helpful. Always slightly chaotic.</h1>
-            <p className="gsap-hero-desc mt-4 text-lg text-muted-foreground opacity-0">Imagine having 500+ marketers and brand owners in your pocket — ready to help, share insights, and hype you up when your campaign finally hits 3x ROAS at 2 AM. That's the WePix Skool community. It's the group chat you wish you had.</p>
+            <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">Always On. Always Ready to Help. Always a Little Wild.</h1>
+            <p className="gsap-hero-desc mt-4 text-lg text-muted-foreground opacity-0">Picture having a squad of 500+ marketers and brand owners right in your pocket. They’re here to share insights, answer your burning questions, and throw a virtual high-five when your campaign crushes 3x ROAS at 2 AM. That’s the WePix Skool community. It’s the group chat you never knew you needed.</p>
             <div className="mt-10">
               <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] overflow-hidden">
                 <img
@@ -63,7 +63,7 @@ export default function Community() {
             </div>
 
             <div className="gsap-benefits">
-              <h2 className="font-display text-2xl md:text-3xl font-semibold mb-8">What you actually get</h2>
+              <h2 className="font-display text-2xl md:text-3xl font-semibold mb-8">What’s Waiting for You</h2>
               <div className="space-y-3 mb-10">
                 {benefits.map((b) => (
                   <div key={b} className="gsap-benefit flex items-start gap-3 opacity-0">

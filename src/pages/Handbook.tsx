@@ -64,39 +64,39 @@ export default function Handbook() {
             {/* CHAPTER 01 — WHO WE ARE */}
             <TabsContent value="who-we-are" className="space-y-4">
               <ContentCard icon={BookOpen} title="WePix Is Not Just Another Agency">
-                <p>Founded in 2022 by Abdul Navas (CEO) and Santhosh (CFO), WePix was built on one very specific belief: fashion e-commerce brands in India deserved better digital marketing than what was available. Not generic. Not templated. Not a copy-paste strategy that works for literally everyone and impresses no one.</p>
-                <p>So we built something different. A team that actually understands fashion, actually understands e-commerce, and actually cares about whether the client's campaign does anything or just looks pretty in a report.</p>
+                <p>Founded in 2022 by Abdul Navas (CEO) and Santhosh (CFO), WePix was created with one clear belief: fashion e-commerce brands in India deserve better digital marketing. Not generic strategies. Not templated solutions. And certainly not the same-old copy-paste strategy that fails to stand out.</p>
+                <p>So, we built something different. A team that truly understands fashion, understands e-commerce, and genuinely cares about whether our clients’ campaigns drive results or just look good on paper.</p>
               </ContentCard>
 
               <ContentCard icon={Users} title="The Mission">
-                <p>We want to be the digital partner that fashion brands call first — not because we are the biggest agency, but because we consistently deliver results that matter. Better digital presence. More conversions. Campaigns that don't embarrass anyone.</p>
+                <p>We aim to be the first digital partner fashion brands turn to, not because we are the biggest agency, but because we deliver results that matter. Better digital presence. More conversions. Campaigns that actually get things done.</p>
               </ContentCard>
 
               <ContentCard icon={Shield} title="The Six Things WePix Stands For">
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-medium text-foreground">Innovation and Creativity</h4>
-                    <p>We don't recycle last season's strategy and rebrand it as fresh thinking. Every client gets real, tailored solutions — not a template with their logo on it.</p>
+                    <p>We don’t recycle outdated strategies. Every client gets a custom approach, tailored just for them. No generic templates with their logo on it.</p>
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground">Collaboration and Teamwork</h4>
-                    <p>The best work at WePix has never come from one person working in isolation. It comes from people talking to each other, sharing references, challenging ideas, and building on each other's thinking.</p>
+                    <p>The best work at WePix doesn’t come from one person working alone. It comes from people talking, sharing ideas, challenging each other, and building on one another’s thinking.</p>
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground">Commitment to Learning</h4>
-                    <p>Digital marketing moves fast. What worked six months ago might be irrelevant today. Staying curious and updated is not optional here — it is part of the job description.</p>
+                    <p>Digital marketing moves at lightning speed. What worked six months ago could be outdated today. Staying curious and informed isn’t optional at WePix. It’s built into the job.</p>
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground">Customer Focus</h4>
-                    <p>Our clients are not just accounts. They are brands with real stakes — real budgets, real sales targets, real pressure. When we treat their problems like they are ours, everyone wins.</p>
+                    <p>Our clients aren’t just accounts. They are brands with real goals. Real budgets, sales targets, and pressure. When we treat their challenges as our own, everyone wins.</p>
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground">Fun and Passion</h4>
-                    <p>We take our work seriously. We don't take ourselves too seriously. There is a difference. Enjoy what you do. If you have lost the joy, say something — don't just quietly stop caring.</p>
+                    <p>We take our work seriously, but not ourselves. Enjoy what you do. If the passion’s gone, speak up. Don’t just quietly stop caring.</p>
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground">Integrity and Transparency</h4>
-                    <p>We don't lie to clients. We don't lie to each other. If something went wrong, we say so and fix it. Honesty is faster and less exhausting than pretending everything is fine.</p>
+                    <p>We’re honest with our clients and each other. If something goes wrong, we own up and fix it. Honesty is easier and more effective than pretending everything is fine.</p>
                   </div>
                 </div>
               </ContentCard>
@@ -119,7 +119,7 @@ export default function Handbook() {
 
               <ContentCard icon={BookOpen} title="The First Week Goal">
                 <p>Your first week is not about impressing everyone. It is about understanding how things work here. Where do decisions get made? How does feedback flow? What is the team's rhythm?</p>
-                <p>Ask questions. Take notes. Say hello to people you don't know. And if something feels confusing or unclear — speak up. Staying silent and guessing is how misunderstandings start on Day 3 and explode on Day 30.</p>
+                <p>Ask questions. Take notes. Say hello to people you don't know. And if something feels confusing or unclear, speak up. Staying silent and guessing is how misunderstandings start on Day 3 and explode on Day 30.</p>
               </ContentCard>
             </TabsContent>
 
@@ -168,7 +168,7 @@ export default function Handbook() {
 
               <ContentCard icon={Calendar} title="Quarterly Voice of Team">
                 <p>Every quarter, we run a Voice of Team segment in our review meetings. This is not a venting session. It is a structured space to flag recurring issues, suggest improvements, and recognize things that are genuinely working well.</p>
-                <p>You can also submit feedback anytime at feedback@wepix.in. It is confidential. It goes to HR and management — not to your entire team group chat.</p>
+                <p>You can also submit feedback anytime at feedback@wepix.in. It is confidential. It goes to HR and management, not to your entire team group chat.</p>
               </ContentCard>
 
               <ContentCard icon={AlertTriangle} title="Grievance Process">
@@ -237,7 +237,7 @@ export default function Handbook() {
               <ContentCard icon={Clock} title="Permissions (Short Time Off)">
                 <InfoRow label="Monthly Limit" value="4 hours maximum per month" />
                 <InfoRow label="Minimum Block" value="30 minutes at a time" />
-                <InfoRow label="How to Apply" value="Through the HR system or your manager — in advance" />
+                <InfoRow label="How to Apply" value="Through the HR system or your manager, in advance" />
                 <InfoRow label="Exceeding 4 Hours" value="Treated as unpaid leave or deducted from casual leave" />
               </ContentCard>
 
@@ -247,7 +247,7 @@ export default function Handbook() {
                 <InfoRow label="Carry Forward" value="Not allowed unless approved in writing by HR." />
                 <InfoRow label="Unapproved Leave" value="Marked as Absent. Unpaid. May lead to disciplinary action." />
                 <InfoRow label="Regularization" value="Allowed once per week for genuine emergencies. Not for routine late check-ins." />
-                <InfoRow label="Overtime" value="Beyond standard hours — eligible for compensation as per legal norms. Must be pre-approved." />
+                <InfoRow label="Overtime" value="Beyond standard hours, eligible for compensation as per legal norms. Must be pre-approved." />
               </ContentCard>
 
               <Card className="border-primary/30 bg-primary/5">
@@ -260,21 +260,21 @@ export default function Handbook() {
             {/* CHAPTER 06 — CONDUCT */}
             <TabsContent value="conduct" className="space-y-4">
               <ContentCard icon={Shield} title="Professional Conduct">
-                <p>Show up as someone who respects the people around them. Respect means different things in different contexts — but at minimum it means: you don't talk over people, you don't undermine colleagues in client meetings, you don't ghost your team when there is a deadline in two hours.</p>
-                <p>Dress code: professional attire at all times. If uniforms are provided, wear them. This is not negotiable — it is about representing a brand that clients need to trust.</p>
+                <p>Show up as someone who respects the people around them. Respect means different things in different contexts, but at minimum it means: you don't talk over people, you don't undermine colleagues in client meetings, you don't ghost your team when there is a deadline in two hours.</p>
+                <p>Dress code: professional attire at all times. If uniforms are provided, wear them. This is not negotiable. It is about representing a brand that clients need to trust.</p>
               </ContentCard>
 
               <ContentCard icon={Lock} title="Protecting Company Information">
-                <p>When you join WePix, you sign a confidentiality agreement. This is not bureaucracy — it protects real business interests. Client data, campaign strategies, creative work, and company financials are confidential. They don't leave the office and they don't get shared outside proper channels.</p>
-                <p>Company assets — devices, software, equipment — are for work. Using them for personal projects or unrelated activity is not okay.</p>
+                <p>`When you join WePix, you sign a confidentiality agreement. This is not bureaucracy. It protects real business interests. Client data, campaign strategies, creative work, and company financials are confidential. They don't leave the office and they don't get shared outside proper channels.</p>`
+                <p>Company assets: devices, software, equipment are for work. Using them for personal projects or unrelated activity is not okay.</p>
               </ContentCard>
 
               <ContentCard icon={Shield} title="Non-Solicitation and Non-Compete">
-                <p>During your employment and for 6 months after leaving WePix, you may not solicit WePix clients, employees, or business partners for yourself or any other party. The non-compete clause details will be in your specific agreement — read it.</p>
+                <p>During your employment and for 6 months after leaving WePix, you may not solicit WePix clients, employees, or business partners for yourself or any other party. The non-compete clause details will be in your specific agreement. Read it.</p>
               </ContentCard>
 
               <ContentCard icon={AlertTriangle} title="Disciplinary Process">
-                <p>Violations of company policy lead to a graduated response: verbal warning, written warning, suspension, or termination — depending on severity. Serious violations (harassment, data breach, gross misconduct) can result in immediate termination.</p>
+                <p>Violations of company policy lead to a graduated response: verbal warning, written warning, suspension, or termination depending on severity. Serious violations (harassment, data breach, gross misconduct) can result in immediate termination.</p>
               </ContentCard>
 
               <Card className="border-primary/30 bg-primary/5">
@@ -288,7 +288,7 @@ export default function Handbook() {
             <TabsContent value="growth" className="space-y-4">
               <ContentCard icon={TrendingUp} title="How People Move Up Here">
                 <p>Growth at WePix is not a mystery. It is not based on who is the loudest in meetings or who has been here the longest. It is based on actual output, actual ownership, and actual impact.</p>
-                <p>But it also doesn't happen automatically. Sitting at your desk delivering average work for 12 months straight and then being surprised that nothing changed is not a WePix problem — that is a you problem.</p>
+                <p>But it also doesn't happen automatically. Sitting at your desk delivering average work for 12 months straight and then being surprised that nothing changed is not a WePix problem. That is a you problem.</p>
               </ContentCard>
 
               <ContentCard icon={BookOpen} title="The Commitment to Learning Is Mutual">
@@ -313,7 +313,7 @@ export default function Handbook() {
               <ContentCard icon={Users} title="What WePix Needs From You">
                 <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
                   <li>Ownership of your work and deadlines</li>
-                  <li>Honest communication — especially when things are going wrong</li>
+                  <li>Honest communication, especially when things are going wrong</li>
                   <li>Respect for your teammates, clients, and company assets</li>
                   <li>Curiosity and initiative in learning</li>
                   <li>Adherence to company policies and confidentiality</li>

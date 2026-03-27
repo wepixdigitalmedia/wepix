@@ -17,17 +17,17 @@ const values = [
 ];
 
 const timeline = [
-  { year: "2016", event: "Abdul started his first brand — Drooling Baby. A kids' fashion label born out of passion and zero marketing knowledge. Spoiler: it didn't go as planned. But every failure was a lesson disguised as a loss." },
-  { year: "2017", event: "Drooling Baby hit its first wall. Sales weren't moving, ads weren't working, and the 'boost post' button was doing absolutely nothing. Abdul started studying digital marketing obsessively — YouTube university, late nights, and a lot of chai." },
-  { year: "2018", event: "Second attempt. Pivoted the brand, tried new strategies, burned more money on ads. Failed again. But this time, the lessons were deeper — understanding margins, customer psychology, and why most agencies deliver garbage." },
-  { year: "2019", event: (<>The penny dropped. After years of trial-and-error, Abdul cracked the code on what actually works in fashion marketing. Started helping other <TirupurTooltip /> brands informally. People noticed. The demand was real.</>)  },
-  { year: "2020", event: "COVID hit, but online D2C exploded. Abdul went all-in on helping fashion brands sell online — content, ads, Shopify stores. The results spoke louder than any pitch deck ever could." },
-  { year: "2021", event: "Built WePixStudio — an AI-powered content tool — because hiring photographers for 200 SKUs is insane. Also started building the team. No more one-man-army." },
-  { year: "2022", event: "December 10th — WePix Digital Media LLP was officially born. What started as one guy failing with a baby brand became a registered company with a real team, real clients, and a real mission. The grind became a business." },
-  { year: "2023", event: "Expanded to Bangalore. Launched the Academy because people kept DM-ing 'bro teach me Meta Ads.' Business vertical went live. 50+ brands served. The snowball was rolling." },
-  { year: "2024", event: "AI Agents division created. Managed ₹2Cr+ in ad spend. Built systems and SOPs that actually scale. At this point, we're basically a tech company that happens to be really good at marketing." },
-  { year: "2025", event: (<>Opened operations in Chennai and UAE. Launched the Digital Store, Mentorship program, and the Handbook. WePix stopped being a '<TirupurTooltip /> agency' and became a pan-India digital media group.</>)  },
-  { year: "2026", event: "3 years and 5 months since Day 1. Countless lessons, ups, downs, sleepless nights, and celebrations. We've been broke, been blessed, and been everything in between. And we're just getting started. The best chapters haven't been written yet." },
+  { year: "2016", event: "Abdul launched Drooling Baby, a kids’ fashion brand with zero marketing experience. It didn’t go as planned, but every failure taught a valuable lesson." },
+  { year: "2017", event: "Sales were flat, ads didn’t work, and the “boost post” button was useless. Abdul started learning digital marketing, diving into YouTube and late-night research." },
+  { year: "2018", event: "Second try. Pivoted the brand, experimented with strategies, and burned more money on ads. It didn’t work again, but this time, the lessons stuck." },
+  { year: "2019", event: "After years of trial and error, Abdul cracked the code on fashion marketing. He began helping other brands informally, and the demand was real."  },
+  { year: "2020", event: "COVID hit, but the D2C boom was unstoppable. Abdul focused on helping fashion brands sell online through ads, content, and Shopify stores. The results spoke for themselves." },
+  { year: "2021", event: "Abdul built WePixStudio, an AI tool to automate content creation, and expanded the team. No more solo hustle, just a real team making waves." },
+  { year: "2022", event: "WePix Digital Media LLP was officially born. What started as one failed brand became a registered company with real clients, a team, and a mission. The grind turned into a real business." },
+  { year: "2023", event: "Expanded to Bangalore and launched the Academy after getting flooded with DMs asking to learn Meta Ads. Business exploded. 50+ brands served. The snowball started rolling." },
+  { year: "2024", event: "We launched our AI Agents division. Managed over ₹2Cr+ in ad spend and built the systems that actually scale. At this point, we were more of a tech company than a marketing agency." },
+  { year: "2025", event: "Expanded to Chennai and UAE. Rolled out the Digital Store, Mentorship Program, and the Handbook. WePix stopped being a ‘small agency’ and evolved into a pan-India digital media group."  },
+  { year: "2026", event: "3 years and 5 months in. We’ve learned, we’ve grown, and we’ve celebrated. From being broke to being blessed, we’ve done it all. And we’re just getting started. The best chapters are still to come." },
 ];
 
 export default function About() {
@@ -75,10 +75,10 @@ export default function About() {
         <section className="py-16 border-t border-border">
           <div className="container">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <ImagePlaceholder label="Office life 1" aspectRatio="square" />
-              <ImagePlaceholder label="Office life 2" aspectRatio="square" />
-              <ImagePlaceholder label="Team meeting" aspectRatio="square" />
-              <ImagePlaceholder label="Behind the scenes" aspectRatio="square" />
+              <ImagePlaceholder src="/team-office-life-1.png" alt="Team at concert event" label="Office life 1" aspectRatio="square" />
+              <ImagePlaceholder src="/team-office-life-2.png" alt="Team reading and collaborating in office" label="Office life 2" aspectRatio="square" />
+              <ImagePlaceholder src="/team-meeting.png" alt="Team meeting at restaurant" label="Team meeting" aspectRatio="square" />
+              <ImagePlaceholder src="/team-behind-scenes.png" alt="Behind the scenes team celebration" label="Behind the scenes" aspectRatio="square" />
             </div>
             <div className="mt-6 text-center">
               <Link to="/people">
@@ -128,14 +128,26 @@ export default function About() {
             <SectionHeading tag="Offices" title="Where the magic happens" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <Card className="rounded-xl border-border overflow-hidden">
-                <ImagePlaceholder label="Tirupur office photo" aspectRatio="video" className="rounded-none border-0 border-b-2" />
+                <ImagePlaceholder
+                  src="/office-tirupur.png"
+                  alt="WePix office in Tirupur"
+                  label="Tirupur office photo"
+                  aspectRatio="video"
+                  className="rounded-none border-0 border-b-2"
+                />
                 <CardContent className="p-4">
                   <h3 className="font-display font-semibold"><TirupurTooltip />, Tamil Nadu</h3>
                   <p className="text-[0.8125rem] text-muted-foreground">HQ — Where it all started (and where the best filter coffee is)</p>
                 </CardContent>
               </Card>
               <Card className="rounded-xl border-border overflow-hidden">
-                <ImagePlaceholder label="Bangalore office photo" aspectRatio="video" className="rounded-none border-0 border-b-2" />
+                <ImagePlaceholder
+                  src="/office-bangalore.png"
+                  alt="WePix office in Bangalore"
+                  label="Bangalore office photo"
+                  aspectRatio="video"
+                  className="rounded-none border-0 border-b-2"
+                />
                 <CardContent className="p-4">
                   <h3 className="font-display font-semibold">Bangalore, Karnataka</h3>
                   <p className="text-[0.8125rem] text-muted-foreground">Business & B2B division (the fancy one)</p>

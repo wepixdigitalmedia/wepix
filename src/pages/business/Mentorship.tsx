@@ -7,20 +7,20 @@ import { useGSAP, heroReveal, gsap } from "@/hooks/useGSAP";
 import { Check, ArrowRight, Users, Video, BookOpen, ShieldCheck } from "lucide-react";
 
 const includes = [
-  "Access to WePix's internal frameworks — the exact SOPs, templates, and strategies we use daily",
-  "Monthly live Q&A sessions with WePix founders on Skool — ask anything, get real answers",
-  "Curated community of agency operators — no beginners, no lurkers, just people in the trenches",
-  "Resource library with campaign breakdowns, client onboarding docs, and pricing models",
-  "Priority WhatsApp support — because sometimes you need an answer before your client call",
-  "Ad account teardowns and strategy reviews — we'll tell you what's broken and how to fix it",
-  "Quarterly business reviews — big picture planning sessions for your agency growth",
+"Access to WePix’s playbook. SOPs, templates, and all the secrets we use to crush it.",
+"Monthly live Q&A with the WePix founders on Skool. Ask anything, get the answers you need.",
+"A community of real agency pros. No beginners, no lurkers, just people in the grind.",
+"A full library of resources. Campaign breakdowns, client onboarding docs, pricing models, and more.",
+"VIP WhatsApp support. Because sometimes you need answers before that 3 PM client call.",
+"Ad account teardowns and strategy reviews. Find out what’s broken and how to fix it.",
+"Quarterly business reviews. Game plan your agency’s growth with big-picture sessions.",
 ];
 
 const format = [
-  { icon: BookOpen, title: "Skool LMS", desc: "Structured learning modules with WePix's actual playbooks and frameworks." },
-  { icon: Users, title: "Private Community", desc: "Curated group of agency owners sharing wins, losses, and real strategies." },
-  { icon: Video, title: "Monthly Live Q&A", desc: "Direct access to WePix founders. No pre-recorded fluff — live and unfiltered." },
-  { icon: ShieldCheck, title: "Application-Based", desc: "Selective by design. We keep the group small so every member gets real value." },
+  { icon: BookOpen, title: "Skool LMS", desc: "Real-life playbooks and frameworks from WePix to level up your game." },
+  { icon: Users, title: "Private Community", desc: "A tight-knit crew of agency owners sharing wins, fails, and all the real strategies." },
+  { icon: Video, title: "Monthly Live Q&A", desc: "Get unfiltered access to WePix founders. No boring pre-recorded stuff, just real talk." },
+  { icon: ShieldCheck, title: "Application-Based", desc: "We keep it exclusive. Only serious folks in the squad so you get real value." },
 ];
 
 export default function Mentorship() {
@@ -39,10 +39,10 @@ export default function Mentorship() {
           <div className="container max-w-3xl">
             <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">Mentorship</span>
             <h1 className="gsap-hero-title font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] opacity-0">
-              Stop figuring it out alone. Get the playbook WePix actually uses.
+            Stop Guessing. Get the Playbook That Actually Works!
             </h1>
             <p className="gsap-hero-desc mt-4 text-base text-muted-foreground opacity-0">
-              For agency owners who are done with generic advice and LinkedIn gurus. This is a structured mentorship built around WePix's real internal frameworks — the same systems we use to manage ₹2Cr+ in ad spend across 50+ brands. Live Q&A sessions, a private community of operators, and hands-on support from people who've actually built what you're building.
+            Tired of hearing the same old advice from LinkedIn "gurus"? Get the real deal with WePix’s structured mentorship. We use the exact systems that help us manage ₹2Cr+ in ad spend across 50+ brands. With us, you’re not just getting a course. You’ll get live Q&A sessions, a tight-knit community of entrepreneurs, and direct, hands-on support from the people who’ve built what you're building. Time to stop wasting time and start seeing results. Let's go.
             </p>
             <div className="mt-8">
               <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] overflow-hidden">
@@ -89,7 +89,7 @@ export default function Mentorship() {
             <div className="mt-12 p-6 rounded-xl bg-muted/50 border border-border">
               <h3 className="font-display text-lg font-semibold mb-2">How to Join</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                This is an application-based program — selective by design. We keep the group intentionally small so every member gets real, personalized attention. Apply below and we'll schedule a quick fit call to see if we're the right match.
+              This is an invite-only program. We keep the crew small so everyone gets the VIP treatment. Apply below and let’s hop on a quick call to see if we vibe and if we’re the right match.
               </p>
               <BookingFormDialog triggerLabel="Apply for Mentorship" showArrow />
             </div>

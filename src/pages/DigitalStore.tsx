@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder";
-import { TirupurTooltip } from "@/components/shared/TirupurTooltip";
+import { TamilTooltip } from "@/components/shared/TamilTooltip";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -14,8 +14,8 @@ const products = [
     type: "Course",
     price: "₹4,999",
     originalPrice: "₹9,999",
-    description: "The complete playbook on running profitable Meta Ads — from pixel setup to scaling. 12+ hours of video, templates, and live campaign walkthroughs.",
-    features: ["12+ hours of video", "Ad templates", "Lifetime access", "Community access"],
+    description: "The ultimate guide to running profitable Meta Ads, from setting up the pixel to scaling. Over 12 hours of video content, templates, and live campaign breakdowns.",
+    features: ["12+ hours of video", "Ad templates", "Lifetime access", "Community support"],
     badge: "Bestseller",
     link: "https://razorpay.me/@wepix/4999",
   },
@@ -24,7 +24,7 @@ const products = [
     type: "Digital Product",
     price: "₹7,999",
     originalPrice: "₹14,999",
-    description: (<>Everything you need to launch a fashion brand online — Shopify checklist, content calendar, ad strategy framework, and supplier contacts in <TirupurTooltip />.</>),
+    description: (<>Everything you need to launch your fashion brand online – Shopify checklist, content calendar, ad strategy framework, and supplier contacts in <TamilTooltip />.</>),
     features: ["Launch checklist", "Content templates", "Ad frameworks", "Supplier database"],
     badge: "New",
     link: "https://razorpay.me/@wepix/7999",

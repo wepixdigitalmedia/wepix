@@ -5,11 +5,11 @@ import { BookingFormDialog } from "@/components/shared/BookingFormDialog";
 import { Check, ArrowRight } from "lucide-react";
 
 const covers = [
-  "Your brand's current challenges and goals — we want the real tea, not the LinkedIn version",
-  "Which WePix services are the right fit — we'll be honest if something isn't for you",
-  "A rough roadmap for the first 60 days — so you know exactly what happens next",
-  "Budget expectations and timeline — no surprises, no hidden costs, no 'oh btw' moments",
-  "Q&A — ask us literally anything. We love questions. The weirder the better.",
+  "Your brand’s challenges and goals - let’s keep it real, no LinkedIn fluff.",
+  "Which WePix services are the right fit - if something’s not for you, we’ll be upfront.",
+  "A rough roadmap for the first 60 days - so you know exactly what’s next.",
+  "Budget and timeline - no surprises, no hidden costs, and no “oh btw” moments.",
+  "Q&A - ask us anything. The weirder the better. We’re all for it.",
 ];
 
 export default function BookACall() {
@@ -33,8 +33,8 @@ export default function BookACall() {
         </section>
 
         <section className="py-24 border-t border-border">
-          <div className="container max-w-2xl gsap-list">
-            <h2 className="font-display text-2xl font-semibold mb-6">Here's what we'll chat about:</h2>
+          <div className="container max-w-4xl gsap-list">
+            <h2 className="font-display text-2xl font-semibold mb-6">Here’s What We’ll Chat About:</h2>
             <div className="space-y-4 mb-10">
               {covers.map((item) => (
                 <div key={item} className="gsap-item flex items-start gap-3 opacity-0">

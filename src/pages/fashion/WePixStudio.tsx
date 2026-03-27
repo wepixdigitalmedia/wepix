@@ -13,12 +13,12 @@ const REGISTER_URL = "https://wepixstudio.app/register";
 const APP_URL = "https://wepixstudio.app";
 
 const features = [
-  { icon: Sparkles, title: "AI-Powered Generation", desc: "Leverage cutting-edge AI to create stunning product photos without a studio, model, or camera." },
-  { icon: Monitor, title: "Multiple Output Formats", desc: "Export in 1K, 2K, or 4K resolutions across various formats." },
-  { icon: Camera, title: "Model Selection", desc: "Choose from diverse AI models that match your brand identity." },
-  { icon: Sun, title: "Lighting Control", desc: "Fine-tune lighting to match your aesthetic — studio, natural, dramatic." },
-  { icon: Zap, title: "Fast Generation", desc: "Get results in minutes, not weeks. Launch faster than your competitors." },
-  { icon: Award, title: "Studio Quality", desc: "Professional-grade images every single time. Consistent and on-brand." },
+  { icon: Sparkles, title: " Powered by AI", desc: "Create stunning product photos with AI. No studio, models, or cameras needed." },
+  { icon: Monitor, title: "Customizable Lighting", desc: "Choose the lighting that fits your vibe: sleek, natural, or bold." },
+  { icon: Camera, title: "Flexible Output", desc: "Export images in 1K, 2K, or 4K resolution. Get your photos in any format you need." },
+  { icon: Sun, title: "Diverse Model Choices", desc: "Pick from a range of AI models that match your brand’s personality and look." },
+  { icon: Zap, title: "Instant Results", desc: "Get photos in minutes. Launch faster than your competitors." },
+  { icon: Award, title: "Consistent Studio Quality", desc: "Enjoy pro-level photos every time. Sharp, polished, and always on-brand." },
 ];
 
 const plans = [
@@ -61,32 +61,33 @@ const plans = [
 ];
 
 const problems = [
-  { icon: X, text: "Model cancellations & scheduling nightmares" },
-  { icon: X, text: "Budget overruns & hidden costs" },
-  { icon: X, text: "25+ days per photoshoot cycle" },
-  { icon: X, text: "₹50,000+ per shoot for basic photos" },
+  { icon: X, text: "Models canceling & hard to schedule" },
+  { icon: X, text: "Hidden costs that blow your budget" },
+  { icon: X, text: "Waiting over 25 days for photos" },
+  { icon: X, text: "Spending ₹50,000+ on basic pictures" },
 ];
 
 const solutions = [
-  { icon: Check, text: "Generate photos instantly, anytime" },
-  { icon: Check, text: "Fixed monthly pricing, no surprises" },
-  { icon: Check, text: "From concept to product page in minutes" },
+  { icon: Check, text: "Get photos instantly, whenever you need them" },
+  { icon: Check, text: "One fixed monthly price, no extra charges" },
+  { icon: Check, text: "From idea to product page in minutes" },
   { icon: Check, text: "Starting at just ₹999/month" },
 ];
 
 const galleryImages = [
-  { src: "https://fls-a09d31ea-741a-41e1-896a-304e50c6988e.laravel.cloud/results/photoshoot-130/znav8nak21rmt0cwmdm9rarw04.png", alt: "Blue Saree" },
-  { src: "https://fls-a09d31ea-741a-41e1-896a-304e50c6988e.laravel.cloud/results/photoshoot-129/ceq06y9sa1rmy0cw37c9nyhq18.png", alt: "White Kurta" },
-  { src: "https://fls-a09d31ea-741a-41e1-896a-304e50c6988e.laravel.cloud/results/photoshoot-137/fffkzkpqmsrmw0cwttbaw2zdpm.png", alt: "Fashion Shoot" },
-  { src: "https://fls-a09d31ea-741a-41e1-896a-304e50c6988e.laravel.cloud/results/photoshoot-111/psx6ren1ssrmy0cvyhdvv9hc4w.png", alt: "Saree" },
-  { src: "https://fls-a09d31ea-741a-41e1-896a-304e50c6988e.laravel.cloud/results/photoshoot-120/bhk54xxt4nrmr0cvyjgaa1x674.png", alt: "Saree" },
-  { src: "https://fls-a09d31ea-741a-41e1-896a-304e50c6988e.laravel.cloud/results/photoshoot-132/g3rp0xh9nnrmr0cwtd1953dx4c.png", alt: "Deep Sea Lines" },
-  { src: "https://fls-a09d31ea-741a-41e1-896a-304e50c6988e.laravel.cloud/results/photoshoot-113/p404vez341rmt0cvyhxrfvt8zr.png", alt: "Saree" },
-  { src: "https://fls-a09d31ea-741a-41e1-896a-304e50c6988e.laravel.cloud/results/photoshoot-133/18x9cgm4s5rmw0cwtd3bksmsx0.png", alt: "Deep Sea Lines" },
-  { src: "https://fls-a09d31ea-741a-41e1-896a-304e50c6988e.laravel.cloud/results/photoshoot-118/c8d6aafdfhrmr0cvyjbsj1vpqr.png", alt: "Saree" },
-  { src: "https://fls-a09d31ea-741a-41e1-896a-304e50c6988e.laravel.cloud/results/photoshoot-123/n5p2jbxy89rmt0cvyjxv74qqf8.png", alt: "Saree" },
-  { src: "https://fls-a09d31ea-741a-41e1-896a-304e50c6988e.laravel.cloud/results/photoshoot-116/ccn7ez7vgdrmt0cvyj49v6fwmc.png", alt: "Saree" },
-  { src: "https://fls-a09d31ea-741a-41e1-896a-304e50c6988e.laravel.cloud/results/photoshoot-121/1pmsjwrpv9rmw0cvyjkr2awv14.png", alt: "Saree" },
+  { src: "/gallery/1.png", alt: "WePix" },
+  { src: "/gallery/2.png", alt: "WePix" },
+  { src: "/gallery/3.png", alt: "WePix" },
+  { src: "/gallery/4.png", alt: "WePix" },
+  { src: "/gallery/5.png", alt: "WePix" },
+  { src: "/gallery/6.png", alt: "WePix" },
+  { src: "/gallery/7.png", alt: "WePix" },
+  { src: "/gallery/8.png", alt: "WePix" },
+  { src: "/gallery/9.png", alt: "WePix" },
+  { src: "/gallery/10.png", alt: "WePix" },
+  { src: "/gallery/11.png", alt: "WePix" },
+  { src: "/gallery/12.png", alt: "WePix" },
+  { src: "/gallery/13.png", alt: "WePix" },
 ];
 
 export default function WePixStudio() {
@@ -104,14 +105,14 @@ export default function WePixStudio() {
           <div className="container max-w-4xl text-center">
             <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">WePixStudio</span>
             <h1 className="gsap-hero-title font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] opacity-0">
-              AI fashion photoshoots. Powerful, Customizable, Instant.
+              AI fashion photoshoots. Fast. Flexible. Powerful.
             </h1>
             <p className="gsap-hero-desc mt-4 text-base text-muted-foreground max-w-2xl mx-auto opacity-0">
-              In fashion, time is money. Save both with WePix AI fashion studio. No studio, no model, no camera — just stunning product photos in minutes.
+            In fashion, speed matters. Create stunning product photos in minutes with WePix AI studio. No studio. No models. No camera. Just results.
             </p>
             <div className="gsap-hero-cta mt-8 flex justify-center gap-4 opacity-0">
               <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="font-medium gap-2">Get Started <ArrowRight size={16} /></Button>
+                <Button size="lg" className="font-medium gap-2">Start Shoot <ArrowRight size={16} /></Button>
               </a>
               <a href={`${APP_URL}/landing#features`} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="font-medium">Learn More</Button>
@@ -167,10 +168,10 @@ export default function WePixStudio() {
                     <Zap size={18} className="text-foreground" />
                     <h3 className="font-display text-base font-semibold">Easy Mode</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4">For founders who want to get it done, quick.</p>
+                  <p className="text-sm text-muted-foreground mb-4">For founders who want to get things done fast.</p>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center gap-2"><Check size={14} /> Preset-based generation</li>
-                    <li className="flex items-center gap-2"><Check size={14} /> Quick setup in 3 steps</li>
+                    <li className="flex items-center gap-2"><Check size={14} /> Ready-to-use presets for quick generation</li>
+                    <li className="flex items-center gap-2"><Check size={14} /> Setup in just 3 simple steps</li>
                     <li className="flex items-center gap-2"><Check size={14} /> 4 images per photoshoot</li>
                   </ul>
                 </CardContent>
@@ -181,9 +182,9 @@ export default function WePixStudio() {
                     <Sliders size={18} className="text-foreground" />
                     <h3 className="font-display text-base font-semibold">Pro Mode</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4">For perfectionists who care about every detail.</p>
+                  <p className="text-sm text-muted-foreground mb-4">For perfectionists who want it all just right.</p>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center gap-2"><Check size={14} /> Full control over all parameters</li>
+                    <li className="flex items-center gap-2"><Check size={14} /> Full control over every detail</li>
                     <li className="flex items-center gap-2"><Check size={14} /> 1–8 images per photoshoot</li>
                     <li className="flex items-center gap-2"><Check size={14} /> Custom scenarios & prompts</li>
                   </ul>
@@ -263,7 +264,7 @@ export default function WePixStudio() {
         {/* Gallery */}
         <section className="py-16 bg-muted/30 overflow-hidden">
           <div className="container">
-            <SectionHeading tag="Gallery" title="See what our community is creating" />
+            <SectionHeading tag="Gallery" title="Check Out the Creative Masterpieces Our Community is Making" />
           </div>
           <div className="relative">
             <div className="flex animate-marquee gap-3 w-max">
@@ -282,8 +283,8 @@ export default function WePixStudio() {
       </div>
 
       <CTABanner
-        headline="Ready to transform your product photography?"
-        subtext="Join 500+ brands already using WePixStudio. Start creating AI-powered photoshoots in minutes."
+        headline="Transform Your Product Photography with AI"
+        subtext="Join 500+ brands who’ve already switched to WePixStudio. Create flawless photoshoots in minutes."
         ctaLabel="Get Started Free"
         ctaHref={REGISTER_URL}
         useDialog={false}

@@ -7,61 +7,71 @@ const departments = [
   {
     name: "Founders",
     members: [
-      { name: "Abdul Navas", role: "Co-Founder & CEO", bio: "Built WePix from the ground up with a vision to fix how brands approach digital growth." },
-      { name: "Santhosh", role: "Co-Founder & COO", bio: "Runs operations, delivery, and everything that keeps the engine moving." },
+      { name: "Abdul Navas", role: "Founder", bio: "Built Wepix from the ground up. Every decision and direction traces back to his vision." },
+      { name: "Santhosh", role: "Co-Founder", bio: "Keeps operations and delivery running smoothly. If it needs to happen, he makes sure it does." },
     ],
   },
   {
     name: "Leadership",
     members: [
-      { name: "Vignesh", role: "Head of Content", bio: "Leads content strategy across all brand verticals." },
-      { name: "Meera Nair", role: "Creative Director", bio: "Oversees all visual direction and brand design systems." },
+      { name: "Vignesh", role: "Chief Operating Officer", bio: "Bridges strategy and execution. Every brand vertical runs better because of him." },
+    ],
+  },
+  {
+    name: "HR Department",
+    members: [
+      { name: "Dhesini", role: "HR", bio: "Right people, right place, right culture. She makes it happen." },
     ],
   },
   {
     name: "Marketing",
     members: [
-      { name: "Karthik R.", role: "Performance Marketing Lead", bio: "Manages ad budgets and campaign performance across Meta and Google." },
-      { name: "Farhan Ahmed", role: "Meta Ads Specialist", bio: "Deep expertise in Meta advertising platforms and creative testing." },
-      { name: "Rohan Das", role: "SEO & Analytics Lead", bio: "Drives organic growth and data-driven decision making." },
-      { name: "Sneha Reddy", role: "Community Manager", bio: "Builds and nurtures brand communities across platforms." },
+      { name: "Rineesha", role: "Performance Marketer", bio: "She runs Meta campaigns that perform and makes sure every brand shows up the right way." },
+      { name: "Madhumitha", role: "Marketer & Content Writer", bio: "She keeps every rupee working hard on Meta and makes sure the brand always looks strong." },
+      { name: "Sasi Prabha", role: "Performance Marketer", bio: "She writes content that gets read, runs campaigns that get results, and keeps the brand sharp." },
+      { name: "Krishnabrindha", role: "Performance Marketer", bio: "She runs targeted campaigns and builds brand strategies that keep you relevant and growing." },
     ],
   },
   {
     name: "Design & Video",
     members: [
-      { name: "Ananya Iyer", role: "Graphic Designer", bio: "Creates visual assets for campaigns, brands, and social content." },
-      { name: "Rahul Menon", role: "Video Production Head", bio: "Leads video content production from concept to delivery." },
+      { name: "Hari Krishna", role: "Sr. Designer & Video Editor", bio: "Sets the quality bar for the team. Complex designs, polished edits, always on point." },
+      { name: "Kadhir Vel", role: "Jr. Designer & Video Editor", bio: "Fresh ideas, clean execution. He handles designs and edits and keeps projects moving." },
+      { name: "Vashanth", role: "Jr. Designer & Video Editor", bio: "Handles both design and video with equal focus and always delivers what the brief needs." },
     ],
   },
   {
     name: "Development",
     members: [
-      { name: "Vikram S.", role: "Full-Stack Developer", bio: "Builds and maintains web platforms, Shopify stores, and internal tools." },
+      { name: "Gowthaman", role: "Shopify Developer", bio: "He builds Shopify stores that are fast, functional, and ready to sell from day one." },
+      { name: "Jananika", role: "Jr.Shopify Developer", bio: "From store setups to platform fixes, she gets the job done and keeps everything running smooth." },
     ],
   },
-  {
-    name: "Strategy & Partnerships",
-    members: [
-      { name: "Arjun Patel", role: "AI & Automation Lead", bio: "Develops AI workflows and automation systems for clients and internal use." },
-      { name: "Divya Krishnan", role: "Fashion Strategy Lead", bio: "Specialises in growth strategy for D2C fashion brands." },
-      { name: "Lakshmi V.", role: "Client Success Manager", bio: "Ensures client satisfaction and long-term relationship building." },
-      { name: "Tanya Gupta", role: "Brand Partnerships", bio: "Manages strategic partnerships and brand collaborations." },
-    ],
-  },
+  // {
+  //   name: "Strategy & Partnerships",
+  //   members: [
+  //     { name: "Arjun Patel", role: "AI & Automation Lead", bio: "Develops AI workflows and automation systems for clients and internal use." },
+  //     { name: "Divya Krishnan", role: "Fashion Strategy Lead", bio: "Specialises in growth strategy for D2C fashion brands." },
+  //     { name: "Lakshmi V.", role: "Client Success Manager", bio: "Ensures client satisfaction and long-term relationship building." },
+  //     { name: "Tanya Gupta", role: "Brand Partnerships", bio: "Manages strategic partnerships and brand collaborations." },
+  //   ],
+  // },
 ];
 
 const memberImageSrc: Record<string, string> = {
   "Abdul Navas": "/people-abdul-navas.png",
   "Santhosh": "/people-santhosh.png",
   "Vignesh": "/people-vignesh.png",
-  "Karthik R.": "/people-karthik-r.png",
-  "Farhan Ahmed": "/people-farhan-ahmed.png",
-  "Rohan Das": "/people-rohan-das.png",
-  "Sneha Reddy": "/people-sneha-reddy.png",
-  "Ananya Iyer": "/people-ananya-iyer.png",
-  "Rahul Menon": "/people-rahul-menon.png",
-  "Vikram S.": "/people-vikram-s.png",
+  "Dhesini": "/dhesini.png",
+  "Rineesha": "/people-karthik-r.png",
+  "Madhumitha": "/people-rohan-das.png",
+  "Sasi Prabha": "/people-farhan-ahmed.png",
+  "Krishnabrindha": "/people-sneha-reddy.png",
+  "Kadhir Vel": "/people-ananya-iyer.png",
+  "Vashanth": "/people-rahul-menon.png",
+  "Hari Krishna": "/harikrishna.png",
+  "Gowthaman": "/gowthaman.png",
+  "Jananika": "/people-vikram-s.png",
 };
 
 export default function People() {

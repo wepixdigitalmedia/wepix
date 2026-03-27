@@ -18,9 +18,9 @@ const subTabs = [
 ];
 
 const culturePrinciples = [
-  { icon: Shield, title: "Ownership", desc: "Everyone takes responsibility for their work. If something breaks, we fix it. If something can be improved, we improve it." },
-  { icon: BookOpen, title: "Learning", desc: "Staying curious about tools, platforms, and ideas. Whether it is new advertising strategies, AI workflows, or marketing systems, learning is part of the job." },
-  { icon: Rocket, title: "Momentum", desc: "Shipping work instead of endlessly discussing ideas. The team focuses on testing ideas and iterating quickly. Progress over perfection." },
+  { icon: Shield, title: "Own It.", desc: "If something goes wrong, we don’t point fingers – we fix it. If something can be better, we make it better. We take responsibility and lead the way." },
+  { icon: BookOpen, title: "Stay Curious.", desc: "We’re always learning. Whether it’s new ad strategies, cutting-edge AI, or marketing systems, we stay on top of it. If you’re not learning, you’re not growing." },
+  { icon: Rocket, title: "Make It Happen.", desc: "Ideas are cool, but action is cooler. We focus on getting things done, testing, and iterating quickly. Perfection can wait, progress can’t." },
 ];
 
 const mediaWallItems = [
@@ -32,27 +32,27 @@ const mediaWallItems = [
 const jobs = [
   {
     title: "Performance Marketer",
-    desc: "Responsible for launching and optimizing paid advertising campaigns across Meta and Google platforms. Focus on testing creatives, analyzing performance metrics, and scaling profitable campaigns.",
+    desc: "Your mission: Become the hero who launches and optimizes epic Meta and Google campaigns. You’ll test creatives, analyze performance data, and scale profitable campaigns to help brands shine. Get ready to make numbers go up!",
   },
   {
     title: "Social Media Manager",
-    desc: "Responsible for managing brand presence on social platforms, planning content strategies, analyzing trends, and collaborating with creative teams.",
+    desc: "Your mission: Own the social game! Manage our brand's presence across IG, FB, and more. Craft killer content strategies, keep up with trends, and work hand-in-hand with creative squads. Help us stay ahead of the trends, one post at a time!",
   },
   {
     title: "Shopify Developer",
-    desc: "Responsible for building Shopify storefronts that convert visitors into customers. Includes theme customization, performance optimization, and marketing integrations.",
+    desc: "Your mission: You’ll be the brain behind building sleek, high-converting Shopify stores. From theme customization to optimizing performance, you’ll make the user experience smooth. Plus, you’ll connect the dots with marketing integrations to get sales flowing!",
   },
   {
     title: "Video Editor",
-    desc: "Responsible for producing performance ads, reels, and branded content with strong storytelling and pacing.",
+    desc: "Your mission: Get those creative juices flowing! You’ll craft performance-driven ads, killer Reels, and branded content that speak to the soul. Strong storytelling, pacing, and creativity are your tools to make each video a banger.",
   },
 ];
 
 const perks = [
-  { icon: DollarSign, title: "Compensation", desc: "WePix rewards people who produce results. Growth inside the company is tied to performance and skill development." },
-  { icon: Award, title: "Share Options (ESOPs)", desc: "Long term contributors may receive equity participation opportunities as the company expands." },
-  { icon: Heart, title: "Benefits", desc: "Employees gain exposure to real business growth systems and work directly with founders and entrepreneurs." },
-  { icon: Clock, title: "Time Off", desc: "Employees receive structured leave policies and flexibility when personal situations require time away." },
+  { icon: DollarSign, title: "Compensation", desc: "We reward the doers, the ones who make things happen. Your growth inside WePix is all about the impact you make and how much you level up your skills." },
+  { icon: Award, title: "Share Options (ESOPs)", desc: "Get a piece of the pie! Long-term contributors might receive equity as WePix grows. More involvement means more rewards." },
+  { icon: Heart, title: "Benefits", desc: "Here’s your backstage pass. Work directly with founders and entrepreneurs. Plus, get that hands-on experience that will shape your growth." },
+  { icon: Clock, title: "Time Off", desc: "Because life happens. We’ve got flexible time-off policies so you can take care of personal stuff without worrying about work." },
 ];
 
 export default function Careers() {
@@ -86,14 +86,14 @@ export default function Careers() {
       {/* Why Join WePix */}
       <section id="why-join" className="py-20 md:py-28 scroll-mt-32">
         <div className="container">
-          <SectionHeading tag="Careers" title="Why Join WePix" />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto items-center">
+          <SectionHeading tag="Careers" title="WePix: Where Creators Build, Grow, and Thrive" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
             <div
               className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center overflow-hidden"
               style={{ aspectRatio: "1 / 1" }}
             >
               <img
-                src="/careers-team-collaboration.png"
+                src="/careers-team-collaboration.jpg"
                 alt="WePix team collaboration"
                 style={{ objectFit: "contain" }}
                 className="w-full h-full"
@@ -101,12 +101,10 @@ export default function Careers() {
               />
             </div>
             <div className="space-y-4 text-muted-foreground">
-              <p>Working at WePix is not about finishing tasks inside a rigid agency system. It is about building real digital systems that help businesses grow.</p>
-              <p>The company was founded by Abdul Navas and Santhosh with a belief that businesses deserve better growth systems than generic marketing services.</p>
-              <p>WePix works closely with founders and brands to build digital infrastructure that produces measurable results.</p>
-              <p>Joining the team means stepping into a fast moving environment where ownership is expected and ideas are encouraged.</p>
-              <p>If you notice a problem you are expected to solve it. If you discover an opportunity you are encouraged to explore it.</p>
-              <p className="font-medium text-foreground">This environment is built for builders.</p>
+              <p>At WePix, we don’t just check tasks off a list. We build real digital systems that help businesses grow. It's about crafting smart growth systems, not the typical generic marketing fluff.
+              Founded by Abdul Navas and Santhosh, WePix was built on the belief that businesses deserve better than the standard marketing services. We work hand-in-hand with founders and brands to create digital infrastructure that actually delivers results.</p>
+              <p>Joining WePix means stepping into a fast-paced world where ownership is key and ideas are welcome. We don’t just expect you to finish tasks, we expect you to make a difference. If you see a problem, solve it. If you spot an opportunity, explore it.</p>
+              <p className="font-medium text-foreground">This is a space built for builders. Are you in?</p>
             </div>
           </div>
         </div>
@@ -115,7 +113,7 @@ export default function Careers() {
       {/* Culture */}
       <section id="culture" className="py-20 bg-muted/50 scroll-mt-32">
         <div className="container">
-          <SectionHeading tag="Culture" title="The Way We Work" description="The culture at WePix is built around three principles." />
+          <SectionHeading tag="Culture" title="WePix Vibes: Own It, Learn It, Ship It." description="At WePix, we don’t just work – we build, grow, and move fast. Our culture is all about three key things:" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {culturePrinciples.map((p, i) => (
               <motion.div
@@ -140,7 +138,7 @@ export default function Careers() {
 
           {/* Media Wall */}
           <div className="mt-16">
-            <h3 className="font-display text-xl font-semibold text-center mb-8">Life at WePix</h3>
+            <h3 className="font-display text-xl font-semibold text-center mb-8">Vibe Check: Life at WePix</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
               {mediaWallItems.map((item, i) => (
                 <motion.div
