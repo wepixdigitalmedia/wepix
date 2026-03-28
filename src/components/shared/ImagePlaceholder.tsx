@@ -7,9 +7,18 @@ interface ImagePlaceholderProps {
   alt?: string;
   className?: string;
   aspectRatio?: "video" | "square" | "wide" | "portrait";
+  /** Grayscale until pointer is over the frame; then show full color. */
+  grayscaleUntilHover?: boolean;
 }
 
-export function ImagePlaceholder({ label = "Image coming soon", src, alt, className, aspectRatio = "video" }: ImagePlaceholderProps) {
+export function ImagePlaceholder({
+  label = "Image coming soon",
+  src,
+  alt,
+  className,
+  aspectRatio = "video",
+  grayscaleUntilHover = false,
+}: ImagePlaceholderProps) {
   const ratioClass = {
     video: "aspect-video",
     square: "aspect-square",
@@ -19,11 +28,22 @@ export function ImagePlaceholder({ label = "Image coming soon", src, alt, classN
 
   if (src) {
     return (
-      <div className={cn("rounded-xl border-2 border-dashed border-border bg-muted/40 overflow-hidden flex flex-col items-center justify-center gap-3", ratioClass, className)}>
+      <div
+        className={cn(
+          "rounded-xl border-2 border-dashed border-border bg-muted/40 overflow-hidden flex flex-col items-center justify-center gap-3",
+          grayscaleUntilHover && "group",
+          ratioClass,
+          className,
+        )}
+      >
         <img
           src={src}
           alt={alt ?? label}
-          className="w-full h-full object-cover"
+          className={cn(
+            "w-full h-full object-cover",
+            grayscaleUntilHover &&
+              "grayscale transition-[filter] duration-300 ease-out group-hover:grayscale-0",
+          )}
           loading="lazy"
         />
       </div>

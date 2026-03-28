@@ -150,7 +150,7 @@ export default function Fashion() {
         <section className="py-24 border-t border-border">
           <div className="container max-w-3xl text-center gsap-problem opacity-0">
             <h2 className="font-display text-3xl md:text-4xl font-semibold">You've got a killer product. So why isn't anyone buying?</h2>
-            <p className="mt-6 text-lg text-muted-foreground">Because in 2024, having great products isn't enough. You need scroll-stopping content, ads that don't look like ads, a store that converts, and a strategy that doesn't involve praying to the algorithm gods. That's literally what we do — and we're embarrassingly good at it.</p>
+            <p className="mt-6 text-lg text-muted-foreground">Because in today’s world, having a dope product isn’t enough. You need content that grabs attention, ads that don't scream “ads,” a store that actually converts, and a strategy that doesn’t depend on algorithm luck. That's literally our thing, and we're lowkey smashing it.</p>
           </div>
         </section>
 

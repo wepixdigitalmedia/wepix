@@ -17,7 +17,7 @@ const products = [
     description: "The ultimate guide to running profitable Meta Ads, from setting up the pixel to scaling. Over 12 hours of video content, templates, and live campaign breakdowns.",
     features: ["12+ hours of video", "Ad templates", "Lifetime access", "Community support"],
     badge: "Bestseller",
-    link: "https://razorpay.me/@wepix/4999",
+    link: "#",
   },
   {
     title: "D2C Fashion Brand Launch Kit",
@@ -27,7 +27,7 @@ const products = [
     description: (<>Everything you need to launch your fashion brand online – Shopify checklist, content calendar, ad strategy framework, and supplier contacts in <TamilTooltip />.</>),
     features: ["Launch checklist", "Content templates", "Ad frameworks", "Supplier database"],
     badge: "New",
-    link: "https://razorpay.me/@wepix/7999",
+    link: "#",
   },
   {
     title: "AI Marketing Toolkit",
@@ -37,7 +37,7 @@ const products = [
     description: "50+ AI prompts for marketing, content frameworks, automation workflows, and tool recommendations that'll save you 10+ hours per week.",
     features: ["50+ AI prompts", "Automation workflows", "Tool guides", "Monthly updates"],
     badge: null,
-    link: "https://razorpay.me/@wepix/2999",
+    link: "#",
   },
   {
     title: "Advanced Performance Marketing",
@@ -47,7 +47,7 @@ const products = [
     description: "For marketers who've outgrown beginner courses. Advanced bid strategies, attribution modeling, creative testing frameworks, and scaling playbooks.",
     features: ["20+ hours content", "1:1 audit session", "Advanced strategies", "Certificate"],
     badge: "Premium",
-    link: "https://razorpay.me/@wepix/14999",
+    link: "#",
   },
   {
     title: "Social Media Content Calendar",
@@ -57,7 +57,7 @@ const products = [
     description: "90-day plug-and-play content calendar with post ideas, captions, hashtag sets, and scheduling templates for fashion and lifestyle brands.",
     features: ["90-day plan", "Caption templates", "Hashtag research", "Notion template"],
     badge: null,
-    link: "https://razorpay.me/@wepix/999",
+    link: "#",
   },
   {
     title: "Shopify Store Setup Masterclass",
@@ -67,7 +67,7 @@ const products = [
     description: "Build a conversion-optimized Shopify store from scratch. Theme customization, payment setup, SEO basics, and our exact store audit checklist.",
     features: ["8+ hours video", "Store checklist", "Theme guide", "SEO templates"],
     badge: null,
-    link: "https://razorpay.me/@wepix/4999",
+    link: "#",
   },
 ];
 
@@ -79,7 +79,7 @@ export default function DigitalStore() {
           <SectionHeading
             tag="Digital Store"
             title="Courses & digital products"
-            description="Everything we've learned from managing ₹2Cr+ in ad spend and building 50+ brands — packaged into courses, templates, and toolkits you can use right now."
+            description="Everything we've learned from managing ₹2Cr+ in ad spend and building 50+ brands, packaged into courses, templates, and toolkits you can use right now."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {products.map((product, i) => (
@@ -169,7 +169,7 @@ export default function DigitalStore() {
                       </div>
                       <a href={product.link} target="_blank" rel="noopener noreferrer">
                         <Button size="sm" className="gap-1.5 text-xs">
-                          <ShoppingCart size={14} /> Buy Now
+                          <ShoppingCart size={14} /> Comming Soon
                         </Button>
                       </a>
                     </div>

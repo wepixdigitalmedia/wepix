@@ -356,7 +356,7 @@ const Index = () => {
           <SectionHeading
             tag="How We Scale"
             title="Our 4 Secret Pillars"
-            description="Explore the four secret pillars essential for scaling your brand. From nailing your foundations and tracking, to deploying our MCS framework and driving profitable traffic, each pillar is designed to systematically grow your revenue, margins, and brand equity."
+            description="We're not your average agency that slaps a logo on everything and calls it a day. WePix runs four distinct verticals, each with its own team, strategy, and unhealthy amount of passion. Think of us as the Avengers of marketing, minus the capes (okay, sometimes capes)."
           />
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
@@ -474,7 +474,7 @@ const Index = () => {
             {[
               {
                 name: "Abdul",
-                role: "Founder & CEO, Fashion brand expert and growth consultant",
+                role: "Founder & CEO",
                 bio: (<>
                 Founder & CEO, Fashion Brand Expert & Growth Consultant Grew up in <TirupurTooltip /> where fabric and ambition go hand in hand. Watched incredible products die because of bad marketing and decided that had to stop. Today he turns D2C fashion brands from hidden gems into sold out stories. Numbers, strategy, growth, he feels it before the data even shows it.</>),
                 photo: founderAbdulImage,
@@ -486,7 +486,7 @@ const Index = () => {
               },
               {
                 name: "Santhosh",
-                role: "Co-Founder & CFO - Finance Controller, Principal Consultant for Brands",
+                role: "Co-Founder & CFO",
                 bio: "Co-Founder & CFO, Principal Brand Consultant Every rupee has a job and he makes sure it does it well. Santhosh keeps the financial engine running clean so the team can focus on delivering results. Budgets balance, cash flows right, and clients stay profitable. The kind of person who finds problems in the numbers before they become actual problems.",
                 photo: founderSanthoshImage,
                 social: {
@@ -497,7 +497,7 @@ const Index = () => {
               },
               {
                 name: "Vignesh",
-                role: "COO at WePix Business (Lead Gen Expert)",
+                role: "Chief Operating Officer",
                 bio: "COO, Lead Gen Expert He does not chase leads. He builds systems that attract the right people, warm them up, and hand them over ready to buy. While others are figuring out what went wrong, Vignesh already has the next pipeline full and moving. Results first, talk later.",
                 social: {
                   linkedin: "https://linkedin.com/company/wepix",
