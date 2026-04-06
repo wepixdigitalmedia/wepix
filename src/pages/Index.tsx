@@ -82,7 +82,7 @@ const brandCards = [
   {
     icon: Sparkles,
     title: "Sourcing",
-    description: (<>Straight from <TirupurTooltip /> — the garment capital. Quality fabrics, honest pricing, no middleman drama.</>),
+    description: (<>Straight from <TirupurTooltip />. No middlemen. No nonsense. Just solid quality and fair pricing.</>),
     href: "https://wepixsourcing.com",
     color: "from-orange-500/20 to-orange-500/5"
   }
@@ -195,7 +195,7 @@ const Index = () => {
           <SectionHeading
             tag="What We Do"
             title="Four verticals. One obsession."
-            description="We're not your average agency that slaps a logo on everything and calls it a day. WePix runs four distinct verticals — each with its own team, strategy, and unhealthy amount of passion. Think of us as the Avengers of marketing, minus the capes (okay, sometimes capes)." />
+            description="We're not your average agency that slaps a logo on everything and calls it a day. WePix runs four distinct verticals, each with its own team, strategy, and unhealthy amount of passion. Think of us as the Avengers of marketing, minus the capes (okay, sometimes capes)." />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {brandCards.map((card, i) => (
@@ -363,23 +363,23 @@ const Index = () => {
             {[
               {
                 label: "Pillar 1",
-                title: "Brand & Offer Foundations",
-                body: "Dial in your positioning, pricing, and creative direction so your brand actually stands for something in the market.",
+                title: "Build a Brand That Actually Hits",
+                body: "Stop guessing. We lock in your positioning, pricing, and vibe so your brand stands out and people get it instantly.",
               },
               {
                 label: "Pillar 2",
-                title: "Tracking & Infrastructure",
-                body: "Clean tracking, dashboards, and systems so every rupee spent can be traced back to revenue — in real time.",
+                title: "Know Where Every Rupee Goes",
+                body: "No more blind spending. Clean tracking, clear dashboards, and systems that show what’s working and what’s wasting money.",
               },
               {
                 label: "Pillar 3",
-                title: "Content & Acquisition",
-                body: "Scroll-stopping creatives, high-converting funnels, and media buying that makes paid traffic your growth engine.",
+                title: "Turn Content Into Sales Machines",
+                body: "Content that grabs attention. Funnels that convert. Ads that actually bring in buyers, not just views.",
               },
               {
                 label: "Pillar 4",
-                title: "Retention & Scale",
-                body: "Email, remarketing, and offer stacking to increase LTV, stabilize cash flow, and scale without burning out your brand.",
+                title: "Make More From What You Already Have",
+                body: "Emails, remarketing, smart offers. More repeat buyers, better cash flow, and growth that doesn’t break your brand.",
               },
             ].map((pillar, i) => {
               const isActive = activePillar === i;
@@ -456,7 +456,7 @@ const Index = () => {
         <div className="container max-w-3xl text-center">
           <SectionHeading tag="Our Philosophy" title="We have opinions. Strong ones." />
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed -mt-6">
-            "We don't believe in cookie-cutter marketing. We don't believe in 'just boost the post bro.' We believe in building brands that people genuinely care about — the kind where customers slide into your DMs saying 'I NEED this.' We wrote a whole manifesto about it because we're dramatic like that."
+            We’re not into copy-paste marketing or “just boost the post, bro” strategies. We build brands people actually care about. The kind where customers jump into your DMs saying, “I need this.” We think differently. We build differently.<br></br> <b>Yeah, we even wrote a whole manifesto about it. Because why not?</b>
           </p>
           <Link to="/manifesto">
             <Button variant="outline" className="mt-8 font-display font-medium gap-2">
@@ -476,7 +476,7 @@ const Index = () => {
                 name: "Abdul",
                 role: "Founder & CEO",
                 bio: (<>
-                Founder & CEO, Fashion Brand Expert & Growth Consultant Grew up in <TirupurTooltip /> where fabric and ambition go hand in hand. Watched incredible products die because of bad marketing and decided that had to stop. Today he turns D2C fashion brands from hidden gems into sold out stories. Numbers, strategy, growth, he feels it before the data even shows it.</>),
+                Fashion Brand Expert & Growth Consultant Grew up in <TirupurTooltip /> where fabric and ambition go hand in hand. Watched incredible products die because of bad marketing and decided that had to stop. Today he turns D2C fashion brands from hidden gems into sold out stories. Numbers, strategy, growth, he feels it before the data even shows it.</>),
                 photo: founderAbdulImage,
                 social: {
                   linkedin: "https://www.linkedin.com/in/abdulnavas/",
@@ -487,7 +487,7 @@ const Index = () => {
               {
                 name: "Santhosh",
                 role: "Co-Founder & CFO",
-                bio: "Co-Founder & CFO, Principal Brand Consultant Every rupee has a job and he makes sure it does it well. Santhosh keeps the financial engine running clean so the team can focus on delivering results. Budgets balance, cash flows right, and clients stay profitable. The kind of person who finds problems in the numbers before they become actual problems.",
+                bio: "Principal Brand Consultant Every rupee has a job and he makes sure it does it well. Santhosh keeps the financial engine running clean so the team can focus on delivering results. Budgets balance, cash flows right, and clients stay profitable. The kind of person who finds problems in the numbers before they become actual problems.",
                 photo: founderSanthoshImage,
                 social: {
                   linkedin: "https://linkedin.com/in/santhosh-wepix",
@@ -498,7 +498,7 @@ const Index = () => {
               {
                 name: "Vignesh",
                 role: "Chief Operating Officer",
-                bio: "COO, Lead Gen Expert He does not chase leads. He builds systems that attract the right people, warm them up, and hand them over ready to buy. While others are figuring out what went wrong, Vignesh already has the next pipeline full and moving. Results first, talk later.",
+                bio: "Lead Gen Expert He does not chase leads. He builds systems that attract the right people, warm them up, and hand them over ready to buy. While others are figuring out what went wrong, Vignesh already has the next pipeline full and moving. Results first, talk later.",
                 social: {
                   linkedin: "https://linkedin.com/company/wepix",
                   instagram: "https://instagram.com/wepix",
