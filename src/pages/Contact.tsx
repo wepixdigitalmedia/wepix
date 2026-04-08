@@ -8,11 +8,67 @@ import { BookingFormDialog } from "@/components/shared/BookingFormDialog";
 import { useGSAP, heroReveal } from "@/hooks/useGSAP";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { TirupurTooltip } from "@/components/shared/TirupurTooltip";
+import { FormEvent, useState } from "react";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    brand: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitState, setSubmitState] = useState<{
+    type: "idle" | "success" | "error";
+    message: string;
+  }>({
+    type: "idle",
+    message: "",
+  });
+
   const containerRef = useGSAP((container) => {
     heroReveal(container);
   });
+
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitState({ type: "idle", message: "" });
+
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/hello@wepix.in", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `New contact message from ${formData.name}`,
+          name: formData.name,
+          email: formData.email,
+          brand: formData.brand,
+          message: formData.message,
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to submit");
+      }
+
+      setSubmitState({
+        type: "success",
+        message: "Message sent successfully. We will get back to you soon.",
+      });
+      setFormData({ name: "", email: "", brand: "", message: "" });
+    } catch {
+      setSubmitState({
+        type: "error",
+        message: "Could not send right now. Please email us directly at hello@wepix.in.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <Layout>
@@ -33,7 +89,7 @@ export default function Contact() {
                 <p className="text-muted-foreground mb-6">30 minutes. No obligations. No sales pitch. Just a genuine conversation about your brand, your goals, and whether we're the right fit. Think of it as a first date, but for marketing.</p>
                 <BookingFormDialog triggerLabel="Schedule Your Call" triggerClassName="w-full" showArrow />
                 <div className="mt-10 space-y-4">
-                  <div className="flex items-center gap-3 text-sm text-muted-foreground"><Phone size={16} /> +91 98765 43210</div>
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground"><Phone size={16} /> +91 93423 66970</div>
                   <div className="flex items-center gap-3 text-sm text-muted-foreground"><Mail size={16} /> hello@wepix.in</div>
                   <div className="flex items-start gap-3 text-sm text-muted-foreground">
                     <MapPin size={16} className="shrink-0 mt-0.5" />
@@ -44,13 +100,65 @@ export default function Contact() {
               <Card className="rounded-xl border-border">
                 <CardContent className="p-6">
                   <h2 className="font-display text-2xl font-semibold mb-4">Drop a Message</h2>
-                  <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                    <div><Label htmlFor="name">Name</Label><Input id="name" placeholder="What should we call you?" className="mt-1 rounded-lg" /></div>
-                    <div><Label htmlFor="email">Email</Label><Input id="email" type="email" placeholder="you@yourbrand.com" className="mt-1 rounded-lg" /></div>
-                    <div><Label htmlFor="brand">Brand / Company</Label><Input id="brand" placeholder="Your brand's name" className="mt-1 rounded-lg" /></div>
-                    <div><Label htmlFor="message">Message</Label><Textarea id="message" placeholder="Tell us about your brand and what you're looking for. The more detail, the better our first conversation will be!" rows={4} className="mt-1 rounded-lg" /></div>
-                    <Button type="submit" className="w-full rounded-lg font-medium">Send Message</Button>
-                    <p className="text-xs text-muted-foreground text-center">This form is for display only. Please use the booking link or WhatsApp — we're way faster there!</p>
+                  <form className="space-y-4" onSubmit={onSubmit}>
+                    <div>
+                      <Label htmlFor="name">Name</Label>
+                      <Input
+                        id="name"
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
+                        placeholder="What should we call you?"
+                        className="mt-1 rounded-lg"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="email">Email</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
+                        placeholder="you@yourbrand.com"
+                        className="mt-1 rounded-lg"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="brand">Brand / Company</Label>
+                      <Input
+                        id="brand"
+                        required
+                        value={formData.brand}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, brand: e.target.value }))}
+                        placeholder="Your brand's name"
+                        className="mt-1 rounded-lg"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="message">Message</Label>
+                      <Textarea
+                        id="message"
+                        required
+                        value={formData.message}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
+                        placeholder="Tell us about your brand and what you're looking for. The more detail, the better our first conversation will be!"
+                        rows={4}
+                        className="mt-1 rounded-lg"
+                      />
+                    </div>
+                    <Button type="submit" disabled={isSubmitting} className="w-full rounded-lg font-medium">
+                      {isSubmitting ? "Sending..." : "Send Message"}
+                    </Button>
+                    {submitState.type !== "idle" && (
+                      <p
+                        className={`text-xs text-center ${
+                          submitState.type === "success" ? "text-emerald-600" : "text-destructive"
+                        }`}
+                      >
+                        {submitState.message}
+                      </p>
+                    )}
                   </form>
                 </CardContent>
               </Card>

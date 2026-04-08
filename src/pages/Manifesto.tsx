@@ -125,7 +125,7 @@ export default function Manifesto() {
               </p>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.2 }}>
-              <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 overflow-hidden aspect-square">
+              <div className="rounded-xl bg-muted/40 overflow-hidden aspect-square">
                 <img
                   src="/manifesto-hero-visual.png"
                   alt="Manifesto hero visual with chess strategy concept"
@@ -176,7 +176,7 @@ export default function Manifesto() {
       {/* Image break */}
       <section className="py-16">
         <div className="container max-w-4xl">
-          <div className="border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] rounded-xl overflow-hidden">
+          <div className="bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] rounded-xl overflow-hidden">
             <img
               src="/manifesto-team-culture.png"
               alt="Team culture visual"

@@ -7,11 +7,69 @@ import { Label } from "@/components/ui/label";
 import { BookingFormDialog } from "@/components/shared/BookingFormDialog";
 import { useGSAP, heroReveal } from "@/hooks/useGSAP";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { FormEvent, useState } from "react";
 
 export default function BusinessContact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    service: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitState, setSubmitState] = useState<{
+    type: "idle" | "success" | "error";
+    message: string;
+  }>({
+    type: "idle",
+    message: "",
+  });
+
   const containerRef = useGSAP((container) => {
     heroReveal(container);
   });
+
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitState({ type: "idle", message: "" });
+
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/hello@wepix.in", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `New business brief from ${formData.name}`,
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          service: formData.service,
+          message: formData.message,
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to submit");
+      }
+
+      setSubmitState({
+        type: "success",
+        message: "Brief sent successfully. We will contact you shortly.",
+      });
+      setFormData({ name: "", company: "", email: "", service: "", message: "" });
+    } catch {
+      setSubmitState({
+        type: "error",
+        message: "Could not send right now. Please email us directly at hello@wepix.in.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <Layout>
@@ -32,7 +90,7 @@ export default function BusinessContact() {
                 <p className="text-muted-foreground mb-6">30-minute consultation with our business team. We'll listen to your challenges, share some initial ideas, and figure out if we're the right fit. Think of it as speed dating, but for business growth.</p>
                 <BookingFormDialog triggerLabel="Schedule Your Call" triggerClassName="w-full" showArrow />
                 <div className="mt-10 space-y-4">
-                  <div className="flex items-center gap-3 text-sm text-muted-foreground"><Phone size={16} /> +91 98765 43210</div>
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground"><Phone size={16} /> +91 93423 66970</div>
                   <div className="flex items-center gap-3 text-sm text-muted-foreground"><Mail size={16} /> business@wepix.in</div>
                   <div className="flex items-start gap-3 text-sm text-muted-foreground"><MapPin size={16} className="shrink-0 mt-0.5" /><p>WePix Business, Bangalore, Karnataka</p></div>
                 </div>
@@ -40,14 +98,76 @@ export default function BusinessContact() {
               <Card className="rounded-xl border-border">
                 <CardContent className="p-6">
                   <h2 className="font-display text-2xl font-semibold mb-4">Send a Brief</h2>
-                  <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                    <div><Label htmlFor="name">Name</Label><Input id="name" placeholder="What should we call you?" className="mt-1 rounded-lg" /></div>
-                    <div><Label htmlFor="company">Company</Label><Input id="company" placeholder="Your company name" className="mt-1 rounded-lg" /></div>
-                    <div><Label htmlFor="email">Work Email</Label><Input id="email" type="email" placeholder="you@company.com" className="mt-1 rounded-lg" /></div>
-                    <div><Label htmlFor="service">Service of Interest</Label><Input id="service" placeholder="e.g., AI Agents, Lead Gen, All of it" className="mt-1 rounded-lg" /></div>
-                    <div><Label htmlFor="message">Tell us about your goals</Label><Textarea id="message" placeholder="What are you trying to achieve? The more detail, the better our first conversation will be!" rows={4} className="mt-1 rounded-lg" /></div>
-                    <Button type="submit" className="w-full rounded-lg font-medium">Submit Brief</Button>
-                    <p className="text-xs text-muted-foreground text-center">This form is for display only. For faster responses, use the booking link!</p>
+                  <form className="space-y-4" onSubmit={onSubmit}>
+                    <div>
+                      <Label htmlFor="name">Name</Label>
+                      <Input
+                        id="name"
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
+                        placeholder="What should we call you?"
+                        className="mt-1 rounded-lg"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="company">Company</Label>
+                      <Input
+                        id="company"
+                        required
+                        value={formData.company}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, company: e.target.value }))}
+                        placeholder="Your company name"
+                        className="mt-1 rounded-lg"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="email">Work Email</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
+                        placeholder="you@company.com"
+                        className="mt-1 rounded-lg"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="service">Service of Interest</Label>
+                      <Input
+                        id="service"
+                        required
+                        value={formData.service}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, service: e.target.value }))}
+                        placeholder="e.g., AI Agents, Lead Gen, All of it"
+                        className="mt-1 rounded-lg"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="message">Tell us about your goals</Label>
+                      <Textarea
+                        id="message"
+                        required
+                        value={formData.message}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
+                        placeholder="What are you trying to achieve? The more detail, the better our first conversation will be!"
+                        rows={4}
+                        className="mt-1 rounded-lg"
+                      />
+                    </div>
+                    <Button type="submit" disabled={isSubmitting} className="w-full rounded-lg font-medium">
+                      {isSubmitting ? "Sending..." : "Submit Brief"}
+                    </Button>
+                    {submitState.type !== "idle" && (
+                      <p
+                        className={`text-xs text-center ${
+                          submitState.type === "success" ? "text-emerald-600" : "text-destructive"
+                        }`}
+                      >
+                        {submitState.message}
+                      </p>
+                    )}
                   </form>
                 </CardContent>
               </Card>

@@ -41,6 +41,7 @@ function getPageVariable(pathname: string): string {
     "/handbook": "Handbook",
     "/manifesto": "Manifesto",
     "/digital-store": "DigitalStore",
+    "/academy/digital-store": "DigitalStore",
     "/blogs": "Blogs",
   };
   return map[pathname] || "General";

@@ -68,55 +68,55 @@ type MemberImageSrc = string | { light: string; dark: string };
 const memberImageSrc: Record<string, MemberImageSrc> = {
   "Abdul Navas": {
     light: "/team/abdul.jpg",
-    dark: "/team/abdul-dark.png",
+    dark: "/team/abdul-dark.jpg",
   },
   "Santhosh": {
     light: "/team/santhosh.jpg",
-    dark: "/team/santhosh-dark.png",
+    dark: "/team/santhosh-dark.jpg",
   },
   "Vignesh": {
     light: "/team/vignesh.jpg",
-    dark: "/team/vignesh-dark.png",
+    dark: "/team/vignesh-dark.jpg",
   },
   "Dhesini": {
     light: "/team/dhesini.jpg",
-    dark: "/team/dhesini-dark.png",
+    dark: "/team/dhesini-dark.jpg",
   },
   "Rineesha": {
     light: "/team/rineesha.jpg",
-    dark: "/team/rineesha-dark.png",
+    dark: "/team/rineesha-dark.jpg",
   },
   "Madhumitha": {
     light: "/team/madhumitha.jpg",
-    dark: "/team/madhumitha-dark.png",
+    dark: "/team/madhumitha-dark.jpg",
   },
   "Sasi Prabha": {
     light: "/team/sasi.jpg",
-    dark: "/team/sasi-dark.png",
+    dark: "/team/sasi-dark.jpg",
   },
   "Krishnabrindha": {
     light: "/team/brindha.jpg",
-    dark: "/team/brindha-dark.png",
+    dark: "/team/brindha-dark.jpg",
   },
   "Hari Krishna": {
     light: "/team/harikrishna.jpg",
-    dark: "/team/harikrishna-dark.png",
+    dark: "/team/harikrishna-dark.jpg",
   },
   "Kadhirvel": {
     light: "/team/kadirvel.jpg",
-    dark: "/team/kadirvel-dark.png",
+    dark: "/team/kadirvel-dark.jpg",
   },
   "Vashanth Ram": {
     light: "/team/vashanth.jpg",
-    dark: "/team/vashanth-dark.png",
+    dark: "/team/vashanth-dark.jpg",
   },
   "Gowthaman": {
     light: "/team/gowthaman.jpg",
-    dark: "/team/gowthaman-dark.png",
+    dark: "/team/gowthaman-dark.jpg",
   },
   "Jananika": {
     light: "/team/janani.jpg",
-    dark: "/team/janani-dark.png",
+    dark: "/team/janani-dark.jpg",
   },
 };
 
@@ -154,7 +154,7 @@ export default function People() {
                       className="text-center"
                     >
                       {portrait ? (
-                        <div className="border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-square rounded-xl mb-3 overflow-hidden">
+                        <div className="bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-square rounded-xl mb-3 overflow-hidden">
                           {typeof portrait === "string" ? (
                             <img
                               src={portrait}

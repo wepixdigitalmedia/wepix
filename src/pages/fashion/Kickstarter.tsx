@@ -18,11 +18,11 @@ const included = [
 ];
 
 const faqs = [
-  { q: "Who is this for?", a: "New D2C fashion brands launching online for the first time, or existing brands that tried doing it themselves and... well, let's just say it didn't go as planned. If you've got great products but your online game is giving 'under construction,' this is for you." },
-  { q: "How long is the program?", a: "60 days. That's enough time to set up your entire online presence, launch campaigns, gather data, optimize, and see real results. It's intense (in a good way), like a marketing bootcamp for your brand." },
-  { q: "What if I don't have a Shopify store?", a: "Perfect — we build it for you! Store setup is fully included. We'll design it, set up payments, optimize for conversions, and make it look like you hired a fancy agency (because you did, except we're not overpriced)." },
-  { q: "What's the investment?", a: "It depends on your specific needs — number of SKUs, campaign scope, etc. Book a call and we'll give you a custom quote. No hidden fees, no surprise invoices, no 'oh we forgot to mention that costs extra.'" },
-  { q: "Do I need to provide products for the shoot?", a: "Yes! You send us the products, we handle literally everything else — styling, shooting, editing, making them look irresistible. Ship them over and trust the process." },
+  { q: "Who is this for?", a: "If you're launching a D2C fashion brand or trying to fix one that’s not working online, this is for you. Great products but zero traction? Store not converting? Ads not hitting? Yeah, we solve that." },
+  { q: "How long are we talking?", a: "60 days. Enough to build your online presence, launch campaigns, collect data, and start seeing real results. It’s intense in a good way. Think of it like a marketing bootcamp for your brand." },
+  { q: "No Shopify store yet? No stress.", a: "We’ll build it for you. From design to payments to conversions, everything is covered. End result? A store that looks premium and actually sells." },
+  { q: "What's the investment?", a: "It depends on what you need. Number of SKUs, campaign scope, and overall goals. Hop on a call and we’ll give you a clear custom quote. No hidden fees. No surprise invoices. No “oh that costs extra” later." },
+  { q: "Who handles the shoot?", a: "You send the products. We take care of the rest. From styling to final edits, everything is covered." },
 ];
 
 export default function Kickstarter() {
@@ -43,7 +43,7 @@ export default function Kickstarter() {
             <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">No confusion. No random experiments.</h1>
             <p className="gsap-hero-desc mt-4 text-lg text-muted-foreground opacity-0">Just a complete system covering store, content, ads, and strategy designed to turn your products into a selling brand.'</p>
             <div className="mt-10">
-              <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 overflow-hidden aspect-[21/9]">
+              <div className="rounded-xl bg-muted/40 overflow-hidden aspect-[21/9]">
                 <img
                   src="/kickstarter-timeline.png"
                   alt="Kickstarter program timeline infographic"

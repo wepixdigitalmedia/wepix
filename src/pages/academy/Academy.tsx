@@ -10,7 +10,7 @@ import { useGSAP, heroReveal, scrollFadeIn, gsap } from "@/hooks/useGSAP";
 
 const offerings = [
   { icon: GraduationCap, title: "Meta Ads Mastery Course", description: "Learn the real way to run profitable Meta Ads. This isn't some textbook theory. We’re talking about actual experience from running real campaigns. No fluff, just results.", href: "/academy/meta-ads-course", img: "Course preview" },
-  { icon: Video, title: "Live Webinars", description: "Get direct access to weekly live sessions where we break down what’s working right now. We’ll answer all your burning questions and share the most actionable tips in real-time.", href: "/academy/webinar", img: "Webinar screenshot" },
+  { icon: Video, title: "Live Masterclass", description: "Get direct access to weekly live sessions where we break down what’s working right now. We’ll answer all your burning questions and share the most actionable tips in real-time.", href: "/academy/webinar", img: "Webinar screenshot" },
   { icon: Users, title: "Skool Community", description: "Join a group of 500+ marketers and brand owners where we share wins, losses, and everything in between. It’s like a group chat, but full of knowledge and support.", href: "/academy/community", img: "Community screenshot" },
 ];
 
@@ -55,7 +55,7 @@ export default function Academy() {
                   </Link>
                 </div>
               </div>
-              <div className="gsap-hero-cta opacity-0 rounded-xl overflow-hidden aspect-square border-2 border-dashed border-border bg-muted/40">
+              <div className="gsap-hero-cta opacity-0 rounded-xl overflow-hidden aspect-square bg-muted/40">
                 <img
                   src="/academy-hero-instructor-2.png"
                   alt="WePix Academy instructor with brand-building tools"
@@ -76,7 +76,7 @@ export default function Academy() {
                   <Link to={o.href}>
                     <Card className="h-full hover:shadow-md transition-all rounded-xl border-border group overflow-hidden">
                       {o.img === "Course preview" ? (
-                        <div className="border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 border-b-2 overflow-hidden">
+                        <div className="bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 overflow-hidden">
                           <img
                             src="/meta-ads-course.png"
                             alt="Meta Ads Mastery Course preview"
@@ -85,7 +85,7 @@ export default function Academy() {
                           />
                         </div>
                       ) : o.img === "Webinar screenshot" ? (
-                        <div className="border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 border-b-2 overflow-hidden">
+                        <div className="bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 overflow-hidden">
                           <img
                             src="/academy-webinar.png"
                             alt="Live Webinars preview"
@@ -94,7 +94,7 @@ export default function Academy() {
                           />
                         </div>
                       ) : o.img === "Community screenshot" ? (
-                        <div className="border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 border-b-2 overflow-hidden">
+                        <div className="bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 overflow-hidden">
                           <img
                             src="/academy-skool.png"
                             alt="Skool Community preview"
@@ -140,7 +140,7 @@ export default function Academy() {
               {Array.from({ length: 3 }).map((_, i) => (
                 <Card key={i} className="rounded-xl border-border overflow-hidden">
                   {i === 0 || i === 1 || i === 2 ? (
-                    <div className="border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 border-b-2 overflow-hidden">
+                    <div className="bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 overflow-hidden">
                       <iframe
                         src={
                           i === 0

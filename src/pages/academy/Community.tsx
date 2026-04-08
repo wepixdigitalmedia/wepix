@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder";
 import { useGSAP, heroReveal, gsap } from "@/hooks/useGSAP";
-import { Users, MessageSquare, BookOpen, ArrowRight, Check } from "lucide-react";
+import { Users, MessageSquare, BookOpen, ArrowRight, Check } from "lucide-react"; 
 
 const benefits = [
   "Daily convos about ads, content, and growth. It’s like a group chat, but everyone actually knows what’s up.",
@@ -32,7 +32,7 @@ export default function Community() {
             <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">Always On. Always Ready to Help. Always a Little Wild.</h1>
             <p className="gsap-hero-desc mt-4 text-lg text-muted-foreground opacity-0">Picture having a squad of 500+ marketers and brand owners right in your pocket. They’re here to share insights, answer your burning questions, and throw a virtual high-five when your campaign crushes 3x ROAS at 2 AM. That’s the WePix Skool community. It’s the group chat you never knew you needed.</p>
             <div className="mt-10">
-              <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] overflow-hidden">
+              <div className="rounded-xl bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] overflow-hidden">
                 <img
                   src="/academy-community-hero.png"
                   alt="Marketing community chat bubbles discussing growth strategies"

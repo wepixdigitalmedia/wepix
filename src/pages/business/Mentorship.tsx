@@ -45,7 +45,7 @@ export default function Mentorship() {
             Tired of hearing the same old advice from LinkedIn "gurus"? Get the real deal with WePix’s structured mentorship. We use the exact systems that help us manage ₹2Cr+ in ad spend across 50+ brands. With us, you’re not just getting a course. You’ll get live Q&A sessions, a tight-knit community of entrepreneurs, and direct, hands-on support from the people who’ve built what you're building. Time to stop wasting time and start seeing results. Let's go.
             </p>
             <div className="mt-8">
-              <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] overflow-hidden">
+              <div className="rounded-xl bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] overflow-hidden">
                 <img
                   src="/business-mentorship-session.png"
                   alt="Mentorship session"

@@ -6,15 +6,15 @@ import { useGSAP, heroReveal, scrollFadeIn } from "@/hooks/useGSAP";
 import { TrendingUp } from "lucide-react";
 
 const studies = [
-  { brand: "Yazhli", category: "Ethnic Wear", stat: "3x ROAS", description: "From local saree shop to thriving D2C brand with a gorgeous Shopify store and Meta Ads using our MCS Framework." },
-  { brand: "Thugiil", category: "Kids Fashion", stat: "₹10L+ / mo", description: "Complete brand refresh and premium content strategy targeting millennial parents. Consistency is king (or queen)." },
-  { brand: "Pearloze", category: "Premium Menswear", stat: "2.5x Growth", description: "Repositioned the brand from 'invisible' to 'irresistible.' Luxury content + conversion campaigns that actually convert." },
-  { brand: "Lemoonbaby", category: "Sustainable Fashion", stat: "4x ROAS", description: "Eco-conscious brand that needed the world to know about their mission. We made sustainability look as good as it feels." },
-  { brand: "Teebuy", category: "Handloom Sarees", stat: "₹8L+ / mo", description: "Heritage handloom brand taken digital. AI-generated model shots via WePixStudio turned raw product images into showstoppers." },
-  { brand: "Thedori", category: "Streetwear", stat: "5x ROAS", description: "Bold streetwear brand with zero paid strategy. We built a full Meta funnel and scaled from ₹0 to ₹1L/day ad spend profitably." },
-  { brand: "Pinkstories", category: "Baby Accessories", stat: "₹12L+ / mo", description: "Cute products, chaotic branding. We unified everything - content, store, ads - and turned them into a category leader." },
-  { brand: "Alankarchennai", category: "Luxury Ethnic", stat: "3.8x ROAS", description: "High-ticket ethnic wear brand. Premium Shopify store + catalog ads targeting NRI audiences across the US and UK." },
-  { brand: "Cloudyfit", category: "Men's Grooming", stat: "60% CPA ↑", description: "Grooming brand burning cash on ads. We restructured campaigns, refreshed creatives, and cut their CPA by more than half." },
+  { brand: "Yazhli", category: "Ethnic & Fusion Wear", stat: "31x ROAS", description: "From scroll to sale powered by high-performing creatives and a structured ad system." },
+  { brand: "Thugiil", category: "Kids Fashion", stat: "₹68L+ in Sales", description: "₹68L+ revenue built on clean aesthetics, consistent content, and a system that actually converts." },
+  { brand: "Pearloze", category: "Premium Western Wear", stat: "20x Growth", description: "From just another fashion page to a scroll-stopper brand. Clean visuals with conversion-focused campaigns." },
+  { brand: "Lemoonbaby", category: "Premium Kids Wear", stat: "₹75L+ Revenue Scaled", description: "From a basic kidswear store to a high-converting D2C brand. Adorable visuals backed by performance campaigns that drive consistent sales." },
+  { brand: "Teebuy", category: "Affordable Innerwear & Kidswear", stat: "₹60L+ Revenue Scaled", description: "From a local manufacturing brand to a high-volume D2C store. Value-driven products powered by performance campaigns that convert at scale." },
+  { brand: "Thedori", category: "Modern Ethnic Wear", stat: "Scaling From Scratch", description: "From zero traction to consistent order flow. Aesthetic-first content with campaigns that start converting." },
+  { brand: "Pinkstories", category: "Luxury Ethnic Wear", stat: "From Scroll to Sold", description: "From a boutique-style brand to a fast-growing D2C store. Festive-first visuals backed by campaigns that convert consistently." },
+  { brand: "Alankarchennai", category: "Designer Ethnic Wear", stat: "Premium Sales Flow", description: "Not just seen. Sold. From aesthetic collections to consistent high-value purchases. Content that attracts with campaigns that close." },
+  { brand: "Cloudyfit", category: "Maternity & Lounge Wear", stat: "3x Scaling Achieved", description: "From unstable performance to predictable scaling. Optimized funnels and creatives to drive higher output with the same spend." },
 ];
 
 export default function CaseStudies() {

@@ -25,7 +25,7 @@ export default function Webinar() {
       <div ref={containerRef}>
         <section className="gsap-hero-section py-24 md:py-32">
           <div className="container max-w-3xl">
-            <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">Webinars</span>
+            <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">Masterclass</span>
             <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">Free Live Sessions. Real Insights. No Pitch Decks.</h1>
             <p className="gsap-hero-desc mt-4 text-lg text-muted-foreground opacity-0">Every week, we go live to break down real campaigns, share what’s actually working, and answer your questions. No fluff, just straight-up value. It's free to join (yes, actually free, not "free but we’ll upsell you for 45 minutes" free). Join, learn, and leave with more knowledge than you came with.</p>
             <div className="mt-10 rounded-xl overflow-hidden aspect-video">
@@ -44,7 +44,7 @@ export default function Webinar() {
             <Card className="rounded-xl border-border">
               <CardContent className="p-8 text-center">
                 <Calendar className="text-foreground mx-auto mb-4" size={28} />
-                <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Next Webinar — Live</span>
+                <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Next Masterclass — Live</span>
                 <h2 className="font-display text-2xl md:text-3xl font-semibold mt-3">Scaling Meta Ads: The 2024 Playbook</h2>
                 <p className="text-muted-foreground mt-2">Friday, 7 PM IST · Free to Join · Bring snacks and questions</p>
                 <div className="mt-6">

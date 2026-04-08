@@ -96,7 +96,7 @@ export default function Business() {
                   <Button size="lg" className="rounded-lg font-medium gap-2">Learn About AI Agents <ArrowRight size={16} /></Button>
                 </Link>
               </div>
-              <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+              <div className="rounded-xl bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
                 <img
                   src="/ai-agent-demo-5.png"
                   alt="AI assistant handing off intelligence to a human"
@@ -110,7 +110,7 @@ export default function Business() {
 
         <section className="py-24">
           <div className="container max-w-3xl text-center gsap-mentorship opacity-0">
-            <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] mb-10 overflow-hidden">
+            <div className="rounded-xl bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] mb-10 overflow-hidden">
               <img
                 src="/mentorship-session-photo.png"
                 alt="Business mentorship session reviewing ad performance"

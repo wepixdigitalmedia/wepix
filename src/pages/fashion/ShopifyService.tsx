@@ -96,7 +96,11 @@ export default function ShopifyService() {
         <section className="gsap-hero-section py-20 md:py-28">
           <div className="container max-w-4xl">
             <div className="flex flex-col items-center text-center">
-              <img src={shopifyPartnerBadge} alt="Shopify Partner" className="gsap-hero-tag h-10 w-auto mb-6 opacity-0" />
+              <img
+                src={shopifyPartnerBadge}
+                alt="Shopify Partner"
+                className="gsap-hero-tag h-10 w-auto mb-6 opacity-0 dark:invert"
+              />
               <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">Official Shopify Partner</span>
               <h1 className="gsap-hero-title font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] opacity-0">
               Your Premium Shopify Store, Crafted for Fashion & D2C
@@ -293,7 +297,11 @@ export default function ShopifyService() {
         {/* Trust */}
         <section className="py-16 bg-muted/30">
           <div className="container max-w-3xl text-center">
-            <img src={shopifyPartnerBadge} alt="Shopify Partner" className="h-8 w-auto mx-auto mb-4" />
+            <img
+              src={shopifyPartnerBadge}
+              alt="Shopify Partner"
+              className="h-8 w-auto mx-auto mb-4 dark:invert"
+            />
             <h2 className="font-display text-xl md:text-2xl font-semibold mb-3">Official Shopify Partner</h2>
             <p className="text-sm text-muted-foreground max-w-lg mx-auto">
               As a certified Shopify Partner, we have access to exclusive tools, priority support from Shopify, and deep expertise in the platform. Your store is in safe, certified hands.

@@ -13,14 +13,14 @@ import { useState } from "react";
 const services = [
   { icon: Rocket, title: "Kickstarter Program", description: "60 days. Zero to selling. We build your store, shoot your products, run your ads, and hold your hand through the whole thing. It's like a bootcamp, but for your brand.", href: "/fashion/kickstarter", img: "Kickstarter program" },
   { icon: Camera, title: "WePixStudio", description: "AI-powered content creation that makes your ₹500 product look like it belongs in Vogue. Seriously, your competitors will be confused.", href: "/fashion/wepixstudio", img: "WePixStudio demo" },
-  { icon: BarChart3, title: "Meta Ads Management", description: "Full-funnel ad management powered by our MCS Framework. We don't just run ads — we build a system that prints money (legally).", href: "/fashion/book", img: "Ads dashboard" },
+  { icon: BarChart3, title: "Meta Ads Management", description: "We don’t just run ads. We make them hit. Full funnel systems that turn clicks into cash and scale without chaos.", href: "/fashion/book", img: "Ads dashboard" },
 ];
 
 const mcsSteps = [
-  { step: "M", title: "Media", description: "We target the right audience with the right budget, so every rupee is well spent." },
-  { step: "C", title: "Creative", description: "We create content that grabs attention and makes people stop, look, and save." },
-  { step: "S", title: "Strategy", description: "We plan the full customer journey—from first impression to purchase." },
-  { step: "4", title: "Iterate", description: "We track results and improve every week. Nothing is left on autopilot." },
+  { step: "M", title: "Media", description: "Right people. Right targeting. No wasted spend." },
+  { step: "C", title: "Creative", description: "Content that stops the scroll and makes people care." },
+  { step: "S", title: "Strategy", description: "Clear journey from first click to checkout." },
+  { step: "4", title: "Iterate", description: "We track, tweak, and improve every single week." },
 ];
 
 export default function Fashion() {
@@ -74,7 +74,7 @@ export default function Fashion() {
                   </span>
                 </div>
               </div>
-              <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-square gsap-hero-cta opacity-0 overflow-hidden">
+              <div className="rounded-xl bg-muted/40 flex items-center justify-center aspect-square gsap-hero-cta opacity-0 overflow-hidden">
                 <img
                   src="/fashion-hero.png"
                   alt="Fashion e-commerce hero visual"
@@ -94,7 +94,7 @@ export default function Fashion() {
                   key={image.src}
                   type="button"
                   onClick={() => setActiveImageIndex(i)}
-                  className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden text-left"
+                  className="rounded-xl bg-muted/40 flex items-center justify-center aspect-[3/4] overflow-hidden text-left"
                 >
                   <img
                     src={image.src}
@@ -205,7 +205,7 @@ export default function Fashion() {
 
         <section className="gsap-mcs-section py-24">
           <div className="container">
-            <SectionHeading tag="Our Secret Sauce" title="The MCS Framework" description="Media, Creative, Strategy and never stopping until it works. This is the system behind every campaign we have run and every result we have delivered." />
+            <SectionHeading tag="Our Secret Sauce" title="The MCS Framework" description="Media. Creative. Strategy. Then we keep pushing till it works. This is how every campaign we run turns into real results." />
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {mcsSteps.map((step) => (
                 <div key={step.step} className="gsap-mcs-step text-center opacity-0">
@@ -214,25 +214,25 @@ export default function Fashion() {
                       <img
                         src="/mcs-media-icon.png"
                         alt="Media step icon"
-                        className="w-8 h-8 object-contain"
+                        className="w-8 h-8 object-contain dark:invert"
                       />
                     ) : step.step === "C" ? (
                       <img
                         src="/mcs-creative-icon.png"
                         alt="Creative step icon"
-                        className="w-8 h-8 object-contain"
+                        className="w-8 h-8 object-contain dark:invert"
                       />
                     ) : step.step === "S" ? (
                       <img
                         src="/mcs-strategy-icon.png"
                         alt="Strategy step icon"
-                        className="w-8 h-8 object-contain"
+                        className="w-8 h-8 object-contain dark:invert"
                       />
                     ) : step.step === "4" ? (
                       <img
                         src="/mcs-iterate-icon.png"
                         alt="Iterate step icon"
-                        className="w-8 h-8 object-contain"
+                        className="w-8 h-8 object-contain dark:invert"
                       />
                     ) : (
                       <span className="font-display text-xl font-semibold">{step.step}</span>
@@ -247,7 +247,7 @@ export default function Fashion() {
         </section>
       </div>
 
-      <CTABanner headline="Ready to make your fashion brand unforgettable?" subtext="Book a free strategy call. We'll roast your current marketing (lovingly) and show you what's possible." ctaLabel="Book a Free Call" />
+      <CTABanner headline="Your brand deserves attention. Let’s get it." subtext="We’ll review your marketing, spot the gaps, and map out what actually moves the needle." ctaLabel="Book a Free Call" />
     </Layout>
   );
 }

@@ -13,7 +13,7 @@ const posts = [
   { title: "Stop Boosting Posts. Here's What to Do Instead.", tag: "Meta Ads", date: "Feb 8, 2026", readTime: "4 min" },
   { title: "Building a Content Calendar That Doesn't Suck", tag: "Content", date: "Jan 30, 2026", readTime: "7 min" },
   { title: "The Ugly Truth About Marketing Agency Pricing", tag: "Industry", date: "Jan 22, 2026", readTime: "6 min" },
-  { title: "Shopify vs WooCommerce for Indian Fashion Brands", tag: "E-commerce", date: "Jan 15, 2026", readTime: "9 min" },
+  { title: "Shopify vs WooCommerce for Indian Fashion Brands", tag: "E-commerce", date: "Jan 15, 2026", readTime: "9 min" }, 
   { title: "Our Exact Creative Testing Framework (Steal It)", tag: "Strategy", date: "Jan 8, 2026", readTime: "8 min" },
 ];
 
@@ -24,8 +24,8 @@ export default function Blogs() {
         <div className="container">
           <SectionHeading
             tag="Blog"
-            title="Stuff we've learned the hard way"
-            description="Real insights from running ads, building brands, and occasionally breaking things. No fluff, no LinkedIn-bro energy — just actionable knowledge."
+            title="From trial and error to what actually works"
+            description="No fluff. No noise. Just clear, actionable insights."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {posts.map((post, i) => (

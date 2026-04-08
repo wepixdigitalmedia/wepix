@@ -469,7 +469,7 @@ const Index = () => {
       {/* Founders */}
       <section className="py-16 md:py-28 bg-muted/50">
         <div className="container">
-          <SectionHeading tag="The Crew" title="Built by doers, not PowerPoint warriors." />
+          <SectionHeading tag="The Crew" title="Built by people who execute, not just present." />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -480,7 +480,7 @@ const Index = () => {
                 photo: founderAbdulImage,
                 social: {
                   linkedin: "https://www.linkedin.com/in/abdulnavas/",
-                  instagram: "https://instagram.com/talkswithabdul",
+                  instagram: "https://www.instagram.com/abdul_navas/ ",
                   x: "https://x.com/talkswithabdul",
                 },
               },
@@ -490,9 +490,9 @@ const Index = () => {
                 bio: "Principal Brand Consultant Every rupee has a job and he makes sure it does it well. Santhosh keeps the financial engine running clean so the team can focus on delivering results. Budgets balance, cash flows right, and clients stay profitable. The kind of person who finds problems in the numbers before they become actual problems.",
                 photo: founderSanthoshImage,
                 social: {
-                  linkedin: "https://linkedin.com/in/santhosh-wepix",
-                  instagram: "https://instagram.com/wepix",
-                  x: "https://x.com/wepix",
+                  linkedin: "https://www.linkedin.com/in/santhosh-wepix/",
+                  instagram: "https://www.instagram.com/santhosh_wepix/",
+                  x: "https://x.com/",
                 },
               },
               {
@@ -500,9 +500,9 @@ const Index = () => {
                 role: "Chief Operating Officer",
                 bio: "Lead Gen Expert He does not chase leads. He builds systems that attract the right people, warm them up, and hand them over ready to buy. While others are figuring out what went wrong, Vignesh already has the next pipeline full and moving. Results first, talk later.",
                 social: {
-                  linkedin: "https://linkedin.com/company/wepix",
-                  instagram: "https://instagram.com/wepix",
-                  x: "https://x.com/wepix",
+                  linkedin: "https://www.linkedin.com/in/vigneshbalakrishna/",
+                  instagram: "https://www.instagram.com/it_wasnt_me_vicky/",
+                  x: "https://x.com/rockvignesh123",
                 },
                 photo: founderVigneshImage,
               }
@@ -669,8 +669,8 @@ const Index = () => {
       </section>
 
       <CTABanner
-        headline="Ready to stop winging it?"
-        subtext="Book a free strategy call. No pitch decks, no corporate jargon, no 'let me circle back' — just a real conversation about your brand over virtual chai."
+        headline="You don’t need more ideas. You need direction."
+        subtext="Let’s get on a call and figure out what actually moves your brand forward."
         ctaLabel="Book a Free Call"
       />
     </Layout>

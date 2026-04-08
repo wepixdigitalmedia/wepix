@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
@@ -17,7 +17,6 @@ import Handbook from "./pages/Handbook";
 import Careers from "./pages/Careers";
 import Perennial from "./pages/Perennial";
 import Blogs from "./pages/Blogs";
-import DigitalStore from "./pages/DigitalStore";
 import Fashion from "./pages/fashion/Fashion";
 import Kickstarter from "./pages/fashion/Kickstarter";
 import WePixStudio from "./pages/fashion/WePixStudio";
@@ -25,6 +24,7 @@ import ShopifyService from "./pages/fashion/ShopifyService";
 import CaseStudies from "./pages/fashion/CaseStudies";
 import BookACall from "./pages/fashion/BookACall";
 import Academy from "./pages/academy/Academy";
+import DigitalStore from "./pages/academy/DigitalStore";
 import MetaAdsCourse from "./pages/academy/MetaAdsCourse";
 import Webinar from "./pages/academy/Webinar";
 import Community from "./pages/academy/Community";
@@ -57,7 +57,7 @@ const App = () => (
             <Route path="/vignesh" element={<Vignesh />} />
             <Route path="/handbook" element={<Handbook />} />
             <Route path="/blogs" element={<Blogs />} />
-            <Route path="/digital-store" element={<DigitalStore />} />
+            <Route path="/digital-store" element={<Navigate to="/academy/digital-store" replace />} />
             <Route path="/manifesto" element={<Manifesto />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/perennial" element={<Perennial />} />
@@ -69,6 +69,7 @@ const App = () => (
             <Route path="/fashion/shopify" element={<ShopifyService />} />
             <Route path="/fashion/book" element={<BookACall />} />
             <Route path="/academy" element={<Academy />} />
+            <Route path="/academy/digital-store" element={<DigitalStore />} />
             <Route path="/academy/meta-ads-course" element={<MetaAdsCourse />} />
             <Route path="/academy/webinar" element={<Webinar />} />
             <Route path="/academy/community" element={<Community />} />

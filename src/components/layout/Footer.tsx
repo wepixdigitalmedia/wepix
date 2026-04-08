@@ -6,7 +6,7 @@ const footerLinks = {
     { label: "Fashion", href: "/fashion" },
     { label: "Academy", href: "/academy" },
     { label: "Business", href: "/business" },
-    { label: "Digital Store", href: "/digital-store" },
+    { label: "Digital Store", href: "/academy/digital-store" },
   ],
   Company: [
     { label: "About", href: "/about" },
@@ -32,11 +32,10 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Linkedin, href: "https://linkedin.com/company/wepix", label: "LinkedIn" },
-  { icon: Instagram, href: "https://instagram.com/wepix", label: "Instagram" },
-  { icon: Youtube, href: "https://youtube.com/@wepix", label: "YouTube" },
-  { icon: Twitter, href: "https://x.com/wepix", label: "X" },
-  { icon: Facebook, href: "https://facebook.com/wepix", label: "Facebook" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/wepixdigitalmedia/", label: "LinkedIn" },
+  { icon: Instagram, href: "https://www.instagram.com/wepixindia/", label: "Instagram" },
+  { icon: Youtube, href: "https://www.youtube.com/@wepix", label: "YouTube" },
+  { icon: Facebook, href: "https://www.facebook.com/wepixindia/", label: "Facebook" },
 ];
 
 function MediumIcon({ size = 18 }: { size?: number }) {
@@ -67,9 +66,9 @@ export function Footer() {
             <a href="mailto:hello@wepix.in" className="inline-block mt-3 text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors">
               hello@wepix.in
             </a>
-            <a href="tel:+91987654321" className="flex items-center gap-1.5 mt-2 text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors">
+            <a href="tel:+919342366970" className="flex items-center gap-1.5 mt-2 text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors">
               <Phone size={14} />
-              +91 987654321
+              +91 93423 66970
             </a>
             <div className="flex gap-4 mt-6">
               {socialLinks.map((social) => (
@@ -77,9 +76,6 @@ export function Footer() {
                   <social.icon size={18} />
                 </a>
               ))}
-              <a href="https://medium.com/@wepix" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Medium">
-                <MediumIcon size={18} />
-              </a>
             </div>
           </div>
 
@@ -105,7 +101,7 @@ export function Footer() {
           {[
             { city: "Tirupur", address: "Sheriff Colony, Tirupur" },
             { city: "Bangalore", address: "HSR Layout, Bangalore" },
-            { city: "Chennai", address: "Casagrand Amberly, Navalur, Chennai" },
+            // { city: "Chennai", address: "Casagrand Amberly, Navalur, Chennai" },
           ].map((loc) => (
             <div key={loc.city} className="flex items-start gap-3">
               <div className="shrink-0 w-8 h-8 rounded-lg bg-muted flex items-center justify-center mt-0.5">

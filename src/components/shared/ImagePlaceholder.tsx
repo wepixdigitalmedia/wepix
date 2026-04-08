@@ -30,7 +30,7 @@ export function ImagePlaceholder({
     return (
       <div
         className={cn(
-          "rounded-xl border-2 border-dashed border-border bg-muted/40 overflow-hidden flex flex-col items-center justify-center gap-3",
+          "rounded-xl bg-muted/40 overflow-hidden flex flex-col items-center justify-center gap-3",
           grayscaleUntilHover && "group",
           ratioClass,
           className,
@@ -41,8 +41,7 @@ export function ImagePlaceholder({
           alt={alt ?? label}
           className={cn(
             "w-full h-full object-cover",
-            grayscaleUntilHover &&
-              "grayscale transition-[filter] duration-300 ease-out group-hover:grayscale-0",
+              grayscaleUntilHover && "grayscale",
           )}
           loading="lazy"
         />
@@ -51,7 +50,7 @@ export function ImagePlaceholder({
   }
 
   return (
-    <div className={cn("rounded-xl border-2 border-dashed border-border bg-muted/40 overflow-hidden flex flex-col items-center justify-center gap-3", ratioClass, className)}>
+    <div className={cn("rounded-xl bg-muted/40 overflow-hidden flex flex-col items-center justify-center gap-3", ratioClass, className)}>
       <ImageIcon className="text-muted-foreground/40" size={40} />
       <p className="text-sm text-muted-foreground/60 font-medium">{label}</p>
     </div>

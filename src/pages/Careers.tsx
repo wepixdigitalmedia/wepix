@@ -89,7 +89,7 @@ export default function Careers() {
           <SectionHeading tag="Careers" title="WePix: Where Creators Build, Grow, and Thrive" />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
             <div
-              className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex items-center justify-center overflow-hidden"
+              className="rounded-xl bg-muted/40 flex items-center justify-center overflow-hidden"
               style={{ aspectRatio: "1 / 1" }}
             >
               <img
@@ -149,7 +149,7 @@ export default function Careers() {
                   transition={{ delay: i * 0.04, duration: 0.4 }}
                 >
                   {item === "Team party" ? (
-                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                    <div className="rounded-xl bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
                       <img
                         src="/careers-team-party.png"
                         alt="Team party at WePix"
@@ -158,7 +158,7 @@ export default function Careers() {
                       />
                     </div>
                   ) : item === "Office brainstorming" ? (
-                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                    <div className="rounded-xl bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
                       <img
                         src="/careers-office-brainstorming.png"
                         alt="Office brainstorming session at WePix"
@@ -167,7 +167,7 @@ export default function Careers() {
                       />
                     </div>
                   ) : item === "Campaign review" ? (
-                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                    <div className="rounded-xl bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
                       <img
                         src="/careers-campaign-review.png"
                         alt="Campaign review meeting at WePix"
@@ -176,7 +176,7 @@ export default function Careers() {
                       />
                     </div>
                   ) : item === "Late night builds" ? (
-                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                    <div className="rounded-xl bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
                       <img
                         src="/careers-late-night-builds.png"
                         alt="Late night builds team selfie"
@@ -185,7 +185,7 @@ export default function Careers() {
                       />
                     </div>
                   ) : item === "Team celebration" ? (
-                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                    <div className="rounded-xl bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
                       <img
                         src="/careers-team-celebration.png"
                         alt="Team celebration at WePix"
@@ -194,7 +194,7 @@ export default function Careers() {
                       />
                     </div>
                   ) : item === "Workshop day" ? (
-                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                    <div className="rounded-xl bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
                       <img
                         src="/careers-workshop-day.png"
                         alt="Workshop day at WePix"
@@ -203,7 +203,7 @@ export default function Careers() {
                       />
                     </div>
                   ) : item === "Product shoot day" ? (
-                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                    <div className="rounded-xl bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
                       <img
                         src="/careers-product-shoot-day.png"
                         alt="Product shoot day at WePix"
@@ -212,7 +212,7 @@ export default function Careers() {
                       />
                     </div>
                   ) : item === "Creative chaos" ? (
-                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                    <div className="rounded-xl bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
                       <img
                         src="/careers-creative-chaos.png"
                         alt="Creative chaos at WePix"
@@ -221,7 +221,7 @@ export default function Careers() {
                       />
                     </div>
                   ) : item === "Launch day" ? (
-                    <div className="rounded-xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
+                    <div className="rounded-xl bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video overflow-hidden">
                       <img
                         src="/careers-launch-day.png"
                         alt="Launch day at WePix"
@@ -254,7 +254,7 @@ export default function Careers() {
               >
                 <Card className="h-full border-border/50">
                   {job.title === "Performance Marketer" ? (
-                    <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video border-dashed border-border bg-muted/40 flex items-center justify-center">
+                    <div className="rounded-t-xl rounded-b-none border-0 overflow-hidden aspect-video bg-muted/40 flex items-center justify-center">
                       <img
                         src="/performance-marketer-hero.png"
                         alt="Performance marketing dashboards for Meta and Google ads"
@@ -263,7 +263,7 @@ export default function Careers() {
                       />
                     </div>
                   ) : job.title === "Shopify Developer" ? (
-                    <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video border-dashed border-border bg-muted/40 flex items-center justify-center">
+                    <div className="rounded-t-xl rounded-b-none border-0 overflow-hidden aspect-video bg-muted/40 flex items-center justify-center">
                       <img
                         src="/shopify-developer-hero-3.png"
                         alt="Shopify storefronts across devices with winter collection"
@@ -272,7 +272,7 @@ export default function Careers() {
                       />
                     </div>
                   ) : job.title === "Social Media Manager" ? (
-                    <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video border-dashed border-border bg-muted/40 flex items-center justify-center">
+                    <div className="rounded-t-xl rounded-b-none border-0 overflow-hidden aspect-video bg-muted/40 flex items-center justify-center">
                       <img
                         src="/social-media-manager-hero.png"
                         alt="Social media manager dashboard with multiple platforms"
@@ -281,7 +281,7 @@ export default function Careers() {
                       />
                     </div>
                   ) : job.title === "Video Editor" ? (
-                    <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video border-dashed border-border bg-muted/40 flex items-center justify-center">
+                    <div className="rounded-t-xl rounded-b-none border-0 overflow-hidden aspect-video bg-muted/40 flex items-center justify-center">
                       <img
                         src="/video-editor-hero.png"
                         alt="Video editor creative workspace interface"
