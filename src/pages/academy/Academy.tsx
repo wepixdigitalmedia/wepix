@@ -57,9 +57,15 @@ export default function Academy() {
               </div>
               <div className="gsap-hero-cta opacity-0 rounded-xl overflow-hidden aspect-square bg-muted/40">
                 <img
-                  src="/academy-hero-instructor-2.png"
+                  src="/academy-hero-instructor-2-light.png"
                   alt="WePix Academy instructor with brand-building tools"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover dark:hidden"
+                  loading="lazy"
+                />
+                <img
+                  src="/academy-hero-instructor-2-dark.png"
+                  alt="WePix Academy instructor with brand-building tools"
+                  className="hidden w-full h-full object-cover dark:block"
                   loading="lazy"
                 />
               </div>
@@ -78,27 +84,45 @@ export default function Academy() {
                       {o.img === "Course preview" ? (
                         <div className="bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 overflow-hidden">
                           <img
-                            src="/meta-ads-course.png"
+                            src="/meta-ads-course-light.png"
                             alt="Meta Ads Mastery Course preview"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover dark:hidden"
+                            loading="lazy"
+                          />
+                          <img
+                            src="/meta-ads-course-dark.png"
+                            alt="Meta Ads Mastery Course preview"
+                            className="hidden w-full h-full object-cover dark:block"
                             loading="lazy"
                           />
                         </div>
                       ) : o.img === "Webinar screenshot" ? (
                         <div className="bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 overflow-hidden">
                           <img
-                            src="/academy-webinar.png"
+                            src="/academy-webinar-light.png"
                             alt="Live Webinars preview"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover dark:hidden"
+                            loading="lazy"
+                          />
+                          <img
+                            src="/academy-webinar-dark.png"
+                            alt="Live Webinars preview"
+                            className="hidden w-full h-full object-cover dark:block"
                             loading="lazy"
                           />
                         </div>
                       ) : o.img === "Community screenshot" ? (
                         <div className="bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 overflow-hidden">
                           <img
-                            src="/academy-skool.png"
+                            src="/academy-skool-light.png"
                             alt="Skool Community preview"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover dark:hidden"
+                            loading="lazy"
+                          />
+                          <img
+                            src="/academy-skool-dark.png"
+                            alt="Skool Community preview"
+                            className="hidden w-full h-full object-cover dark:block"
                             loading="lazy"
                           />
                         </div>

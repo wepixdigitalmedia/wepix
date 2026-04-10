@@ -33,18 +33,26 @@ const jobs = [
   {
     title: "Performance Marketer",
     desc: "Your mission: Become the hero who launches and optimizes epic Meta and Google campaigns. You’ll test creatives, analyze performance data, and scale profitable campaigns to help brands shine. Get ready to make numbers go up!",
+    hero: { light: "/performance-marketer-hero-light.png", dark: "/performance-marketer-hero-dark.png" },
+    heroAlt: "Performance marketing dashboards for Meta and Google ads",
   },
   {
     title: "Social Media Manager",
     desc: "Your mission: Own the social game! Manage our brand's presence across IG, FB, and more. Craft killer content strategies, keep up with trends, and work hand-in-hand with creative squads. Help us stay ahead of the trends, one post at a time!",
+    hero: { light: "/social-media-manager-hero-light.png", dark: "/social-media-manager-hero-dark.png" },
+    heroAlt: "Social media manager dashboard with multiple platforms",
   },
   {
     title: "Shopify Developer",
     desc: "Your mission: You’ll be the brain behind building sleek, high-converting Shopify stores. From theme customization to optimizing performance, you’ll make the user experience smooth. Plus, you’ll connect the dots with marketing integrations to get sales flowing!",
+    hero: { light: "/shopify-developer-hero-3-light.png", dark: "/shopify-developer-hero-3-dark.png" },
+    heroAlt: "Shopify storefronts across devices with winter collection",
   },
   {
     title: "Video Editor",
     desc: "Your mission: Get those creative juices flowing! You’ll craft performance-driven ads, killer Reels, and branded content that speak to the soul. Strong storytelling, pacing, and creativity are your tools to make each video a banger.",
+    hero: { light: "/video-editor-hero-light.png", dark: "/video-editor-hero-dark.png" },
+    heroAlt: "Video editor creative workspace interface",
   },
 ];
 
@@ -253,39 +261,18 @@ export default function Careers() {
                 transition={{ delay: i * 0.08, duration: 0.5 }}
               >
                 <Card className="h-full border-border/50">
-                  {job.title === "Performance Marketer" ? (
+                  {job.hero ? (
                     <div className="rounded-t-xl rounded-b-none border-0 overflow-hidden aspect-video bg-muted/40 flex items-center justify-center">
                       <img
-                        src="/performance-marketer-hero.png"
-                        alt="Performance marketing dashboards for Meta and Google ads"
-                        className="w-full h-full object-cover"
+                        src={job.hero.light}
+                        alt={job.heroAlt}
+                        className="w-full h-full object-cover dark:hidden"
                         loading="lazy"
                       />
-                    </div>
-                  ) : job.title === "Shopify Developer" ? (
-                    <div className="rounded-t-xl rounded-b-none border-0 overflow-hidden aspect-video bg-muted/40 flex items-center justify-center">
                       <img
-                        src="/shopify-developer-hero-3.png"
-                        alt="Shopify storefronts across devices with winter collection"
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-                  ) : job.title === "Social Media Manager" ? (
-                    <div className="rounded-t-xl rounded-b-none border-0 overflow-hidden aspect-video bg-muted/40 flex items-center justify-center">
-                      <img
-                        src="/social-media-manager-hero.png"
-                        alt="Social media manager dashboard with multiple platforms"
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-                  ) : job.title === "Video Editor" ? (
-                    <div className="rounded-t-xl rounded-b-none border-0 overflow-hidden aspect-video bg-muted/40 flex items-center justify-center">
-                      <img
-                        src="/video-editor-hero.png"
-                        alt="Video editor creative workspace interface"
-                        className="w-full h-full object-cover"
+                        src={job.hero.dark}
+                        alt={job.heroAlt}
+                        className="hidden w-full h-full object-cover dark:block"
                         loading="lazy"
                       />
                     </div>

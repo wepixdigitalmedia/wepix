@@ -7,10 +7,10 @@ import { useGSAP, heroReveal, scrollFadeIn } from "@/hooks/useGSAP";
 import { Bot, MessageSquare, Users, BarChart3, Clock, ArrowRight } from "lucide-react";
 
 const agents = [
-  { title: "Sales Call Setter Agent", description: "Books calls for you on autopilot. Handles objections, finds slots, sends confirmations. Your team just shows up and closes.", img: "Sales call setter interface", src: "/ai-agent-setter.png" },
-  { title: "Lead Qualifier Agent", description: "Filters out the time wasters. Talks to every lead, asks the right questions, sends only the serious ones to your closers.", img: "Lead qualifier dashboard", src: "/ai-agent-qualifier.png" },
-  { title: "WhatsApp Chat Agent", description: "Replies instantly. Handles queries, shares products, processes orders, and escalates when needed. Feels human. Works like a machine.", img: "WhatsApp chat agent demo", src: "/ai-agent-chat.png" },
-  { title: "Instagram DM Agent", description: "Never miss a DM again. Captures leads, answers questions, and turns casual scrollers into buyers.", img: "Instagram DM agent interface", src: "/ai-agent-dm.png" },
+  { title: "Sales Call Setter Agent", description: "Books calls for you on autopilot. Handles objections, finds slots, sends confirmations. Your team just shows up and closes.", img: "Sales call setter interface", srcLight: "/ai-agent-setter-light.png", srcDark: "/ai-agent-setter-dark.png" },
+  { title: "Lead Qualifier Agent", description: "Filters out the time wasters. Talks to every lead, asks the right questions, sends only the serious ones to your closers.", img: "Lead qualifier dashboard", srcLight: "/ai-agent-qualifier-light.png", srcDark: "/ai-agent-qualifier-dark.png" },
+  { title: "WhatsApp Chat Agent", description: "Replies instantly. Handles queries, shares products, processes orders, and escalates when needed. Feels human. Works like a machine.", img: "WhatsApp chat agent demo", srcLight: "/ai-agent-chat-light.png", srcDark: "/ai-agent-chat-dark.png" },
+  { title: "Instagram DM Agent", description: "Never miss a DM again. Captures leads, answers questions, and turns casual scrollers into buyers.", img: "Instagram DM agent interface", srcLight: "/ai-agent-dm-light.png", srcDark: "/ai-agent-dm-dark.png" },
 ];
 
 const useCases = [
@@ -105,7 +105,7 @@ export default function AIAgents() {
               {agents.map((agent) => (
                 <div key={agent.title} className="gsap-agent opacity-0">
                   <Card className="h-full rounded-xl border-border overflow-hidden">
-                    <ImagePlaceholder label={agent.img} src={agent.src} alt={agent.title} aspectRatio="video" />
+                    <ImagePlaceholder label={agent.img} srcLight={agent.srcLight} srcDark={agent.srcDark} alt={agent.title} aspectRatio="video" />
                     <CardContent className="p-4 sm:p-5">
                       <h3 className="font-display text-sm sm:text-base font-semibold">{agent.title}</h3>
                       <p className="text-sm text-muted-foreground mt-2">{agent.description}</p>

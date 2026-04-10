@@ -47,9 +47,15 @@ export default function Mentorship() {
             <div className="mt-8">
               <div className="rounded-xl bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] overflow-hidden">
                 <img
-                  src="/business-mentorship-session.png"
+                  src="/business-mentorship-session-light.png"
                   alt="Mentorship session"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover dark:hidden"
+                  loading="lazy"
+                />
+                <img
+                  src="/business-mentorship-session-dark.png"
+                  alt="Mentorship session"
+                  className="hidden w-full h-full object-cover dark:block"
                   loading="lazy"
                 />
               </div>

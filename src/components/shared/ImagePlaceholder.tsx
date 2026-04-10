@@ -4,6 +4,9 @@ import { ImageIcon } from "lucide-react";
 interface ImagePlaceholderProps {
   label?: string;
   src?: string;
+  /** When both are set, light image shows in light theme and dark in dark theme. */
+  srcLight?: string;
+  srcDark?: string;
   alt?: string;
   className?: string;
   aspectRatio?: "video" | "square" | "wide" | "portrait";
@@ -14,6 +17,8 @@ interface ImagePlaceholderProps {
 export function ImagePlaceholder({
   label = "Image coming soon",
   src,
+  srcLight,
+  srcDark,
   alt,
   className,
   aspectRatio = "video",
@@ -25,6 +30,32 @@ export function ImagePlaceholder({
     wide: "aspect-[21/9]",
     portrait: "aspect-[3/4]",
   }[aspectRatio];
+
+  if (srcLight != null && srcDark != null) {
+    return (
+      <div
+        className={cn(
+          "rounded-xl bg-muted/40 overflow-hidden flex flex-col items-center justify-center gap-3",
+          grayscaleUntilHover && "group",
+          ratioClass,
+          className,
+        )}
+      >
+        <img
+          src={srcLight}
+          alt={alt ?? label}
+          className={cn("w-full h-full object-cover dark:hidden", grayscaleUntilHover && "grayscale")}
+          loading="lazy"
+        />
+        <img
+          src={srcDark}
+          alt={alt ?? label}
+          className={cn("hidden w-full h-full object-cover dark:block", grayscaleUntilHover && "grayscale")}
+          loading="lazy"
+        />
+      </div>
+    );
+  }
 
   if (src) {
     return (

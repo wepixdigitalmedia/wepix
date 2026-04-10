@@ -129,7 +129,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <Card className="rounded-xl border-border overflow-hidden">
                 <ImagePlaceholder
-                  src="/office-tirupur.png"
+                  src="/office-tirupur.jpg"
                   alt="WePix office in Tirupur"
                   label="Tirupur office photo"
                   aspectRatio="video"

@@ -76,9 +76,14 @@ export default function Fashion() {
               </div>
               <div className="rounded-xl bg-muted/40 flex items-center justify-center aspect-square gsap-hero-cta opacity-0 overflow-hidden">
                 <img
-                  src="/fashion-hero.png"
+                  src="/fashion-hero-light.png"
                   alt="Fashion e-commerce hero visual"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover dark:hidden"
+                />
+                <img
+                  src="/fashion-hero-dark.png"
+                  alt="Fashion e-commerce hero visual"
+                  className="hidden w-full h-full object-cover dark:block"
                 />
               </div>
             </div>
@@ -165,25 +170,40 @@ export default function Fashion() {
                       {s.title === "Kickstarter Program" ? (
                         <div className="aspect-video rounded-none border-0 border-b-2 overflow-hidden bg-muted/40">
                           <img
-                            src="/kickstarter-program.png"
+                            src="/kickstarter-program-light.png"
                             alt="Kickstarter program strategy visual"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover dark:hidden"
+                          />
+                          <img
+                            src="/kickstarter-program-dark.png"
+                            alt="Kickstarter program strategy visual"
+                            className="hidden w-full h-full object-cover dark:block"
                           />
                         </div>
                       ) : s.title === "WePixStudio" ? (
                         <div className="aspect-video rounded-none border-0 border-b-2 overflow-hidden bg-muted/40">
                           <img
-                            src="/wepixstudio-hero.png"
+                            src="/wepixstudio-hero-light.png"
                             alt="WePix AI Studio"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover dark:hidden"
+                          />
+                          <img
+                            src="/wepixstudio-hero-dark.png"
+                            alt="WePix AI Studio"
+                            className="hidden w-full h-full object-cover dark:block"
                           />
                         </div>
                       ) : s.title === "Meta Ads Management" ? (
                         <div className="aspect-video rounded-none border-0 border-b-2 overflow-hidden bg-muted/40">
                           <img
-                            src="/meta-ads-dashboard.png"
+                            src="/meta-ads-dashboard-light.png"
                             alt="Meta ads dashboard"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover dark:hidden"
+                          />
+                          <img
+                            src="/meta-ads-dashboard-dark.png"
+                            alt="Meta ads dashboard"
+                            className="hidden w-full h-full object-cover dark:block"
                           />
                         </div>
                       ) : (

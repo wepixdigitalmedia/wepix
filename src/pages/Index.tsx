@@ -15,6 +15,7 @@ import { motion } from "framer-motion";
 import { StackedReels } from "@/components/shared/StackedReels";
 import { WistiaLeadForm } from "@/components/shared/WistiaLeadForm";
 import { useTypewriter } from "@/hooks/useTypewriter";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import velauraLogo from "@/assets/brands/velaura.png";
 import pinkstoriesLogo from "@/assets/brands/pinkstories.webp";
 import yazhliLogo from "@/assets/brands/yazhli.webp";
@@ -49,10 +50,14 @@ function XLogo({ size = 18, className = "" }: { size?: number; className?: strin
   );
 }
 
-import heroFashionImage from "@/assets/hero-fashion.png";
-import academyHeroImage from "@/assets/academy-hero.png";
-import businessHeroImage from "@/assets/business-hero.png";
-import sourcingHeroImage from "@/assets/sourcing-hero.png";
+import heroFashionLight from "@/assets/hero-fashion-light.png";
+import heroFashionDark from "@/assets/hero-fashion-dark.png";
+import academyHeroLight from "@/assets/academy-hero-light.png";
+import academyHeroDark from "@/assets/academy-hero-dark.png";
+import businessHeroLight from "@/assets/business-hero-light.png";
+import businessHeroDark from "@/assets/business-hero-dark.png";
+import sourcingHeroLight from "@/assets/sourcing-hero-light.png";
+import sourcingHeroDark from "@/assets/sourcing-hero-dark.png";
 import founderAbdulImage from "@/assets/founder-abdul.png";
 import founderSanthoshImage from "@/assets/founder-santhosh.png";
 import founderVigneshImage from "@/assets/founder-vignesh.png";
@@ -89,9 +94,72 @@ const brandCards = [
 ];
 
 const caseStudies = [
-  { brand: "Ethnic Wear", stat: "3x ROAS in 60 days", description: "They came to us with zero online presence and a prayer. We gave them a Shopify store, fire content, and Meta Ads that actually slapped. Two months later? ₹5L/month rolling in." },
-  { brand: "Baby Clothing", stat: "₹10L+ monthly revenue", description: "A kids' fashion brand with adorable products but zero marketing game. We built everything from scratch — branding, content, store, ads. Now their DMs are busier than a Mumbai local train." },
-  { brand: "Athleisure", stat: "2.5x revenue growth", description: "Premium menswear brand that was criminally underperforming online. We repositioned them, created chef's-kiss content, and doubled their digital presence. The founder literally sent us biryani." }
+  { brand: "Premium Westernwear", stat: "₹6.9L in 28 days", description: "Sales were all over the place. We built structure. Ads, creatives, and tracking that actually made sense. Now it’s consistent revenue, not random spikes." },
+  { brand: "Baby Clothing", stat: "3–4x ROAS. ₹11.7L/month", description: "Good products, no proper system. We built the engine. Content, ads, and tracking. Now doing ₹11L+ consistently." },
+  { brand: "Athleisure", stat: "From unstable to ₹14.2L/month", description: "Sales were fluctuating hard. We stabilized the backend and doubled down on winners. Now growth is predictable." }
+];
+
+const testimonials = [
+  {
+    name: "Arjun R",
+    role: "Founder, Chennai",
+    quote:
+      "Within 2 months, Wepix helped us scale from inconsistent sales to ₹4L/month. Their approach to fashion marketing is very practical and result-driven.",
+  },
+  {
+    name: "Nithya S",
+    role: "Co-Founder, Coimbatore",
+    quote:
+      "We were stuck at low ROAS, but after working with Wepix, it improved to 3.8x. They clearly understand how to scale D2C brands.",
+  },
+  {
+    name: "Praveen K",
+    role: "Founder, Bangalore",
+    quote:
+      "Wepix helped us cross ₹8L/month with structured ads and better creatives. The difference was visible within weeks.",
+  },
+  {
+    name: "Karthik V",
+    role: "Founder, Madurai",
+    quote:
+      "Their strategy is very clear and focused. No random experiments, everything is backed by data and results.",
+  },
+  {
+    name: "Divya M",
+    role: "Brand Owner, Kochi",
+    quote:
+      "What I liked most is their deep understanding of fashion audiences. Targeting and creatives were perfectly aligned.",
+  },
+  {
+    name: "Aishwarya R",
+    role: "Founder, Hyderabad",
+    quote:
+      "The content quality from Wepix Studio completely changed our brand image. It now looks premium and professional.",
+  },
+  {
+    name: "Sanjay P",
+    role: "Co-Founder, Tiruppur",
+    quote:
+      "Their creatives alone improved our conversion rate. Clean, aesthetic, and exactly what our brand needed.",
+  },
+  {
+    name: "Manoj Kumar",
+    role: "Founder, Salem",
+    quote:
+      "Very easy team to work with. Quick response, clear communication, and strong execution.",
+  },
+  {
+    name: "Rahul S",
+    role: "Founder, Erode",
+    quote:
+      "We've worked with other agencies before, but Wepix is the only one that delivered consistent results.",
+  },
+  {
+    name: "Keerthana R",
+    role: "Co-Founder, Trichy",
+    quote:
+      "Wepix feels like an extended team. They took complete ownership and helped us scale without confusion.",
+  },
 ];
 
 const Index = () => {
@@ -211,9 +279,15 @@ const Index = () => {
                     {card.title === "Fashion" && (
                       <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
                         <img
-                          src={heroFashionImage}
+                          src={heroFashionLight}
                           alt="Fashion marketing visuals"
-                          className="w-full h-full object-cover transition-all duration-500"
+                          className="w-full h-full object-cover transition-all duration-500 dark:hidden"
+                          loading="lazy"
+                        />
+                        <img
+                          src={heroFashionDark}
+                          alt="Fashion marketing visuals"
+                          className="hidden w-full h-full object-cover transition-all duration-500 dark:block"
                           loading="lazy"
                         />
                       </div>
@@ -221,9 +295,15 @@ const Index = () => {
                     {card.title === "Academy" && (
                       <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
                         <img
-                          src={academyHeroImage}
+                          src={academyHeroLight}
                           alt="Academy learning visuals"
-                          className="w-full h-full object-cover transition-all duration-500"
+                          className="w-full h-full object-cover transition-all duration-500 dark:hidden"
+                          loading="lazy"
+                        />
+                        <img
+                          src={academyHeroDark}
+                          alt="Academy learning visuals"
+                          className="hidden w-full h-full object-cover transition-all duration-500 dark:block"
                           loading="lazy"
                         />
                       </div>
@@ -231,9 +311,15 @@ const Index = () => {
                     {card.title === "Business" && (
                       <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
                         <img
-                          src={businessHeroImage}
+                          src={businessHeroLight}
                           alt="Business and growth visuals"
-                          className="w-full h-full object-cover transition-all duration-500"
+                          className="w-full h-full object-cover transition-all duration-500 dark:hidden"
+                          loading="lazy"
+                        />
+                        <img
+                          src={businessHeroDark}
+                          alt="Business and growth visuals"
+                          className="hidden w-full h-full object-cover transition-all duration-500 dark:block"
                           loading="lazy"
                         />
                       </div>
@@ -241,9 +327,15 @@ const Index = () => {
                     {card.title === "Sourcing" && (
                       <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
                         <img
-                          src={sourcingHeroImage}
+                          src={sourcingHeroLight}
                           alt="Sourcing visuals"
-                          className="w-full h-full object-cover transition-all duration-500"
+                          className="w-full h-full object-cover transition-all duration-500 dark:hidden"
+                          loading="lazy"
+                        />
+                        <img
+                          src={sourcingHeroDark}
+                          alt="Sourcing visuals"
+                          className="hidden w-full h-full object-cover transition-all duration-500 dark:block"
                           loading="lazy"
                         />
                       </div>
@@ -618,52 +710,46 @@ const Index = () => {
               <h3 className="font-display text-xl font-semibold">What People Say About Working With Us</h3>
               <p className="text-muted-foreground text-[0.9375rem] leading-relaxed mt-2 max-w-xl mx-auto">Feedback from founders, brands, and companies who have worked with the WePix team.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[1, 2, 3].map((n) => (
-                <Card key={n} className="border-border/50">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      {n === 1 ? (
-                        <div className="rounded-full w-12 h-12 shrink-0 overflow-hidden border border-border/40 bg-muted/40">
-                          <img
-                            src="/testimonial-profile-1.png"
-                            alt="Client profile"
-                            className="w-full h-full object-cover"
-                            loading="lazy"
-                          />
-                        </div>
-                      ) : n === 2 ? (
-                        <div className="rounded-full w-12 h-12 shrink-0 overflow-hidden border border-border/40 bg-muted/40">
-                          <img
-                            src="/testimonial-profile-2.png"
-                            alt="Client profile"
-                            className="w-full h-full object-cover"
-                            loading="lazy"
-                          />
-                        </div>
-                      ) : n === 3 ? (
-                        <div className="rounded-full w-12 h-12 shrink-0 overflow-hidden border border-border/40 bg-muted/40">
-                          <img
-                            src="/testimonial-profile-3.png"
-                            alt="Client profile"
-                            className="w-full h-full object-cover"
-                            loading="lazy"
-                          />
-                        </div>
-                      ) : (
-                        <ImagePlaceholder label={`Profile ${n}`} aspectRatio="square" className="rounded-full w-12 h-12 shrink-0" />
-                      )}
-                      <div>
-                        <h4 className="font-display text-[0.8125rem] font-semibold">Client Name</h4>
-                        <p className="text-[0.6875rem] text-muted-foreground">Role, Company</p>
-                      </div>
-                    </div>
-                    <p className="text-[0.8125rem] text-muted-foreground italic leading-relaxed">"Testimonial text about the experience working with WePix and the results achieved."</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            <p className="text-center text-[0.6875rem] text-muted-foreground mt-6">Powered by <a href="https://sayabout.us" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">sayabout.us</a></p>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full px-10 md:px-12"
+            >
+              <CarouselContent>
+                {testimonials.map((testimonial) => {
+                  const initials = testimonial.name
+                    .split(" ")
+                    .map((part) => part[0])
+                    .join("")
+                    .slice(0, 2)
+                    .toUpperCase();
+
+                  return (
+                    <CarouselItem key={testimonial.name} className="md:basis-1/2 lg:basis-1/3">
+                      <Card className="h-full border-border/50">
+                        <CardContent className="p-6">
+                          <div className="flex items-center gap-3 mb-4">
+                            <div className="rounded-full w-12 h-12 shrink-0 border border-border/40 bg-muted/40 flex items-center justify-center">
+                              <span className="text-[0.75rem] font-semibold text-foreground">{initials}</span>
+                            </div>
+                            <div>
+                              <h4 className="font-display text-[0.8125rem] font-semibold">{testimonial.name}</h4>
+                              <p className="text-[0.6875rem] text-muted-foreground">{testimonial.role}</p>
+                            </div>
+                          </div>
+                          <p className="text-[0.8125rem] text-muted-foreground italic leading-relaxed">"{testimonial.quote}"</p>
+                        </CardContent>
+                      </Card>
+                    </CarouselItem>
+                  );
+                })}
+              </CarouselContent>
+              <CarouselPrevious className="left-0 md:-left-2" />
+              <CarouselNext className="right-0 md:-right-2" />
+            </Carousel>
+            {/* <p className="text-center text-[0.6875rem] text-muted-foreground mt-6">Powered by <a href="https://sayabout.us" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">sayabout.us</a></p> */}
           </div>
         </div>
       </section>
