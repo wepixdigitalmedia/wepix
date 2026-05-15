@@ -32,13 +32,13 @@ export function CTABanner({ headline, subtext, ctaLabel, ctaHref, useDialog = tr
   });
 
   return (
-    <section ref={containerRef} className="border-t border-border py-28">
+    <section ref={containerRef} className="border-t border-border py-8 sm:py-12 md:py-16 lg:py-24">
       <div className="container text-center">
-        <h2 className="gsap-cta-el font-display text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight max-w-2xl mx-auto opacity-0">
+        <h2 className="gsap-cta-el font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight max-w-2xl mx-auto opacity-0">
           {headline}
         </h2>
-        {subtext && <p className="gsap-cta-el mt-5 text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl mx-auto opacity-0">{subtext}</p>}
-        <div className="gsap-cta-el mt-10 opacity-0">
+        {subtext && <p className="gsap-cta-el mt-4 md:mt-5 text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed max-w-xl mx-auto opacity-0">{subtext}</p>}
+        <div className="gsap-cta-el mt-7 md:mt-10 opacity-0">
           {useDialog ? (
             <BookingFormDialog triggerLabel={ctaLabel} showArrow triggerSize="lg" />
           ) : ctaHref ? (

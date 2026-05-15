@@ -8,7 +8,7 @@ export default function MetaAdsCourse() {
     <div className="min-h-screen flex flex-col bg-background">
       <Navbar />
       <main className="flex-1">
-        <section className="py-24 md:py-32">
+        <section className="py-10 sm:py-14 md:py-24 lg:py-32">
           <div className="container max-w-3xl text-center">
             <span className="inline-flex items-center rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium tracking-wide uppercase text-muted-foreground">
               WePix Academy

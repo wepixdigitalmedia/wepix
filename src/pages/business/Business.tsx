@@ -35,9 +35,9 @@ export default function Business() {
   return (
     <Layout>
       <div ref={containerRef}>
-        <section className="gsap-hero-section py-24 md:py-36">
+        <section className="gsap-hero-section py-10 sm:py-14 md:py-28 lg:py-36">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-12 items-center">
               <div>
                 <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">WePix Business</span>
                 <h1 className="gsap-hero-title font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] opacity-0">
@@ -68,7 +68,7 @@ export default function Business() {
           </div>
         </section>
 
-        <section className="py-24 border-t border-border">
+        <section className="py-10 md:py-16 lg:py-24 border-t border-border">
           <div className="container">
             <SectionHeading tag="Services" title="7 ways we help B2B companies stop being boring" />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
@@ -87,9 +87,9 @@ export default function Business() {
           </div>
         </section>
 
-        <section className="py-24 bg-muted/30">
+        <section className="py-10 md:py-16 lg:py-24 bg-muted/30">
           <div className="container gsap-spotlight opacity-0">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-12 items-center max-w-5xl mx-auto">
               <div>
                 <SectionHeading tag="Spotlight" title="AI Agents: Your team's new best friend" description="Search, display, YouTube. We place your brand exactly where your customers are looking. It’s like being everywhere at once, but on a budget." align="left" />
                 <Link to="/business/ai-agents">
@@ -108,7 +108,7 @@ export default function Business() {
           </div>
         </section>
 
-        <section className="py-24">
+        <section className="py-10 md:py-16 lg:py-24">
           <div className="container max-w-3xl text-center gsap-mentorship opacity-0">
             <div className="rounded-xl bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-[21/9] mb-10 overflow-hidden">
               <img

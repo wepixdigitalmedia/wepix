@@ -37,7 +37,7 @@ export default function Kickstarter() {
   return (
     <Layout>
       <div ref={containerRef}>
-        <section className="gsap-hero-section py-24 md:py-32">
+        <section className="gsap-hero-section py-10 sm:py-14 md:py-24 lg:py-32">
           <div className="container max-w-3xl">
             <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">Kickstarter Program</span>
             <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">No confusion. No random experiments.</h1>
@@ -54,7 +54,7 @@ export default function Kickstarter() {
           </div>
         </section>
 
-        <section className="py-24 border-t border-border gsap-checklist">
+        <section className="py-10 md:py-16 lg:py-24 border-t border-border gsap-checklist">
           <div className="container max-w-3xl">
             <h2 className="font-display text-2xl md:text-3xl font-semibold mb-8">What's Included (spoiler: everything)</h2>
             <div className="space-y-3">
@@ -71,7 +71,7 @@ export default function Kickstarter() {
           </div>
         </section>
 
-        <section className="py-24 bg-muted/30">
+        <section className="py-10 md:py-16 lg:py-24 bg-muted/30">
           <div className="container max-w-3xl">
             <h2 className="font-display text-2xl md:text-3xl font-semibold mb-8">Burning Questions? We got answers.</h2>
             <Accordion type="single" collapsible className="w-full">

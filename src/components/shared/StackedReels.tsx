@@ -178,7 +178,7 @@ export function StackedReels() {
   }, [activeIndex]);
 
   return (
-    <div className="w-full flex justify-center lg:justify-start items-center min-h-[500px] md:min-h-[600px] py-10 touch-none">
+    <div className="w-full flex justify-center lg:justify-start items-center min-h-[min(64vw,300px)] sm:min-h-[min(70vw,380px)] md:min-h-[560px] py-3 sm:py-4 md:py-10 touch-none">
       <motion.div 
         className="relative w-[280px] md:w-[320px] aspect-[9/16] z-10"
         onMouseEnter={() => setIsHovered(true)}

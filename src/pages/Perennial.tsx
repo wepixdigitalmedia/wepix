@@ -27,7 +27,7 @@ export default function Perennial() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-24 md:py-32 border-b border-border">
+      <section className="py-10 sm:py-14 md:py-24 lg:py-32 border-b border-border">
         <div className="container max-w-4xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="inline-block text-sm font-medium text-muted-foreground mb-4 px-3 py-1 rounded-full border border-border bg-muted">Perennial Group</span>
@@ -38,9 +38,9 @@ export default function Perennial() {
       </section>
 
       {/* Brand Narrative */}
-      <section className="py-20">
+      <section className="py-10 md:py-16 lg:py-20">
         <div className="container max-w-4xl" style={{ maxWidth: "70rem" }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-12 items-start">
             <img src={wepixTeamImg} alt="WePix team photo" className="rounded-xl w-full h-auto object-cover aspect-square lg:aspect-auto" loading="lazy" />
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>Most organisations are built to win a moment. Very few are built to survive change.</p>
@@ -55,7 +55,7 @@ export default function Perennial() {
       </section>
 
       {/* Doctrine */}
-      <section className="py-20 bg-muted/50">
+      <section className="py-10 md:py-16 lg:py-20 bg-muted/50">
         <div className="container max-w-3xl">
           <SectionHeading tag="The Perennial Doctrine" title="The quiet spine" description="Perennial Group exists to build enduring systems across domains by applying engineering discipline, long-term thinking, and high-agency execution." align="left" />
           <div className="space-y-8 mt-12">
@@ -78,7 +78,7 @@ export default function Perennial() {
       </section>
 
       {/* Footer CTA */}
-      <section className="py-20 border-t border-border">
+      <section className="py-10 md:py-16 lg:py-20 border-t border-border">
         <div className="container max-w-2xl text-center">
           <h2 className="font-display text-2xl md:text-3xl font-semibold">Build systems that last</h2>
           <p className="text-muted-foreground mt-3">If you are building something meant to endure, we should talk.</p>

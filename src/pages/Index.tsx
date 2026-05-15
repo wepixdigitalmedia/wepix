@@ -171,27 +171,27 @@ const Index = () => {
     <Layout>
       {/* Hero */}
       <section className="bg-hero text-hero-foreground relative overflow-hidden">
-        <div className="container relative py-24 md:py-36">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="container relative py-8 sm:py-12 md:py-20 lg:py-28 xl:py-36">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}>
 
-              <span className="inline-block text-[0.6875rem] font-display font-semibold uppercase tracking-[0.15em] text-primary mb-6">
+              <span className="inline-block text-[0.6875rem] font-display font-semibold uppercase tracking-[0.15em] text-primary mb-4 md:mb-6">
                 Digital Media Group
               </span>
-              <div className="min-h-[8rem] md:min-h-[8rem] lg:min-h-[7.5rem] w-full">
+              <div className="min-h-[5.5rem] sm:min-h-[6.5rem] md:min-h-[8rem] lg:min-h-[7.5rem] w-full">
                 <h1 className="font-display text-2xl md:text-3xl lg:text-[2.75rem] xl:text-5xl font-bold leading-[1.15] break-words hyphens-none">
                   We don't just run ads.{" "}
                   <span className="text-gradient">{displayText}</span>
                   <span className={`inline-block w-[3px] h-[0.85em] bg-foreground ml-0.5 align-middle rounded-sm transition-opacity duration-100 ${showCursor ? "opacity-100" : "opacity-0"}`} />
                 </h1>
               </div>
-              <p className="mt-5 text-[0.9375rem] md:text-base text-hero-foreground/60 leading-relaxed">
+              <p className="mt-4 md:mt-5 text-[0.9375rem] md:text-base text-hero-foreground/60 leading-relaxed">
               Most brands are invisible online and they don't even know it. We fix that. From Meta ads to content to full brand strategy, we make sure your brand shows up, stands out, and brings back real results. One team. Every platform. No cap.
               </p>
-              <div className="flex flex-wrap gap-4 mt-10">
+              <div className="flex flex-wrap gap-3 sm:gap-4 mt-6 md:mt-10">
                 <Link to="/fashion">
                   <Button size="lg" className="font-display font-medium text-base gap-2">
                     Explore WePix <ArrowRight size={18} />
@@ -208,22 +208,22 @@ const Index = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="rounded-3xl overflow-hidden border border-border shadow-lg relative aspect-video bg-transparent"
+              className="rounded-2xl md:rounded-3xl overflow-hidden border border-border shadow-lg relative aspect-video bg-black/5 max-w-full"
             >
               <iframe
                 src="https://fast.wistia.net/embed/iframe/86i9yszwdd?autoPlay=false&videoFoam=true&playbar=false&fullscreenButton=false&volumeControl=false&smallPlayButton=true&wistiaLogo=false&seo=false"
                 title="WePix Strategy Video"
                 allow="autoplay; fullscreen"
                 allowFullScreen
-                className="w-[101%] h-[101%] -ml-[0.5%] -mt-[0.5%] border-none bg-transparent"
+                className="absolute inset-0 h-full w-full border-none bg-transparent"
               ></iframe>
             </motion.div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 border-b border-border">
-        <div className="container grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="py-8 md:py-14 lg:py-20 border-b border-border">
+        <div className="container grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6 md:gap-8">
           <AnimatedCounter end={50} suffix="+" label="Brands Who Trust Us" />
           <AnimatedCounter end={2} suffix="Cr+" prefix="INR " label="Ad Spend We've Managed" />
           <AnimatedCounter end={10} suffix="K+" label="Creatives Crafted" />
@@ -232,12 +232,12 @@ const Index = () => {
       </section>
 
       {/* Client Logos */}
-      <section className="py-20 border-b border-border overflow-hidden">
+      <section className="py-8 md:py-14 lg:py-20 border-b border-border overflow-hidden">
         <div className="container">
-          <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-muted-foreground text-center mb-8">Trusted by brands like</p>
+          <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-muted-foreground text-center mb-5 md:mb-8">Trusted by brands like</p>
         </div>
         <div className="relative">
-          <div className="flex animate-marquee gap-8 md:gap-16 w-max items-center">
+          <div className="flex animate-marquee gap-6 sm:gap-8 md:gap-16 w-max items-center">
             {[...trustedBrands, ...trustedBrands, ...trustedBrands, ...trustedBrands].map((brand, i) => (
               <a
                 key={i}
@@ -258,14 +258,14 @@ const Index = () => {
       </section>
 
       {/* Brand Navigator */}
-      <section className="py-16 md:py-28 lg:py-32">
+      <section className="py-8 md:py-16 lg:py-28 xl:py-32">
         <div className="container">
           <SectionHeading
             tag="What We Do"
             title="Four verticals. One obsession."
             description="We're not your average agency that slaps a logo on everything and calls it a day. WePix runs four distinct verticals, each with its own team, strategy, and unhealthy amount of passion. Think of us as the Avengers of marketing, minus the capes (okay, sometimes capes)." />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
             {brandCards.map((card, i) => (
               <motion.div
                 key={card.title}
@@ -340,7 +340,7 @@ const Index = () => {
                         />
                       </div>
                     )}
-                    <CardContent className="p-6">
+                    <CardContent className="p-5 sm:p-6">
                       <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${card.color} flex items-center justify-center mb-4`}>
                         <card.icon className="text-foreground" size={24} />
                       </div>
@@ -359,14 +359,14 @@ const Index = () => {
       </section>
 
       {/* Case Studies Teaser */}
-      <section className="py-16 md:py-28 bg-muted/50">
+      <section className="py-8 md:py-16 lg:py-24 xl:py-28 bg-muted/50">
         <div className="container">
           <SectionHeading
             tag="Results"
             title="Real brands. Real money. Real stories."
             description="We don't do vanity metrics. Nobody cares about your 'reach' when you can't pay rent. Here's what happened when brands stopped settling for mid agencies and trusted us with their growth." />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
             {caseStudies.map((study, i) =>
               <motion.div
                 key={study.brand}
@@ -375,7 +375,7 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}>
                 <Card className="h-full border-border/50">
-                  {study.brand === "Ethnic Wear" ? (
+                  {study.brand === "Premium Westernwear" ? (
                     <div className="rounded-t-xl rounded-b-none border-0 border-b-2 overflow-hidden aspect-video bg-muted/40">
                       <img
                         src="/ethnic-wear-results.png"
@@ -423,7 +423,7 @@ const Index = () => {
                   ) : (
                     <ImagePlaceholder label={`${study.brand} results`} aspectRatio="video" className="rounded-t-xl rounded-b-none border-0 border-b-2" />
                   )}
-                  <CardContent className="p-6">
+                  <CardContent className="p-5 sm:p-6">
                     <span className="text-[0.6875rem] font-display font-semibold uppercase tracking-[0.15em] text-primary">{study.brand}</span>
                     <p className="font-display text-xl font-semibold mt-2">{study.stat}</p>
                     <p className="text-[0.8125rem] text-muted-foreground mt-3 leading-relaxed">{study.description}</p>
@@ -432,7 +432,7 @@ const Index = () => {
               </motion.div>
             )}
           </div>
-          <div className="text-center mt-10">
+          <div className="text-center mt-7 md:mt-10">
             <Link to="/fashion/case-studies">
               <Button variant="outline" className="font-display font-medium gap-2">
                 View All Case Studies <ArrowRight size={16} />
@@ -443,7 +443,7 @@ const Index = () => {
       </section>
 
       {/* Pillars */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-8 md:py-16 lg:py-20 xl:py-24 bg-background">
         <div className="container">
           <SectionHeading
             tag="How We Scale"
@@ -451,7 +451,7 @@ const Index = () => {
             description="We're not your average agency that slaps a logo on everything and calls it a day. WePix runs four distinct verticals, each with its own team, strategy, and unhealthy amount of passion. Think of us as the Avengers of marketing, minus the capes (okay, sometimes capes)."
           />
 
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+          <div className="mt-6 md:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
             {[
               {
                 label: "Pillar 1",
@@ -544,14 +544,14 @@ const Index = () => {
       </section>
 
       {/* Manifesto Teaser */}
-      <section className="py-16 md:py-20">
+      <section className="py-8 md:py-14 lg:py-20">
         <div className="container max-w-3xl text-center">
-          <SectionHeading tag="Our Philosophy" title="We have opinions. Strong ones." />
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed -mt-6">
+          <SectionHeading tag="Our Philosophy" title="We have opinions. Strong ones." className="!mb-6 md:!mb-10" />
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed mt-1 md:mt-0">
             We’re not into copy-paste marketing or “just boost the post, bro” strategies. We build brands people actually care about. The kind where customers jump into your DMs saying, “I need this.” We think differently. We build differently.<br></br> <b>Yeah, we even wrote a whole manifesto about it. Because why not?</b>
           </p>
           <Link to="/manifesto">
-            <Button variant="outline" className="mt-8 font-display font-medium gap-2">
+            <Button variant="outline" className="mt-6 md:mt-8 font-display font-medium gap-2">
               Read the Manifesto <ArrowRight size={16} />
             </Button>
           </Link>
@@ -559,10 +559,10 @@ const Index = () => {
       </section>
 
       {/* Founders */}
-      <section className="py-16 md:py-28 bg-muted/50">
+      <section className="py-8 md:py-16 lg:py-24 xl:py-28 bg-muted/50">
         <div className="container">
           <SectionHeading tag="The Crew" title="Built by people who execute, not just present." />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
             {[
               {
                 name: "Abdul",
@@ -616,7 +616,7 @@ const Index = () => {
                     className="rounded-none border-0 border-b-2"
                   />
                 )}
-                <CardContent className="p-8">
+                <CardContent className="p-5 sm:p-6 md:p-8">
                   <h3 className="font-display text-lg font-semibold">{founder.name}</h3>
                   <p className="text-[0.8125rem] text-primary font-medium mt-1">{founder.role}</p>
                   <p className="text-[0.8125rem] text-muted-foreground mt-3 leading-relaxed">{founder.bio}</p>
@@ -667,7 +667,7 @@ const Index = () => {
               </Card>
             )}
           </div>
-          <div className="mt-10 text-center">
+          <div className="mt-8 md:mt-10 text-center">
             <p className="text-[0.875rem] md:text-base text-muted-foreground mb-4">
               “Agencies show you decks. Our crew shows you dashboards that actually move.”
             </p>
@@ -681,13 +681,13 @@ const Index = () => {
       </section>
 
       {/* Founder Content and Insights */}
-      <section className="py-16 md:py-20">
+      <section className="py-8 md:py-14 lg:py-20">
         <div className="container">
           <SectionHeading tag="Insights" title="Founder Content and Insights" />
 
           {/* Instagram Reels */}
-          <div className="max-w-5xl mx-auto mb-16">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div className="max-w-5xl mx-auto mb-10 md:mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10 items-center">
               <div className="flex justify-center lg:justify-start">
                 <StackedReels />
               </div>
@@ -705,7 +705,7 @@ const Index = () => {
 
           {/* Testimonials */}
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-10">
+            <div className="text-center mb-6 md:mb-10">
               <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-primary mb-2 block">Testimonials</span>
               <h3 className="font-display text-xl font-semibold">What People Say About Working With Us</h3>
               <p className="text-muted-foreground text-[0.9375rem] leading-relaxed mt-2 max-w-xl mx-auto">Feedback from founders, brands, and companies who have worked with the WePix team.</p>
@@ -715,9 +715,9 @@ const Index = () => {
                 align: "start",
                 loop: true,
               }}
-              className="w-full px-10 md:px-12"
+              className="w-full px-0 sm:px-6 md:px-10"
             >
-              <CarouselContent>
+              <CarouselContent className="-ml-3 sm:-ml-4 md:-ml-4">
                 {testimonials.map((testimonial) => {
                   const initials = testimonial.name
                     .split(" ")
@@ -727,9 +727,9 @@ const Index = () => {
                     .toUpperCase();
 
                   return (
-                    <CarouselItem key={testimonial.name} className="md:basis-1/2 lg:basis-1/3">
+                    <CarouselItem key={testimonial.name} className="pl-3 sm:pl-4 md:basis-1/2 lg:basis-1/3">
                       <Card className="h-full border-border/50">
-                        <CardContent className="p-6">
+                        <CardContent className="p-5 sm:p-6">
                           <div className="flex items-center gap-3 mb-4">
                             <div className="rounded-full w-12 h-12 shrink-0 border border-border/40 bg-muted/40 flex items-center justify-center">
                               <span className="text-[0.75rem] font-semibold text-foreground">{initials}</span>
@@ -746,8 +746,8 @@ const Index = () => {
                   );
                 })}
               </CarouselContent>
-              <CarouselPrevious className="left-0 md:-left-2" />
-              <CarouselNext className="right-0 md:-right-2" />
+              <CarouselPrevious className="left-1 sm:left-0 md:-left-2 h-7 w-7 sm:h-8 sm:w-8" />
+              <CarouselNext className="right-1 sm:right-0 md:-right-2 h-7 w-7 sm:h-8 sm:w-8" />
             </Carousel>
             {/* <p className="text-center text-[0.6875rem] text-muted-foreground mt-6">Powered by <a href="https://sayabout.us" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">sayabout.us</a></p> */}
           </div>

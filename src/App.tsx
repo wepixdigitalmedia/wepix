@@ -37,11 +37,13 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import CookiePolicy from "./pages/CookiePolicy";
 import Legal from "./pages/Legal";
+import MyWorks from "./pages/MyWorks";
+import WorkProjectDetail from "./pages/WorkProjectDetail";
 
 const queryClient = new QueryClient();
 
 const App = () => (
-  <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+  <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
@@ -62,6 +64,9 @@ const App = () => (
             <Route path="/careers" element={<Careers />} />
             <Route path="/perennial" element={<Perennial />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/my-works" element={<MyWorks />} />
+            <Route path="/work" element={<Navigate to="/my-works" replace />} />
+            <Route path="/work/:slug" element={<WorkProjectDetail />} />
             <Route path="/fashion" element={<Fashion />} />
             <Route path="/fashion/kickstarter" element={<Kickstarter />} />
             <Route path="/fashion/wepixstudio" element={<WePixStudio />} />

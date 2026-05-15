@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 const Vignesh = () => {
   return (
     <Layout>
-      <section className="py-16 md:py-24">
+      <section className="py-10 sm:py-12 md:py-20 lg:py-24">
         <div className="container max-w-5xl">
           <SectionHeading
             tag="Founder Story"

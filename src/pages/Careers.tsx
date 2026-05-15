@@ -92,10 +92,10 @@ export default function Careers() {
       </div>
 
       {/* Why Join WePix */}
-      <section id="why-join" className="py-20 md:py-28 scroll-mt-32">
+      <section id="why-join" className="py-10 sm:py-12 md:py-20 lg:py-28 scroll-mt-24 md:scroll-mt-32">
         <div className="container">
           <SectionHeading tag="Careers" title="WePix: Where Creators Build, Grow, and Thrive" />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-12 max-w-6xl mx-auto items-center">
             <div
               className="rounded-xl bg-muted/40 flex items-center justify-center overflow-hidden"
               style={{ aspectRatio: "1 / 1" }}
@@ -119,7 +119,7 @@ export default function Careers() {
       </section>
 
       {/* Culture */}
-      <section id="culture" className="py-20 bg-muted/50 scroll-mt-32">
+      <section id="culture" className="py-10 md:py-16 lg:py-20 bg-muted/50 scroll-mt-24 md:scroll-mt-32">
         <div className="container">
           <SectionHeading tag="Culture" title="WePix Vibes: Own It, Learn It, Ship It." description="At WePix, we don’t just work – we build, grow, and move fast. Our culture is all about three key things:" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -248,7 +248,7 @@ export default function Careers() {
       </section>
 
       {/* Open Positions */}
-      <section id="positions" className="py-20 md:py-28 scroll-mt-32">
+      <section id="positions" className="py-10 sm:py-12 md:py-20 lg:py-28 scroll-mt-24 md:scroll-mt-32">
         <div className="container">
           <SectionHeading tag="Open Positions" title="Join the team" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -297,7 +297,7 @@ export default function Careers() {
       </section>
 
       {/* Pay and Perks */}
-      <section id="perks" className="py-20 bg-muted/50 scroll-mt-32">
+      <section id="perks" className="py-10 md:py-16 lg:py-20 bg-muted/50 scroll-mt-24 md:scroll-mt-32">
         <div className="container">
           <SectionHeading tag="Pay and Perks" title="What you get" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">

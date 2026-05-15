@@ -26,7 +26,7 @@ export default function Community() {
   return (
     <Layout>
       <div ref={containerRef}>
-        <section className="gsap-hero-section py-24 md:py-32">
+        <section className="gsap-hero-section py-10 sm:py-14 md:py-24 lg:py-32">
           <div className="container max-w-3xl">
             <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">Community</span>
             <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">Always On. Always Ready to Help. Always a Little Wild.</h1>
@@ -44,7 +44,7 @@ export default function Community() {
           </div>
         </section>
 
-        <section className="py-24 border-t border-border">
+        <section className="py-10 md:py-16 lg:py-24 border-t border-border">
           <div className="container max-w-4xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
               {[

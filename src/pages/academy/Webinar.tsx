@@ -23,7 +23,7 @@ export default function Webinar() {
   return (
     <Layout>
       <div ref={containerRef}>
-        <section className="gsap-hero-section py-24 md:py-32">
+        <section className="gsap-hero-section py-10 sm:py-14 md:py-24 lg:py-32">
           <div className="container max-w-3xl">
             <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">Masterclass</span>
             <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">Free Live Sessions. Real Insights. No Pitch Decks.</h1>
@@ -39,7 +39,7 @@ export default function Webinar() {
           </div>
         </section>
 
-        <section className="py-24 border-t border-border">
+        <section className="py-10 md:py-16 lg:py-24 border-t border-border">
           <div className="container max-w-3xl">
             <Card className="rounded-xl border-border">
               <CardContent className="p-8 text-center">
@@ -55,7 +55,7 @@ export default function Webinar() {
           </div>
         </section>
 
-        <section className="py-24 bg-muted/30">
+        <section className="py-10 md:py-16 lg:py-24 bg-muted/30">
           <div className="container">
             <SectionHeading tag="Past Sessions" title="Missed a Session? We've Got Your Back. Recordings Available!" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">

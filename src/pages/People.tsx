@@ -123,7 +123,7 @@ const memberImageSrc: Record<string, MemberImageSrc> = {
 export default function People() {
   return (
     <Layout>
-      <section className="py-20 md:py-28">
+      <section className="py-10 sm:py-12 md:py-20 lg:py-28">
         <div className="container">
           <SectionHeading
             tag="The Team"
@@ -135,12 +135,12 @@ export default function People() {
             alt="WePix Digital Media team photo"
             aspectRatio="video"
             grayscaleUntilHover
-            className="mb-16 max-w-5xl mx-auto"
+            className="mb-8 md:mb-12 lg:mb-16 max-w-5xl mx-auto"
           />
 
           {departments.map((dept, di) => (
-            <div key={dept.name} className="mb-16 last:mb-0">
-              <h2 className="font-display text-lg font-semibold text-muted-foreground uppercase tracking-wider mb-6 max-w-6xl mx-auto">{dept.name}</h2>
+            <div key={dept.name} className="mb-10 md:mb-14 lg:mb-16 last:mb-0">
+              <h2 className="font-display text-lg font-semibold text-muted-foreground uppercase tracking-wider mb-4 md:mb-6 max-w-6xl mx-auto">{dept.name}</h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
                 {dept.members.map((member, i) => {
                   const portrait = memberImageSrc[member.name];

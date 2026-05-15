@@ -35,7 +35,7 @@ export default function Mentorship() {
   return (
     <Layout>
       <div ref={containerRef}>
-        <section className="gsap-hero-section py-20 md:py-28">
+        <section className="gsap-hero-section py-10 sm:py-12 md:py-20 lg:py-28">
           <div className="container max-w-3xl">
             <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">Mentorship</span>
             <h1 className="gsap-hero-title font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] opacity-0">
@@ -63,7 +63,7 @@ export default function Mentorship() {
           </div>
         </section>
 
-        <section className="py-20 border-t border-border">
+        <section className="py-10 md:py-16 lg:py-20 border-t border-border">
           <div className="container max-w-4xl">
             <h2 className="font-display text-xl md:text-2xl font-semibold mb-6">Format</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16">

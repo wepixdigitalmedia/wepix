@@ -35,9 +35,9 @@ export default function Academy() {
   return (
     <Layout>
       <div ref={containerRef}>
-        <section className="gsap-hero-section py-24 md:py-36">
+        <section className="gsap-hero-section py-10 sm:py-14 md:py-28 lg:py-36">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-12 items-center">
               <div>
                 <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">WePix Academy</span>
                 <h1 className="gsap-hero-title font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] opacity-0">
@@ -73,7 +73,7 @@ export default function Academy() {
           </div>
         </section>
 
-        <section className="py-24 border-t border-border">
+        <section className="py-10 md:py-16 lg:py-24 border-t border-border">
           <div className="container">
             <SectionHeading tag="What We Offer" title="Three ways to level up your game" />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
@@ -143,7 +143,7 @@ export default function Academy() {
           </div>
         </section>
 
-        <section className="py-24 bg-muted/30">
+        <section className="py-10 md:py-16 lg:py-24 bg-muted/30">
           <div className="container max-w-3xl gsap-checklist">
             <SectionHeading tag="Is this for you?" title="Is This You? You’re in the Right Place!" align="left" />
             <div className="space-y-3">
@@ -157,7 +157,7 @@ export default function Academy() {
           </div>
         </section>
 
-        <section className="py-24">
+        <section className="py-10 md:py-16 lg:py-24">
           <div className="container max-w-5xl">
             <SectionHeading tag="Student Wins" title="What our students are saying" />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

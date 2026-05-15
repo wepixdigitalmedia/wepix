@@ -73,7 +73,7 @@ export default function Contact() {
   return (
     <Layout>
       <div ref={containerRef}>
-        <section className="gsap-hero-section py-24 md:py-32">
+        <section className="gsap-hero-section py-10 sm:py-14 md:py-24 lg:py-32">
           <div className="container max-w-3xl">
             <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">Contact</span>
             <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">Let's talk. We promise we're friendly.</h1>
@@ -81,9 +81,9 @@ export default function Contact() {
           </div>
         </section>
 
-        <section className="py-24 border-t border-border">
+        <section className="py-10 md:py-16 lg:py-24 border-t border-border">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-12 max-w-5xl mx-auto">
               <div>
                 <h2 className="font-display text-2xl font-semibold mb-4">Book a Strategy Call</h2>
                 <p className="text-muted-foreground mb-6">30 minutes. No obligations. No sales pitch. Just a genuine conversation about your brand, your goals, and whether we're the right fit. Think of it as a first date, but for marketing.</p>

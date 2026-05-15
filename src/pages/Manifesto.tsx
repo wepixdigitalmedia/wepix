@@ -114,9 +114,9 @@ export default function Manifesto() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-24 md:py-32 border-b border-border">
+      <section className="py-10 sm:py-14 md:py-24 lg:py-32 border-b border-border">
         <div className="container max-w-4xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-12 items-center">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <span className="inline-block text-[0.8125rem] font-medium text-muted-foreground mb-4 px-3 py-1 rounded-full border border-border bg-muted">Our Philosophy</span>
               <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">Our Manifesto</h1>
@@ -139,7 +139,7 @@ export default function Manifesto() {
       </section>
 
       {/* Principles */}
-      <section className="py-20">
+      <section className="py-10 md:py-16 lg:py-20">
         <div className="container max-w-3xl">
           <div className="space-y-0">
             {principles.map((p, i) => (
@@ -188,7 +188,7 @@ export default function Manifesto() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 border-t border-border">
+      <section className="py-10 md:py-16 lg:py-20 border-t border-border">
         <div className="container max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

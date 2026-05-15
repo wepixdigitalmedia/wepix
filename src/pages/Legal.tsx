@@ -13,7 +13,7 @@ const offices = [
 export default function Legal() {
   return (
     <Layout>
-      <section className="container py-20">
+      <section className="container py-10 md:py-16 lg:py-20">
         <SectionHeading tag="Legal" title="Legal Contact" description="Company registration details and how to reach us for legal matters." />
 
         <div className="max-w-3xl mx-auto space-y-12">

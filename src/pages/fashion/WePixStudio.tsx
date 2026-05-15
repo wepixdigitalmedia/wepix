@@ -101,7 +101,7 @@ export default function WePixStudio() {
     <Layout>
       <div ref={containerRef}>
         {/* Hero */}
-        <section className="gsap-hero-section py-20 md:py-28">
+        <section className="gsap-hero-section py-10 sm:py-12 md:py-20 lg:py-28">
           <div className="container max-w-4xl text-center">
             <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">WePixStudio</span>
             <h1 className="gsap-hero-title font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] opacity-0">

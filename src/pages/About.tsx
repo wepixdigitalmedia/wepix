@@ -47,9 +47,9 @@ export default function About() {
   return (
     <Layout>
       <div ref={containerRef}>
-        <section className="gsap-hero-section py-24 md:py-32">
+        <section className="gsap-hero-section py-10 sm:py-14 md:py-24 lg:py-32">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-12 items-center">
               <div>
                 <span className="gsap-hero-tag inline-block text-[0.8125rem] font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">About Us</span>
                 <h1 className="gsap-hero-title font-display text-2xl md:text-3xl lg:text-[2.75rem] xl:text-5xl font-semibold leading-[1.15] opacity-0">
@@ -90,7 +90,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className="gsap-timeline-section py-24 border-t border-border">
+        <section className="gsap-timeline-section py-10 md:py-16 lg:py-24 border-t border-border">
           <div className="container max-w-3xl">
             <SectionHeading tag="Our Journey" title="The plot so far" align="left" />
             <div className="space-y-0">
@@ -104,7 +104,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className="py-24 bg-muted/30">
+        <section className="py-10 md:py-16 lg:py-24 bg-muted/30">
           <div className="container">
             <SectionHeading tag="Culture" title="Things we'd fight for" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
@@ -123,7 +123,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className="py-24">
+        <section className="py-10 md:py-16 lg:py-24">
           <div className="container">
             <SectionHeading tag="Offices" title="Where the magic happens" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">

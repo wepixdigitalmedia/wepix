@@ -12,6 +12,7 @@ const mainLinks = [
   { label: "Fashion", href: "/fashion" },
   { label: "Academy", href: "/academy" },
   { label: "Business", href: "/business" },
+  { label: "Our Works", href: "/my-works" },
   { label: "About", href: "/about" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
@@ -100,14 +101,14 @@ export function Navbar() {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="md:hidden bg-background border-t border-border pb-4">
+          <div className="md:hidden bg-background border-t border-border pb-3">
             {mainLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
                 onClick={() => setMobileOpen(false)}
                 className={cn(
-                  "block px-6 py-3 text-[0.8125rem] font-medium tracking-wide text-muted-foreground hover:text-foreground hover:bg-muted",
+                  "block px-3 py-2.5 text-[0.8125rem] font-medium tracking-wide text-muted-foreground hover:text-foreground hover:bg-muted",
                   (location.pathname === link.href || (link.href !== "/" && location.pathname.startsWith(link.href))) &&
                     "text-foreground"
                 )}
@@ -115,7 +116,7 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <div className="px-6 pt-2">
+            <div className="px-3 pt-1">
               <BookingFormDialog triggerLabel="Book a Call" triggerSize="sm" triggerClassName="w-full" />
             </div>
           </div>

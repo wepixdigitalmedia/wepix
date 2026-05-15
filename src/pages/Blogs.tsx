@@ -20,7 +20,7 @@ const posts = [
 export default function Blogs() {
   return (
     <Layout>
-      <section className="py-20 md:py-28">
+      <section className="py-10 sm:py-12 md:py-20 lg:py-28">
         <div className="container">
           <SectionHeading
             tag="Blog"

@@ -54,9 +54,9 @@ export default function Fashion() {
   return (
     <Layout>
       <div ref={containerRef}>
-        <section className="gsap-hero-section py-24 md:py-36">
+        <section className="gsap-hero-section py-10 sm:py-14 md:py-28 lg:py-36">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-12 items-center">
               <div>
                 <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">WePix Fashion</span>
                 <h1 className="gsap-hero-title font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] opacity-0">
@@ -152,14 +152,14 @@ export default function Fashion() {
           </div>
         )}
 
-        <section className="py-24 border-t border-border">
+        <section className="py-10 md:py-16 lg:py-24 border-t border-border">
           <div className="container max-w-3xl text-center gsap-problem opacity-0">
             <h2 className="font-display text-3xl md:text-4xl font-semibold">You've got a killer product. So why isn't anyone buying?</h2>
             <p className="mt-6 text-lg text-muted-foreground">Because in today’s world, having a dope product isn’t enough. You need content that grabs attention, ads that don't scream “ads,” a store that actually converts, and a strategy that doesn’t depend on algorithm luck. That's literally our thing, and we're lowkey smashing it.</p>
           </div>
         </section>
 
-        <section className="py-24 bg-muted/30">
+        <section className="py-10 md:py-16 lg:py-24 bg-muted/30">
           <div className="container">
             <SectionHeading tag="Services" title="Everything your fashion brand needs (and then some)" />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
@@ -223,7 +223,7 @@ export default function Fashion() {
           </div>
         </section>
 
-        <section className="gsap-mcs-section py-24">
+        <section className="gsap-mcs-section py-10 md:py-16 lg:py-24">
           <div className="container">
             <SectionHeading tag="Our Secret Sauce" title="The MCS Framework" description="Media. Creative. Strategy. Then we keep pushing till it works. This is how every campaign we run turns into real results." />
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">

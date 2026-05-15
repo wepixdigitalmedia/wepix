@@ -40,7 +40,7 @@ function ContentCard({ icon: Icon, title, children }: { icon: React.ElementType;
 export default function Handbook() {
   return (
     <Layout>
-      <section className="py-20 md:py-28">
+      <section className="py-10 sm:py-12 md:py-20 lg:py-28">
         <div className="container max-w-4xl">
           <SectionHeading
             tag="Handbook"

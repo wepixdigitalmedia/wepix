@@ -24,7 +24,7 @@ export default function BookACall() {
   return (
     <Layout>
       <div ref={containerRef}>
-        <section className="gsap-hero-section py-24 md:py-32">
+        <section className="gsap-hero-section py-10 sm:py-14 md:py-24 lg:py-32">
           <div className="container max-w-3xl">
             <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">Fashion</span>
             <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">Book a Free Strategy Call. It's like therapy, but for your brand.</h1>
@@ -32,7 +32,7 @@ export default function BookACall() {
           </div>
         </section>
 
-        <section className="py-24 border-t border-border">
+        <section className="py-10 md:py-16 lg:py-24 border-t border-border">
           <div className="container max-w-4xl gsap-list">
             <h2 className="font-display text-2xl font-semibold mb-6">Here’s What We’ll Chat About:</h2>
             <div className="space-y-4 mb-10">

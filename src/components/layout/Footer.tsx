@@ -49,8 +49,8 @@ function MediumIcon({ size = 18 }: { size?: number }) {
 export function Footer() {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="container py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
+      <div className="container py-8 sm:py-10 md:py-14 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex items-center gap-2 font-display text-2xl font-bold tracking-tight">
               <img
@@ -97,7 +97,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 pt-8 border-t border-border flex flex-col sm:flex-row justify-center items-start gap-6 sm:gap-10 lg:gap-16">
+        <div className="mt-8 md:mt-12 pt-5 md:pt-7 border-t border-border flex flex-col sm:flex-row justify-center items-start gap-4 sm:gap-6 lg:gap-12">
           {[
             { city: "Tirupur", address: "Sheriff Colony, Tirupur" },
             { city: "Bangalore", address: "HSR Layout, Bangalore" },
@@ -115,7 +115,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-6 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
           <p className="text-[0.6875rem] text-muted-foreground tracking-wide">
             &copy; 2026 WePix Digital Media LLP (India) |{" "}
             <Link to="/perennial" className="hover:text-foreground transition-colors">

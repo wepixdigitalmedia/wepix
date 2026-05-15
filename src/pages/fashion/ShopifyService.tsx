@@ -93,7 +93,7 @@ export default function ShopifyService() {
     <Layout>
       <div ref={containerRef}>
         {/* Hero */}
-        <section className="gsap-hero-section py-20 md:py-28">
+        <section className="gsap-hero-section py-10 sm:py-12 md:py-20 lg:py-28">
           <div className="container max-w-4xl">
             <div className="flex flex-col items-center text-center">
               <img

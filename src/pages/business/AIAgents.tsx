@@ -33,9 +33,9 @@ export default function AIAgents() {
   return (
     <Layout>
       <div ref={containerRef}>
-        <section className="gsap-hero-section py-24 md:py-32">
+        <section className="gsap-hero-section py-10 sm:py-14 md:py-24 lg:py-32">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-12 items-center">
               <div>
                 <span className="gsap-hero-tag inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">AI Agents</span>
                 <h1 className="gsap-hero-title font-display text-4xl md:text-5xl lg:text-6xl font-semibold opacity-0">AI Agents That Never Sleep</h1>
@@ -53,7 +53,7 @@ export default function AIAgents() {
           </div>
         </section>
 
-        <section className="py-24 border-t border-border">
+        <section className="py-10 md:py-16 lg:py-24 border-t border-border">
           <div className="container max-w-3xl">
             <h2 className="font-display text-3xl font-semibold mb-4">Meet the AI Agents That Do More Than Talk</h2>
             <p className="text-lg text-muted-foreground mb-8">Most "AI chatbots" are just glorified FAQ pages with a text box. Ours? Totally different. They're trained on YOUR business data, synced with your CRM, email, and WhatsApp. They pick up from every convo and actually get stuff done. They schedule appointments, follow up with leads, and update your database. Basically, they’re the perfect employee, minus the coffee breaks.</p>
@@ -68,7 +68,7 @@ export default function AIAgents() {
           </div>
         </section>
 
-        <section className="py-24 bg-muted/30">
+        <section className="py-10 md:py-16 lg:py-24 bg-muted/30">
           <div className="container">
             <SectionHeading tag="Use Cases" title="Level Up Your Business with These 5 AI Agent Powers" />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
@@ -87,7 +87,7 @@ export default function AIAgents() {
           </div>
         </section>
 
-        <section className="py-24">
+        <section className="py-10 md:py-16 lg:py-24">
           <div className="container max-w-3xl">
             <SectionHeading tag="Industries" title="Industries we've built agents for" align="left" />
             <div className="flex flex-wrap gap-2">
@@ -98,7 +98,7 @@ export default function AIAgents() {
           </div>
         </section>
 
-        <section className="py-24 bg-muted/30">
+        <section className="py-10 md:py-16 lg:py-24 bg-muted/30">
           <div className="container">
             <SectionHeading tag="Our Agents" title="Your AI Agent Starts Here" />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">

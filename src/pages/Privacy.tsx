@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 export default function Privacy() {
   return (
     <Layout>
-      <section className="container py-20">
+      <section className="container py-10 md:py-16 lg:py-20">
         <SectionHeading tag="Legal" title="Privacy Policy" description="Last updated: March 2026" />
 
         <div className="max-w-3xl mx-auto space-y-10 text-muted-foreground text-sm leading-relaxed">
