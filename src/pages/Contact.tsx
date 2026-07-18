@@ -93,7 +93,7 @@ export default function Contact() {
                   <div className="flex items-center gap-3 text-sm text-muted-foreground"><Mail size={16} /> hello@wepix.in</div>
                   <div className="flex items-start gap-3 text-sm text-muted-foreground">
                     <MapPin size={16} className="shrink-0 mt-0.5" />
-                    <div><p><TirupurTooltip />, Tamil Nadu (HQ — the OG)</p><p>Bangalore, Karnataka (the fancy one)</p></div>
+                    <div><p><TirupurTooltip />, Tamil Nadu (HQ - the OG)</p><p>Bangalore, Karnataka (the fancy one)</p></div>
                   </div>
                 </div>
               </div>

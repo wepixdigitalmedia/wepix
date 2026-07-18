@@ -15,7 +15,7 @@ const services = [
   { icon: Zap, title: "Enterprise Ads", description: "Large-scale campaigns for complex funnels. The kind of stuff that makes spreadsheet lovers weep with joy." },
   { icon: Monitor, title: "Websites", description: "Websites that don't just look pretty but actually convert visitors into customers. Revolutionary concept, we know." },
   { icon: Bot, title: "AI Agents", description: "Custom AI agents that handle customer support, qualify leads, and work 24/7 without asking for a raise. Your new favorite employees." },
-  { icon: Video, title: "Video Production", description: "Corporate videos that people actually watch instead of alt-tabbing. Explainers, testimonials, social content — all of it." },
+  { icon: Video, title: "Video Production", description: "Corporate videos that people actually watch instead of alt-tabbing. Explainers, testimonials, social content - all of it." },
 ];
 
 export default function Business() {

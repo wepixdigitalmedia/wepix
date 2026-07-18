@@ -20,7 +20,7 @@ const doctrine = [
   { num: "12", title: "Method transcends industry", desc: "Industries change. Methods persist. Perennial organises around how systems are built, not where they are applied." },
   { num: "13", title: "Outcomes prove intelligence", desc: "Credentials, theory, and articulation are signals, not evidence. Intelligence is demonstrated by the ability to produce real outcomes under real constraints." },
   { num: "14", title: "Impossible is rarely final", desc: "Most claims of impossibility reflect current assumptions, incentives, or constraints. Progress begins when those constraints are re-examined. Perennial treats impossible as the start of inquiry, not the end of discussion." },
-  { num: "15", title: "Rules can be broken. Laws cannot.", desc: "Rules are human constructs and often deserve challenge. Laws — physical, mathematical, or fundamental — do not negotiate. Perennial questions convention while respecting reality." },
+  { num: "15", title: "Rules can be broken. Laws cannot.", desc: "Rules are human constructs and often deserve challenge. Laws - physical, mathematical, or fundamental - do not negotiate. Perennial questions convention while respecting reality." },
 ];
 
 export default function Perennial() {

@@ -44,7 +44,7 @@ export default function Webinar() {
             <Card className="rounded-xl border-border">
               <CardContent className="p-8 text-center">
                 <Calendar className="text-foreground mx-auto mb-4" size={28} />
-                <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Next Masterclass — Live</span>
+                <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Next Masterclass - Live</span>
                 <h2 className="font-display text-2xl md:text-3xl font-semibold mt-3">Scaling Meta Ads: The 2024 Playbook</h2>
                 <p className="text-muted-foreground mt-2">Friday, 7 PM IST · Free to Join · Bring snacks and questions</p>
                 <div className="mt-6">

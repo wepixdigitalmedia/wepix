@@ -4,11 +4,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { CTABanner } from "@/components/shared/CTABanner";
 import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder";
-import { ArrowRight, GraduationCap, Video, Users, Check } from "lucide-react";
+import { ArrowRight, GraduationCap, Video, Users, Check, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useGSAP, heroReveal, scrollFadeIn, gsap } from "@/hooks/useGSAP";
+import { KickstartEnrollButton } from "@/components/academy/KickstartEnrollButton";
 
 const offerings = [
+  { icon: Rocket, title: "WePix Kickstart Course", description: "The flagship program. Build, launch, and scale your D2C fashion brand with the complete system - store, content, Meta Ads, and scaling. ₹79,999.", href: "/academy/kickstart-course", img: "Kickstart course" },
   { icon: GraduationCap, title: "Meta Ads Mastery Course", description: "Learn the real way to run profitable Meta Ads. This isn't some textbook theory. We’re talking about actual experience from running real campaigns. No fluff, just results.", href: "/academy/meta-ads-course", img: "Course preview" },
   { icon: Video, title: "Live Masterclass", description: "Get direct access to weekly live sessions where we break down what’s working right now. We’ll answer all your burning questions and share the most actionable tips in real-time.", href: "/academy/webinar", img: "Webinar screenshot" },
   { icon: Users, title: "Skool Community", description: "Join a group of 500+ marketers and brand owners where we share wins, losses, and everything in between. It’s like a group chat, but full of knowledge and support.", href: "/academy/community", img: "Community screenshot" },
@@ -46,13 +48,13 @@ export default function Academy() {
                 <p className="gsap-hero-desc mt-5 text-base text-muted-foreground opacity-0">
                 Here’s the deal: most marketing courses are by people who make bank off the course itself. Ours is different. We’re managing crores in ad spend every month, running legit campaigns for real brands. And we’re giving you the full scoop, mistakes, wins, and all the stuff no one tells you on YouTube.
                 </p>
-                <div className="flex flex-wrap gap-3 mt-8">
-                  <Link to="/academy/meta-ads-course" className="gsap-hero-cta opacity-0">
-                    <Button size="lg" className="rounded-lg font-medium gap-2">Explore the Course <ArrowRight size={16} /></Button>
-                  </Link>
-                  <Link to="/academy/webinar" className="gsap-hero-cta opacity-0">
-                    <Button size="lg" variant="outline" className="rounded-lg font-medium">Join a Free Webinar</Button>
-                  </Link>
+
+                <div className="gsap-hero-cta mt-8 flex flex-col sm:flex-row sm:items-center gap-6 opacity-0 border-t border-border/50 pt-6 max-w-md">
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1 font-semibold">Course Fee</p>
+                    <p className="font-display text-3xl md:text-4xl font-bold text-foreground">₹79,999</p>
+                  </div>
+                  <KickstartEnrollButton label="Enroll Now - Start Scaling" />
                 </div>
               </div>
               <div className="gsap-hero-cta opacity-0 rounded-xl overflow-hidden aspect-square bg-muted/40">
@@ -75,13 +77,28 @@ export default function Academy() {
 
         <section className="py-10 md:py-16 lg:py-24 border-t border-border">
           <div className="container">
-            <SectionHeading tag="What We Offer" title="Three ways to level up your game" />
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            <SectionHeading tag="What We Offer" title="Programs to level up your game" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
               {offerings.map((o) => (
                 <div key={o.title} className="gsap-offering-card opacity-0">
                   <Link to={o.href}>
                     <Card className="h-full hover:shadow-md transition-all rounded-xl border-border group overflow-hidden">
-                      {o.img === "Course preview" ? (
+                      {o.img === "Kickstart course" ? (
+                        <div className="bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 overflow-hidden">
+                          <img
+                            src="/kickstarter-program-light.png"
+                            alt="WePix Kickstart Course preview"
+                            className="w-full h-full object-cover dark:hidden"
+                            loading="lazy"
+                          />
+                          <img
+                            src="/kickstarter-program-dark.png"
+                            alt="WePix Kickstart Course preview"
+                            className="hidden w-full h-full object-cover dark:block"
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : o.img === "Course preview" ? (
                         <div className="bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 overflow-hidden">
                           <img
                             src="/meta-ads-course-light.png"

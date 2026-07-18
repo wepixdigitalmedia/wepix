@@ -9,7 +9,7 @@ const Abdul = () => {
           <SectionHeading
             tag="Founder Story"
             title="N Abdul Navas"
-            description="From Tiruppur kid breathing cotton and hustle to building WePix — the fashion-first growth partner for brands that refuse to be mid."
+            description="From Tiruppur kid breathing cotton and hustle to building WePix - the fashion-first growth partner for brands that refuse to be mid."
           />
 
           <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start">
@@ -25,7 +25,7 @@ const Abdul = () => {
             <div className="space-y-4 text-sm md:text-[0.9375rem] text-muted-foreground leading-relaxed">
               <p>
                 Abdul grew up in Tiruppur, surrounded by factories, fabric rolls, and people trying to turn good products into real brands.
-                Watching great garments die because of mid marketing genuinely annoyed him — so he decided to build the crew he wished those brands had.
+                Watching great garments die because of mid marketing genuinely annoyed him - so he decided to build the crew he wished those brands had.
               </p>
               <p>
                 Before WePix, he spent years testing offers, funnels, and media buying strategies with his own money, figuring out what actually

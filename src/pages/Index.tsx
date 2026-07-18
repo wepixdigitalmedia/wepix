@@ -66,7 +66,7 @@ const brandCards = [
   {
     icon: ShoppingBag,
     title: "Fashion",
-    description: "Your clothes deserve better than a boring Instagram grid. We do content, ads, and growth — the whole shebang.",
+    description: "Your clothes deserve better than a boring Instagram grid. We do content, ads, and growth - the whole shebang.",
     href: "/fashion",
     color: "from-primary/20 to-primary/5"
   },

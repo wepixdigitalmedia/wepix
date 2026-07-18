@@ -9,7 +9,7 @@ const Santhosh = () => {
           <SectionHeading
             tag="Founder Story"
             title="R Santhosh"
-            description="The finance brain making sure every crazy idea actually adds up — for WePix and for the brands we work with."
+            description="The finance brain making sure every crazy idea actually adds up - for WePix and for the brands we work with."
           />
 
           <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start">
@@ -28,7 +28,7 @@ const Santhosh = () => {
                 over P&amp;Ls, cash flow, unit economics, and making sure growth doesn&apos;t quietly kill the business.
               </p>
               <p>
-                He&apos;s the reason WePix frameworks are built around profitability first — not just vanity metrics, not just &quot;spend more
+                He&apos;s the reason WePix frameworks are built around profitability first - not just vanity metrics, not just &quot;spend more
                 and hope CPMs stay friendly.&quot;
               </p>
               <p>

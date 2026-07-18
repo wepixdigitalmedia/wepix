@@ -29,6 +29,7 @@ const subNavs: Record<string, { label: string; href: string }[]> = {
   ],
   "/academy": [
     { label: "Overview", href: "/academy" },
+    { label: "Kickstart Course", href: "/academy/kickstart-course" },
     { label: "Meta Ads Course", href: "/academy/meta-ads-course" },
     { label: "Webinar", href: "/academy/webinar" },
     { label: "Community", href: "/academy/community" },

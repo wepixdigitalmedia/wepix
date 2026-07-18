@@ -137,7 +137,7 @@ export default function About() {
                 />
                 <CardContent className="p-4">
                   <h3 className="font-display font-semibold"><TirupurTooltip />, Tamil Nadu</h3>
-                  <p className="text-[0.8125rem] text-muted-foreground">HQ — Where it all started (and where the best filter coffee is)</p>
+                  <p className="text-[0.8125rem] text-muted-foreground">HQ - Where it all started (and where the best filter coffee is)</p>
                 </CardContent>
               </Card>
               <Card className="rounded-xl border-border overflow-hidden">

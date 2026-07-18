@@ -9,7 +9,7 @@ const Vignesh = () => {
           <SectionHeading
             tag="Founder Story"
             title="B Vignesh"
-            description="The B2B growth nerd who treats lead-gen funnels like engineering problems — not wishful thinking."
+            description="The B2B growth nerd who treats lead-gen funnels like engineering problems - not wishful thinking."
           />
 
           <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start">
@@ -24,7 +24,7 @@ const Vignesh = () => {
             </div>
             <div className="space-y-4 text-sm md:text-[0.9375rem] text-muted-foreground leading-relaxed">
               <p>
-                Vignesh doesn&apos;t think in &quot;campaigns&quot; — he thinks in systems. Pipelines, CRM logic, follow-up rules, scoring,
+                Vignesh doesn&apos;t think in &quot;campaigns&quot; - he thinks in systems. Pipelines, CRM logic, follow-up rules, scoring,
                 workflows, and all the unsexy pieces that decide whether a lead machine prints money or just more noise.
               </p>
               <p>
@@ -32,7 +32,7 @@ const Vignesh = () => {
                 sales teams that needed more than &quot;just more leads.&quot;
               </p>
               <p>
-                His obsession: making sure every sales team WePix works with has more qualified conversations than they know what to do with — and
+                His obsession: making sure every sales team WePix works with has more qualified conversations than they know what to do with - and
                 that the founder&apos;s calendar isn&apos;t the bottleneck.
               </p>
             </div>

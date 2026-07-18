@@ -28,6 +28,7 @@ import DigitalStore from "./pages/academy/DigitalStore";
 import MetaAdsCourse from "./pages/academy/MetaAdsCourse";
 import Webinar from "./pages/academy/Webinar";
 import Community from "./pages/academy/Community";
+import KickstartCourse from "./pages/academy/KickstartCourse";
 import Business from "./pages/business/Business";
 import AIAgents from "./pages/business/AIAgents";
 import Mentorship from "./pages/business/Mentorship";
@@ -76,6 +77,7 @@ const App = () => (
             <Route path="/academy" element={<Academy />} />
             <Route path="/academy/digital-store" element={<DigitalStore />} />
             <Route path="/academy/meta-ads-course" element={<MetaAdsCourse />} />
+            <Route path="/academy/kickstart-course" element={<KickstartCourse />} />
             <Route path="/academy/webinar" element={<Webinar />} />
             <Route path="/academy/community" element={<Community />} />
             <Route path="/business" element={<Business />} />

@@ -61,7 +61,7 @@ export default function Handbook() {
               <TabsTrigger value="the-deal" className="text-xs sm:text-sm">The Deal</TabsTrigger>
             </TabsList>
 
-            {/* CHAPTER 01 — WHO WE ARE */}
+            {/* CHAPTER 01 - WHO WE ARE */}
             <TabsContent value="who-we-are" className="space-y-4">
               <ContentCard icon={BookOpen} title="WePix Is Not Just Another Agency">
                 <p>Founded in 2022 by Abdul Navas (CEO) and Santhosh (CFO), WePix was created with one clear belief: fashion e-commerce brands in India deserve better digital marketing. Not generic strategies. Not templated solutions. And certainly not the same-old copy-paste strategy that fails to stand out.</p>
@@ -102,7 +102,7 @@ export default function Handbook() {
               </ContentCard>
             </TabsContent>
 
-            {/* CHAPTER 02 — YOUR FIRST DAY */}
+            {/* CHAPTER 02 - YOUR FIRST DAY */}
             <TabsContent value="first-day" className="space-y-4">
               <ContentCard icon={Clock} title="Before Day One">
                 <p>You should already have your Zoho login, your email credentials, and a basic brief about your role. If you don't, ping HR at hr@wepix.in before you show up. Starting Day 1 without system access is a completely avoidable waste of everyone's morning.</p>
@@ -123,7 +123,7 @@ export default function Handbook() {
               </ContentCard>
             </TabsContent>
 
-            {/* CHAPTER 03 — COMMUNICATION */}
+            {/* CHAPTER 03 - COMMUNICATION */}
             <TabsContent value="communication" className="space-y-4">
               <ContentCard icon={MessageSquare} title="Communication Tools">
                 <p>Bad communication is the root cause of at least 70% of agency problems. Not bad design. Not bad strategy. Bad communication.</p>
@@ -134,7 +134,7 @@ export default function Handbook() {
               </ContentCard>
 
               <ContentCard icon={AlertTriangle} title="Giving Updates Without Being Asked">
-                <p>If you are working on something with a deadline and you hit a blocker — say something. Don't go quiet and hope it sorts itself out.</p>
+                <p>If you are working on something with a deadline and you hit a blocker - say something. Don't go quiet and hope it sorts itself out.</p>
                 <p>The rule is simple: if you are more than 30% behind on something, your team lead needs to know before they have to ask.</p>
               </ContentCard>
 
@@ -154,7 +154,7 @@ export default function Handbook() {
               </Card>
             </TabsContent>
 
-            {/* CHAPTER 04 — FEEDBACK */}
+            {/* CHAPTER 04 - FEEDBACK */}
             <TabsContent value="feedback" className="space-y-4">
               <ContentCard icon={MessageSquare} title="How Feedback Works Here">
                 <p>Feedback at agencies usually goes one of two ways. Either it is so brutally blunt it feels like a personal attack. Or it is so softened and padded with compliments that the actual issue never gets addressed. Both are useless.</p>
@@ -184,7 +184,7 @@ export default function Handbook() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="p-4 rounded-lg bg-destructive/5 border border-destructive/20">
                       <h4 className="text-sm font-semibold text-destructive mb-2">Feedback That Doesn't Help</h4>
-                      <p className="text-xs text-muted-foreground">"This doesn't look right." "The design is off." "Not what I wanted." — All feeling, no direction. The designer now has to guess what wrong means and what right looks like.</p>
+                      <p className="text-xs text-muted-foreground">"This doesn't look right." "The design is off." "Not what I wanted." - All feeling, no direction. The designer now has to guess what wrong means and what right looks like.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
                       <h4 className="text-sm font-semibold text-primary mb-2">Feedback That Actually Helps</h4>
@@ -195,7 +195,7 @@ export default function Handbook() {
               </Card>
             </TabsContent>
 
-            {/* CHAPTER 05 — ATTENDANCE & LEAVE */}
+            {/* CHAPTER 05 - ATTENDANCE & LEAVE */}
             <TabsContent value="attendance" className="space-y-4">
               <ContentCard icon={Clock} title="Work Hours">
                 <InfoRow label="Working Days" value="Monday to Saturday" />
@@ -257,7 +257,7 @@ export default function Handbook() {
               </Card>
             </TabsContent>
 
-            {/* CHAPTER 06 — CONDUCT */}
+            {/* CHAPTER 06 - CONDUCT */}
             <TabsContent value="conduct" className="space-y-4">
               <ContentCard icon={Shield} title="Professional Conduct">
                 <p>Show up as someone who respects the people around them. Respect means different things in different contexts, but at minimum it means: you don't talk over people, you don't undermine colleagues in client meetings, you don't ghost your team when there is a deadline in two hours.</p>
@@ -284,7 +284,7 @@ export default function Handbook() {
               </Card>
             </TabsContent>
 
-            {/* CHAPTER 07 — GROWTH */}
+            {/* CHAPTER 07 - GROWTH */}
             <TabsContent value="growth" className="space-y-4">
               <ContentCard icon={TrendingUp} title="How People Move Up Here">
                 <p>Growth at WePix is not a mystery. It is not based on who is the loudest in meetings or who has been here the longest. It is based on actual output, actual ownership, and actual impact.</p>
@@ -297,7 +297,7 @@ export default function Handbook() {
               </ContentCard>
             </TabsContent>
 
-            {/* CHAPTER 08 — THE DEAL */}
+            {/* CHAPTER 08 - THE DEAL */}
             <TabsContent value="the-deal" className="space-y-4">
               <ContentCard icon={Handshake} title="What WePix Commits to You">
                 <p>Employment relationships work because both sides hold up their end. Here is what WePix commits to you:</p>
@@ -322,7 +322,7 @@ export default function Handbook() {
 
               <Card className="border-border/50 bg-muted/30">
                 <CardContent className="p-5 text-center">
-                  <p className="text-xs text-muted-foreground">Version 1.5 — 2026 &middot; hr@wepix.in &middot; feedback@wepix.in</p>
+                  <p className="text-xs text-muted-foreground">Version 1.5 - 2026 &middot; hr@wepix.in &middot; feedback@wepix.in</p>
                   <p className="text-xs text-muted-foreground mt-1">15/15 Sri Vinayagar Koil Street, Kosavampalayam, Palladam, Tirupur, Tamil Nadu – 641664</p>
                 </CardContent>
               </Card>
