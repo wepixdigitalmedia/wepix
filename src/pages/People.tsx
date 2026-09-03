@@ -9,7 +9,6 @@ const departments = [
     members: [
       { name: "Abdul Navas", role: "Founder", bio: "Built Wepix from the ground up. Every decision and direction traces back to his vision." },
       { name: "Santhosh", role: "Co-Founder", bio: "Keeps operations and delivery running smoothly. If it needs to happen, he makes sure it does." },
-      { name: "Vignesh", role: "Chief Operating Officer", bio: "Bridges strategy and execution. Every brand vertical runs better because of him." },
       { name: "Dhesini", role: "HR", bio: "Right people, right place, right culture. She makes it happen." },
       { name: "Rineesha", role: "Performance Marketer", bio: "She runs Meta campaigns that perform and makes sure every brand shows up the right way." },
       { name: "Madhumitha", role: "Performance Marketer", bio: "She handles the ads that drive sales and keeps the brand vibe strong across platforms." },
@@ -73,10 +72,6 @@ const memberImageSrc: Record<string, MemberImageSrc> = {
   "Santhosh": {
     light: "/team/santhosh.jpg",
     dark: "/team/santhosh-dark.jpg",
-  },
-  "Vignesh": {
-    light: "/team/vignesh.jpg",
-    dark: "/team/vignesh-dark.jpg",
   },
   "Dhesini": {
     light: "/team/dhesini.jpg",
