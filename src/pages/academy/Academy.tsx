@@ -12,7 +12,7 @@ import { KickstartEnrollButton } from "@/components/academy/KickstartEnrollButto
 const offerings = [
   { icon: Rocket, title: "WePix Kickstart Course", description: "The flagship program. Build, launch, and scale your D2C fashion brand with the complete system - store, content, Meta Ads, and scaling. ₹79,999.", href: "/academy/kickstart-course", img: "Kickstart course" },
   { icon: GraduationCap, title: "Meta Ads Mastery Course", description: "Learn the real way to run profitable Meta Ads. This isn't some textbook theory. We’re talking about actual experience from running real campaigns. No fluff, just results.", href: "/academy/meta-ads-course", img: "Course preview" },
-  { icon: Video, title: "Live Masterclass", description: "Get direct access to weekly live sessions where we break down what’s working right now. We’ll answer all your burning questions and share the most actionable tips in real-time.", href: "/academy/webinar", img: "Webinar screenshot" },
+  { icon: Video, title: "Live Masterclasses (Live Tomorrow)", description: "Direct 3-hour live sessions with Abdul Navas. Upcoming: Build Your Fashion Brand Online (19th Sep, ₹299) & Build Your First AI Employee (10th Oct, ₹1,999).", href: "/academy/webinar", img: "Webinar screenshot" },
   { icon: Users, title: "Skool Community", description: "Join a group of 500+ marketers and brand owners where we share wins, losses, and everything in between. It’s like a group chat, but full of knowledge and support.", href: "/academy/community", img: "Community screenshot" },
 ];
 

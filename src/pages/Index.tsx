@@ -60,7 +60,6 @@ import sourcingHeroLight from "@/assets/sourcing-hero-light.png";
 import sourcingHeroDark from "@/assets/sourcing-hero-dark.png";
 import founderAbdulImage from "@/assets/founder-abdul.png";
 import founderSanthoshImage from "@/assets/founder-santhosh.png";
-import founderVigneshImage from "@/assets/founder-vignesh.png";
 
 const brandCards = [
   {
@@ -562,7 +561,7 @@ const Index = () => {
       <section className="py-8 md:py-16 lg:py-24 xl:py-28 bg-muted/50">
         <div className="container">
           <SectionHeading tag="The Crew" title="Built by people who execute, not just present." />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 md:gap-8 max-w-4xl mx-auto">
             {[
               {
                 name: "Abdul",
@@ -586,17 +585,6 @@ const Index = () => {
                   instagram: "https://www.instagram.com/santhosh_wepix/",
                   x: "https://x.com/",
                 },
-              },
-              {
-                name: "Vignesh",
-                role: "Chief Operating Officer",
-                bio: "Lead Gen Expert He does not chase leads. He builds systems that attract the right people, warm them up, and hand them over ready to buy. While others are figuring out what went wrong, Vignesh already has the next pipeline full and moving. Results first, talk later.",
-                social: {
-                  linkedin: "https://www.linkedin.com/in/vigneshbalakrishna/",
-                  instagram: "https://www.instagram.com/it_wasnt_me_vicky/",
-                  x: "https://x.com/rockvignesh123",
-                },
-                photo: founderVigneshImage,
               }
             ].map((founder) =>
               <Card key={founder.name} className="border-border/50 overflow-hidden">
@@ -625,9 +613,7 @@ const Index = () => {
                       to={
                         founder.name.includes("Abdul")
                           ? "/abdul"
-                          : founder.name.includes("Santhosh")
-                          ? "/santhosh"
-                          : "/vignesh"
+                          : "/santhosh"
                       }
                       className="inline-flex items-center text-[0.8125rem] font-medium text-primary hover:text-primary/80"
                     >

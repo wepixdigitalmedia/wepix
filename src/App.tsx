@@ -12,7 +12,6 @@ import Contact from "./pages/Contact";
 import People from "./pages/People";
 import Abdul from "./pages/Abdul";
 import Santhosh from "./pages/Santhosh";
-import Vignesh from "./pages/Vignesh";
 import Handbook from "./pages/Handbook";
 import Careers from "./pages/Careers";
 import Perennial from "./pages/Perennial";
@@ -57,7 +56,6 @@ const App = () => (
             <Route path="/people" element={<People />} />
             <Route path="/abdul" element={<Abdul />} />
             <Route path="/santhosh" element={<Santhosh />} />
-            <Route path="/vignesh" element={<Vignesh />} />
             <Route path="/handbook" element={<Handbook />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/digital-store" element={<Navigate to="/academy/digital-store" replace />} />
@@ -79,6 +77,10 @@ const App = () => (
             <Route path="/academy/meta-ads-course" element={<MetaAdsCourse />} />
             <Route path="/academy/kickstart-course" element={<KickstartCourse />} />
             <Route path="/academy/webinar" element={<Webinar />} />
+            <Route path="/academy/masterclass" element={<Webinar />} />
+            <Route path="/academy/masterclasses" element={<Webinar />} />
+            <Route path="/masterclass" element={<Navigate to="/academy/webinar" replace />} />
+            <Route path="/masterclasses" element={<Navigate to="/academy/webinar" replace />} />
             <Route path="/academy/community" element={<Community />} />
             <Route path="/business" element={<Business />} />
             <Route path="/business/ai-agents" element={<AIAgents />} />
