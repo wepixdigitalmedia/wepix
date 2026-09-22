@@ -11,18 +11,15 @@ import {
   ExternalLink,
   CheckCircle2,
   Sparkles,
-  ShoppingBag,
-  Brain,
   Video,
   Users,
-  ShieldCheck,
   TrendingUp,
   Award,
-  ArrowRight,
 } from "lucide-react";
-import { FASHION_MASTERCLASS_URL, AI_MASTERCLASS_URL } from "@/components/shared/MasterclassPopup";
+import { AI_MASTERCLASS_URL } from "@/components/shared/MasterclassPopup";
 
 const pastWebinars = [
+  { title: "Build Your Fashion Brand Online (Batch 5)", date: "19th Sep 2026", attendees: "150+ Founders" },
   { title: "Meta Ads in 2024: What Actually Works (and what's just hype)", date: "March 2024", attendees: "250+" },
   { title: "Content Strategy for D2C Fashion Brands That Don't Want to Be Boring", date: "February 2024", attendees: "180+" },
   { title: "From ₹0 to ₹10L/month: A Real Case Study (with real numbers)", date: "January 2024", attendees: "300+" },
@@ -74,12 +71,12 @@ export default function Webinar() {
               Free Live Sessions. Real Insights. No Pitch Decks.
             </h1>
             <p className="gsap-hero-desc mt-4 text-base sm:text-lg text-muted-foreground opacity-0 leading-relaxed">
-              Every week, we go live to break down real campaigns, share what’s actually working, and answer your questions. No fluff, just straight-up value. Join, learn, and leave with more knowledge and real systems than you came with.
+              Every session, we go live to break down real campaigns, share what’s actually working, and answer your questions. No fluff, just straight-up value. Join, learn, and leave with more knowledge and real systems than you came with.
             </p>
             <div className="mt-8 sm:mt-10 rounded-2xl overflow-hidden aspect-video border border-border shadow-md bg-muted/40">
               <img
                 src="/webinar-speaker-photo-2.png"
-                alt="Live workshop on starting a fashion brand online by Abdul Navas"
+                alt="Live workshop on building scalable brand systems by Abdul Navas"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -87,111 +84,26 @@ export default function Webinar() {
           </div>
         </section>
 
-        {/* Live & Upcoming Masterclasses Section - Clean, Spacious, Hooked */}
+        {/* Live & Upcoming Masterclass Section - Clean, Focused, Minimal */}
         <section id="masterclasses" className="py-12 md:py-20 lg:py-24 border-t border-border bg-muted/30">
-          <div className="container max-w-6xl">
+          <div className="container max-w-4xl">
             <SectionHeading
-              tag="Upcoming Sessions"
-              title="Pick your masterclass"
-              description="Hands-on 3-hour live sessions with Abdul Navas. Taught in Tamil (தமிழ்), backed by real numbers and implementation assets."
+              tag="Upcoming Masterclass"
+              title="Build Your First AI Employee"
+              description="Direct 3-hour hands-on live session with Abdul Navas. Taught in Tamil (தமிழ்), backed by real live automations and production systems."
             />
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mt-8">
-              {/* Card 1: Fashion Brand Masterclass (Tomorrow) */}
-              <div className="gsap-masterclass-card opacity-0 h-full">
-                <Card className="h-full rounded-2xl border-border bg-card shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden">
+            <div className="mt-8 max-w-3xl mx-auto">
+              {/* Featured Card: AI Employee Masterclass (10 Oct) */}
+              <div className="gsap-masterclass-card opacity-0">
+                <Card className="rounded-2xl border-border bg-card shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden">
                   <div>
                     {/* Top Status Header */}
-                    <div className="p-4 sm:p-5 bg-gradient-to-r from-red-500/10 to-transparent border-b border-border flex items-center justify-between gap-2">
-                      <div className="flex items-center gap-2">
-                        <span className="px-2.5 py-1 rounded-full bg-red-500 text-white text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
-                          <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
-                          Live Tomorrow
-                        </span>
-                        <Badge variant="outline" className="text-xs font-semibold">
-                          Batch 5
-                        </Badge>
-                      </div>
-                      <span className="text-xs font-medium text-muted-foreground">
-                        Tamil (தமிழ்) Live
-                      </span>
-                    </div>
-
-                    {/* Content Body */}
-                    <div className="p-6 sm:p-8 space-y-5">
-                      <div className="flex items-center gap-4 text-xs sm:text-sm text-muted-foreground font-medium">
-                        <span className="flex items-center gap-1.5 text-foreground">
-                          <Calendar size={15} className="text-brand" /> 19th Sep 2026 (Tomorrow)
-                        </span>
-                        <span>•</span>
-                        <span className="flex items-center gap-1.5">
-                          <Clock size={15} className="text-brand" /> 5:00 PM IST (3 hrs)
-                        </span>
-                      </div>
-
-                      <div>
-                        <h3 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
-                          Build Your Fashion Brand Online
-                        </h3>
-                        <p className="text-muted-foreground text-sm sm:text-base mt-2 leading-relaxed">
-                          Stop relying on random Instagram DMs. Learn the structured operating system fashion brands use to generate ₹20+ Lakhs/month with Shopify, Content, and Meta Ads.
-                        </p>
-                      </div>
-
-                      {/* 3 Simple Hooked Points */}
-                      <div className="space-y-3 pt-2 text-sm">
-                        <div className="flex items-start gap-3">
-                          <CheckCircle2 size={18} className="text-brand shrink-0 mt-0.5" />
-                          <span><strong>The Brand OS:</strong> Turn followers into paying customers with high-converting store funnels.</span>
-                        </div>
-                        <div className="flex items-start gap-3">
-                          <CheckCircle2 size={18} className="text-brand shrink-0 mt-0.5" />
-                          <span><strong>Meta Ads Engine:</strong> Proven ad frameworks & creative angles that scale profitably.</span>
-                        </div>
-                        <div className="flex items-start gap-3">
-                          <CheckCircle2 size={18} className="text-brand shrink-0 mt-0.5" />
-                          <span><strong>Free Toolkit:</strong> KPI Tracking Sheet, Brand SOPs & Product Pricing Calculator included.</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Pricing & CTA Footer */}
-                  <div className="p-6 sm:p-8 pt-4 border-t border-border/70 bg-muted/20 space-y-4">
-                    <div className="flex items-baseline justify-between">
-                      <div className="flex items-baseline gap-2">
-                        <span className="font-display text-3xl font-bold text-foreground">₹299</span>
-                        <span className="text-sm text-muted-foreground line-through">₹2,999</span>
-                      </div>
-                      <Badge className="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-0 text-xs font-semibold">
-                        90% OFF Community Pass
-                      </Badge>
-                    </div>
-
-                    <a
-                      href={FASHION_MASTERCLASS_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full"
-                    >
-                      <Button size="lg" className="w-full gap-2 font-medium bg-foreground text-background hover:bg-foreground/90">
-                        Reserve Your Seat (₹299) <ExternalLink size={16} />
-                      </Button>
-                    </a>
-                  </div>
-                </Card>
-              </div>
-
-              {/* Card 2: AI Employee Masterclass (10 Oct) */}
-              <div className="gsap-masterclass-card opacity-0 h-full">
-                <Card className="h-full rounded-2xl border-border bg-card shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden">
-                  <div>
-                    {/* Top Status Header */}
-                    <div className="p-4 sm:p-5 bg-gradient-to-r from-blue-500/10 to-transparent border-b border-border flex items-center justify-between gap-2">
+                    <div className="p-4 sm:p-5 bg-gradient-to-r from-blue-500/10 via-primary/5 to-transparent border-b border-border flex items-center justify-between gap-2">
                       <div className="flex items-center gap-2">
                         <span className="px-2.5 py-1 rounded-full bg-blue-600 text-white text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
                           <Sparkles size={12} />
-                          Batch 1 · New
+                          Batch 1 · Upcoming Live
                         </span>
                         <Badge variant="outline" className="text-xs font-semibold">
                           AI Systems
@@ -203,7 +115,7 @@ export default function Webinar() {
                     </div>
 
                     {/* Content Body */}
-                    <div className="p-6 sm:p-8 space-y-5">
+                    <div className="p-6 sm:p-8 space-y-6">
                       <div className="flex items-center gap-4 text-xs sm:text-sm text-muted-foreground font-medium">
                         <span className="flex items-center gap-1.5 text-foreground">
                           <Calendar size={15} className="text-blue-500" /> 10th October 2026
@@ -223,15 +135,15 @@ export default function Webinar() {
                         </p>
                       </div>
 
-                      {/* 3 Simple Hooked Points */}
-                      <div className="space-y-3 pt-2 text-sm">
+                      {/* 3 Clean Hooked Points */}
+                      <div className="space-y-3 pt-2 text-sm sm:text-base">
                         <div className="flex items-start gap-3">
                           <CheckCircle2 size={18} className="text-blue-500 shrink-0 mt-0.5" />
                           <span><strong>AI Assistant vs Employee:</strong> Give AI a single responsibility, real data, and automated schedules.</span>
                         </div>
                         <div className="flex items-start gap-3">
                           <CheckCircle2 size={18} className="text-blue-500 shrink-0 mt-0.5" />
-                          <span><strong>Ad Doctor & Payment Tracker:</strong> Automatically catch performance anomalies and order leaks.</span>
+                          <span><strong>Ad Doctor & Payment Tracker:</strong> Automatically catch performance anomalies and cash leaks.</span>
                         </div>
                         <div className="flex items-start gap-3">
                           <CheckCircle2 size={18} className="text-blue-500 shrink-0 mt-0.5" />
@@ -249,7 +161,7 @@ export default function Webinar() {
                         <span className="text-sm text-muted-foreground line-through">₹4,999</span>
                       </div>
                       <Badge className="bg-blue-500/10 text-blue-600 dark:text-blue-400 border-0 text-xs font-semibold">
-                        60% OFF Community Pass
+                        60% OFF Early Cohort Pass
                       </Badge>
                     </div>
 
@@ -330,10 +242,10 @@ export default function Webinar() {
                 <div className="md:col-span-8 space-y-3">
                   <span className="text-xs font-semibold uppercase tracking-wider text-brand">Meet Your Mentor</span>
                   <h2 className="font-display text-2xl font-bold tracking-tight">
-                    Learn from someone actively managing live ad spend.
+                    Learn from someone actively managing live systems.
                   </h2>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Abdul Navas is a fashion brand consultant and the founder of WePix Digital Media based in Tiruppur. He works directly with boutique owners and fashion startups to build scalable online businesses using structured systems combining Shopify, Meta ads, and AI automation.
+                    Abdul Navas is a brand consultant and the founder of WePix Digital Media based in Tiruppur. He works directly with brand owners and startups to build scalable online businesses using structured systems combining Shopify, Meta ads, and AI automation.
                   </p>
                   <div className="pt-2 flex flex-wrap gap-4 text-xs font-medium text-muted-foreground">
                     <span className="flex items-center gap-1.5 text-foreground"><TrendingUp size={14} className="text-brand" /> ₹2Cr+ Managed Ad Spend</span>
@@ -357,7 +269,7 @@ export default function Webinar() {
                     <CardContent className="p-5">
                       <div className="flex items-center gap-2 mb-2 text-xs text-muted-foreground">
                         <Video size={14} className="text-foreground" />
-                        <span>{w.date} · {w.attendees} attendees</span>
+                        <span>{w.date} · {w.attendees}</span>
                       </div>
                       <h4 className="font-display text-sm font-semibold">{w.title}</h4>
                     </CardContent>
@@ -370,10 +282,10 @@ export default function Webinar() {
       </div>
 
       <CTABanner
-        headline="Ready to build predictable sales for your brand?"
-        subtext="Secure your seat in the live masterclass and walk away with ready-to-use systems and templates."
-        ctaLabel="Reserve Seat for Tomorrow (₹299)"
-        ctaHref={FASHION_MASTERCLASS_URL}
+        headline="Ready to build your first AI employee?"
+        subtext="Secure your seat in the live masterclass and walk away with ready-to-use systems, prompts, and templates."
+        ctaLabel="Reserve Seat for 10th Oct (₹1,999)"
+        ctaHref={AI_MASTERCLASS_URL}
         useDialog={false}
       />
     </Layout>

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { ExternalLink, Sparkles, X, ChevronRight } from "lucide-react";
-import { openMasterclassPopup, FASHION_MASTERCLASS_URL } from "@/components/shared/MasterclassPopup";
+import { openMasterclassPopup, AI_MASTERCLASS_URL } from "@/components/shared/MasterclassPopup";
 
 export function AnnouncementMarquee() {
   const [visible, setVisible] = useState(true);
@@ -22,41 +21,34 @@ export function AnnouncementMarquee() {
   if (!visible) return null;
 
   return (
-    <aside aria-label="Upcoming live masterclasses" className="relative z-50 bg-foreground text-background text-xs font-medium border-b border-border/20 overflow-hidden select-none">
+    <aside aria-label="Upcoming live masterclass" className="relative z-50 bg-foreground text-background text-xs font-medium border-b border-border/20 overflow-hidden select-none">
       <div className="container py-2 px-3 sm:px-4 flex items-center justify-between gap-3">
-        {/* Left: Pulsing Live Badge */}
+        {/* Left: Upcoming Live Badge */}
         <div
-          onClick={() => openMasterclassPopup("fashion")}
+          onClick={() => openMasterclassPopup()}
           className="cursor-pointer shrink-0 flex items-center gap-2"
         >
-          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-red-500/20 text-red-400 border border-red-500/40 text-[10px] font-bold uppercase tracking-wider">
-            <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping" />
-            Live Tomorrow
+          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30 text-[10px] font-bold uppercase tracking-wider">
+            <Sparkles size={11} className="text-blue-400" />
+            Upcoming Live
           </span>
         </div>
 
         {/* Center: Marquee / Ticker text */}
         <div
-          onClick={() => openMasterclassPopup("fashion")}
+          onClick={() => openMasterclassPopup()}
           className="cursor-pointer flex-1 overflow-hidden relative mx-2 hidden sm:block"
         >
           <div className="flex items-center gap-6 whitespace-nowrap animate-marquee hover:[animation-play-state:paused]">
             <div className="flex items-center gap-6">
               <span className="inline-flex items-center gap-2">
-                <span className="font-semibold text-background">Build Your Fashion Brand Online (Batch 5)</span>
-                <span className="opacity-70">— Tomorrow, 19th Sep at 5:00 PM IST (Tamil Live)</span>
-                <span className="px-1.5 py-0.5 rounded bg-background/20 text-[10px] font-bold">₹299 Only</span>
-              </span>
-              <span className="opacity-40">•</span>
-              <span className="inline-flex items-center gap-2">
-                <Sparkles size={12} className="text-amber-400 shrink-0" />
                 <span className="font-semibold text-background">Build Your First AI Employee (Batch 1)</span>
-                <span className="opacity-70">— 10th Oct at 7:00 PM IST</span>
-                <span className="px-1.5 py-0.5 rounded bg-background/20 text-[10px] font-bold">₹1,999</span>
+                <span className="opacity-70">— 10th Oct 2026 at 7:00 PM IST (Tamil Live)</span>
+                <span className="px-1.5 py-0.5 rounded bg-background/20 text-[10px] font-bold">₹1,999 Only</span>
               </span>
               <span className="opacity-40">•</span>
               <span className="opacity-80">
-                Direct hands-on 3-hour masterclasses by Abdul Navas. Real systems, no fluff.
+                Direct hands-on 3-hour masterclass by Abdul Navas. Real systems, no fluff.
               </span>
               <span className="opacity-40">•</span>
             </div>
@@ -64,20 +56,13 @@ export function AnnouncementMarquee() {
             {/* Duplicate for seamless infinite loop */}
             <div className="flex items-center gap-6" aria-hidden="true">
               <span className="inline-flex items-center gap-2">
-                <span className="font-semibold text-background">Build Your Fashion Brand Online (Batch 5)</span>
-                <span className="opacity-70">— Tomorrow, 19th Sep at 5:00 PM IST (Tamil Live)</span>
-                <span className="px-1.5 py-0.5 rounded bg-background/20 text-[10px] font-bold">₹299 Only</span>
-              </span>
-              <span className="opacity-40">•</span>
-              <span className="inline-flex items-center gap-2">
-                <Sparkles size={12} className="text-amber-400 shrink-0" />
                 <span className="font-semibold text-background">Build Your First AI Employee (Batch 1)</span>
-                <span className="opacity-70">— 10th Oct at 7:00 PM IST</span>
-                <span className="px-1.5 py-0.5 rounded bg-background/20 text-[10px] font-bold">₹1,999</span>
+                <span className="opacity-70">— 10th Oct 2026 at 7:00 PM IST (Tamil Live)</span>
+                <span className="px-1.5 py-0.5 rounded bg-background/20 text-[10px] font-bold">₹1,999 Only</span>
               </span>
               <span className="opacity-40">•</span>
               <span className="opacity-80">
-                Direct hands-on 3-hour masterclasses by Abdul Navas. Real systems, no fluff.
+                Direct hands-on 3-hour masterclass by Abdul Navas. Real systems, no fluff.
               </span>
               <span className="opacity-40">•</span>
             </div>
@@ -86,29 +71,29 @@ export function AnnouncementMarquee() {
 
         {/* Mobile short description */}
         <div
-          onClick={() => openMasterclassPopup("fashion")}
+          onClick={() => openMasterclassPopup()}
           className="cursor-pointer block sm:hidden text-[11px] truncate font-medium flex-1 text-center"
         >
-          Fashion Masterclass (Tomorrow 5 PM) · ₹299
+          AI Masterclass (10 Oct 7 PM) · ₹1,999
         </div>
 
         {/* Right: Actions */}
         <div className="shrink-0 flex items-center gap-1.5 sm:gap-2">
           <a
-            href={FASHION_MASTERCLASS_URL}
+            href={AI_MASTERCLASS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-background text-foreground text-[11px] font-semibold hover:bg-background/90 transition-colors shadow-sm"
           >
-            <span>Register ₹299</span>
+            <span>Register ₹1,999</span>
             <ExternalLink size={10} />
           </a>
 
           <button
-            onClick={() => openMasterclassPopup("fashion")}
+            onClick={() => openMasterclassPopup()}
             className="hidden md:inline-flex items-center gap-1 px-2 py-1 rounded-md bg-background/15 hover:bg-background/25 text-background text-[11px] transition-colors"
           >
-            <span>All Sessions</span>
+            <span>Details</span>
             <ChevronRight size={12} />
           </button>
 
