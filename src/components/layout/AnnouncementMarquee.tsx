@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ExternalLink, Sparkles, X, ChevronRight } from "lucide-react";
-import { openMasterclassPopup, AI_MASTERCLASS_URL } from "@/components/shared/MasterclassPopup";
+import { openMasterclassPopup, FASHION_MASTERCLASS_URL } from "@/components/shared/MasterclassPopup";
 
 export function AnnouncementMarquee() {
   const [visible, setVisible] = useState(true);
@@ -28,8 +28,8 @@ export function AnnouncementMarquee() {
           onClick={() => openMasterclassPopup()}
           className="cursor-pointer shrink-0 flex items-center gap-2"
         >
-          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30 text-[10px] font-bold uppercase tracking-wider">
-            <Sparkles size={11} className="text-blue-400" />
+          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary/20 text-primary border border-primary/30 text-[10px] font-bold uppercase tracking-wider">
+            <Sparkles size={11} className="text-primary" />
             Upcoming Live
           </span>
         </div>
@@ -42,9 +42,9 @@ export function AnnouncementMarquee() {
           <div className="flex items-center gap-6 whitespace-nowrap animate-marquee hover:[animation-play-state:paused]">
             <div className="flex items-center gap-6">
               <span className="inline-flex items-center gap-2">
-                <span className="font-semibold text-background">Build Your First AI Employee (Batch 1)</span>
-                <span className="opacity-70">— 10th Oct 2026 at 7:00 PM IST (Tamil Live)</span>
-                <span className="px-1.5 py-0.5 rounded bg-background/20 text-[10px] font-bold">₹1,999 Only</span>
+                <span className="font-semibold text-background">Build Your Fashion Brand Online (Batch 6)</span>
+                <span className="opacity-70">— 24th Oct 2026 at 5:00 PM IST (Tamil Live)</span>
+                <span className="px-1.5 py-0.5 rounded bg-background/20 text-[10px] font-bold">₹299 Only</span>
               </span>
               <span className="opacity-40">•</span>
               <span className="opacity-80">
@@ -56,9 +56,9 @@ export function AnnouncementMarquee() {
             {/* Duplicate for seamless infinite loop */}
             <div className="flex items-center gap-6" aria-hidden="true">
               <span className="inline-flex items-center gap-2">
-                <span className="font-semibold text-background">Build Your First AI Employee (Batch 1)</span>
-                <span className="opacity-70">— 10th Oct 2026 at 7:00 PM IST (Tamil Live)</span>
-                <span className="px-1.5 py-0.5 rounded bg-background/20 text-[10px] font-bold">₹1,999 Only</span>
+                <span className="font-semibold text-background">Build Your Fashion Brand Online (Batch 6)</span>
+                <span className="opacity-70">— 24th Oct 2026 at 5:00 PM IST (Tamil Live)</span>
+                <span className="px-1.5 py-0.5 rounded bg-background/20 text-[10px] font-bold">₹299 Only</span>
               </span>
               <span className="opacity-40">•</span>
               <span className="opacity-80">
@@ -74,18 +74,18 @@ export function AnnouncementMarquee() {
           onClick={() => openMasterclassPopup()}
           className="cursor-pointer block sm:hidden text-[11px] truncate font-medium flex-1 text-center"
         >
-          AI Masterclass (10 Oct 7 PM) · ₹1,999
+          Fashion Masterclass (24 Oct 5 PM) · ₹299
         </div>
 
         {/* Right: Actions */}
         <div className="shrink-0 flex items-center gap-1.5 sm:gap-2">
           <a
-            href={AI_MASTERCLASS_URL}
+            href={FASHION_MASTERCLASS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-background text-foreground text-[11px] font-semibold hover:bg-background/90 transition-colors shadow-sm"
           >
-            <span>Register ₹1,999</span>
+            <span>Register ₹299</span>
             <ExternalLink size={10} />
           </a>
 

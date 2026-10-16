@@ -16,9 +16,10 @@ import {
   TrendingUp,
   Award,
 } from "lucide-react";
-import { AI_MASTERCLASS_URL } from "@/components/shared/MasterclassPopup";
+import { FASHION_MASTERCLASS_URL } from "@/components/shared/MasterclassPopup";
 
 const pastWebinars = [
+  { title: "Build Your First AI Employee (Batch 1)", date: "10th Oct 2026", attendees: "120+ Founders" },
   { title: "Build Your Fashion Brand Online (Batch 5)", date: "19th Sep 2026", attendees: "150+ Founders" },
   { title: "Meta Ads in 2024: What Actually Works (and what's just hype)", date: "March 2024", attendees: "250+" },
   { title: "Content Strategy for D2C Fashion Brands That Don't Want to Be Boring", date: "February 2024", attendees: "180+" },
@@ -89,24 +90,24 @@ export default function Webinar() {
           <div className="container max-w-4xl">
             <SectionHeading
               tag="Upcoming Masterclass"
-              title="Build Your First AI Employee"
-              description="Direct 3-hour hands-on live session with Abdul Navas. Taught in Tamil (தமிழ்), backed by real live automations and production systems."
+              title="Build Your Fashion Brand Online"
+              description="Direct 3-hour hands-on live session with Abdul Navas. Taught in Tamil (தமிழ்), backed by real numbers, live stores, and production campaigns."
             />
 
             <div className="mt-8 max-w-3xl mx-auto">
-              {/* Featured Card: AI Employee Masterclass (10 Oct) */}
+              {/* Featured Card: Fashion Brand Masterclass (24 Oct) */}
               <div className="gsap-masterclass-card opacity-0">
                 <Card className="rounded-2xl border-border bg-card shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden">
                   <div>
                     {/* Top Status Header */}
-                    <div className="p-4 sm:p-5 bg-gradient-to-r from-blue-500/10 via-primary/5 to-transparent border-b border-border flex items-center justify-between gap-2">
+                    <div className="p-4 sm:p-5 bg-gradient-to-r from-primary/15 via-primary/5 to-transparent border-b border-border flex items-center justify-between gap-2">
                       <div className="flex items-center gap-2">
-                        <span className="px-2.5 py-1 rounded-full bg-blue-600 text-white text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
+                        <span className="px-2.5 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
                           <Sparkles size={12} />
-                          Batch 1 · Upcoming Live
+                          Batch 6 · Upcoming Live
                         </span>
                         <Badge variant="outline" className="text-xs font-semibold">
-                          AI Systems
+                          Fashion & Meta Ads
                         </Badge>
                       </div>
                       <span className="text-xs font-medium text-muted-foreground">
@@ -118,36 +119,36 @@ export default function Webinar() {
                     <div className="p-6 sm:p-8 space-y-6">
                       <div className="flex items-center gap-4 text-xs sm:text-sm text-muted-foreground font-medium">
                         <span className="flex items-center gap-1.5 text-foreground">
-                          <Calendar size={15} className="text-blue-500" /> 10th October 2026
+                          <Calendar size={15} className="text-primary" /> 24th October 2026
                         </span>
                         <span>•</span>
                         <span className="flex items-center gap-1.5">
-                          <Clock size={15} className="text-blue-500" /> 7:00 PM IST (3 hrs)
+                          <Clock size={15} className="text-primary" /> 5:00 PM IST (3 hrs)
                         </span>
                       </div>
 
                       <div>
                         <h3 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
-                          Build Your First AI Employee
+                          Build Your Fashion Brand Online
                         </h3>
                         <p className="text-muted-foreground text-sm sm:text-base mt-2 leading-relaxed">
-                          Stop treating AI like a chatbot. Turn AI into a 24/7 autonomous employee that checks ad ROAS daily, reconciles Razorpay payments, and automates your business briefings.
+                          Stop relying on random Instagram DMs. Learn the structured operating system fashion brands use to generate ₹20+ Lakhs/month with Shopify, Content, and Meta Ads.
                         </p>
                       </div>
 
                       {/* 3 Clean Hooked Points */}
                       <div className="space-y-3 pt-2 text-sm sm:text-base">
                         <div className="flex items-start gap-3">
-                          <CheckCircle2 size={18} className="text-blue-500 shrink-0 mt-0.5" />
-                          <span><strong>AI Assistant vs Employee:</strong> Give AI a single responsibility, real data, and automated schedules.</span>
+                          <CheckCircle2 size={18} className="text-primary shrink-0 mt-0.5" />
+                          <span><strong>The Brand OS:</strong> Turn followers into paying customers with high-converting store funnels.</span>
                         </div>
                         <div className="flex items-start gap-3">
-                          <CheckCircle2 size={18} className="text-blue-500 shrink-0 mt-0.5" />
-                          <span><strong>Ad Doctor & Payment Tracker:</strong> Automatically catch performance anomalies and cash leaks.</span>
+                          <CheckCircle2 size={18} className="text-primary shrink-0 mt-0.5" />
+                          <span><strong>Meta Ads Engine:</strong> Proven ad frameworks & creative angles that scale profitably.</span>
                         </div>
                         <div className="flex items-start gap-3">
-                          <CheckCircle2 size={18} className="text-blue-500 shrink-0 mt-0.5" />
-                          <span><strong>Free Templates:</strong> Complete AI Employee Setup Framework & Reusable Prompts included.</span>
+                          <CheckCircle2 size={18} className="text-primary shrink-0 mt-0.5" />
+                          <span><strong>Free Toolkit & Templates:</strong> KPI Tracking Sheet, Fashion Brand SOPs, Product Pricing Calculator, & Collection Planning Template included.</span>
                         </div>
                       </div>
                     </div>
@@ -157,22 +158,22 @@ export default function Webinar() {
                   <div className="p-6 sm:p-8 pt-4 border-t border-border/70 bg-muted/20 space-y-4">
                     <div className="flex items-baseline justify-between">
                       <div className="flex items-baseline gap-2">
-                        <span className="font-display text-3xl font-bold text-foreground">₹1,999</span>
-                        <span className="text-sm text-muted-foreground line-through">₹4,999</span>
+                        <span className="font-display text-3xl font-bold text-foreground">₹299</span>
+                        <span className="text-sm text-muted-foreground line-through">₹2,999</span>
                       </div>
-                      <Badge className="bg-blue-500/10 text-blue-600 dark:text-blue-400 border-0 text-xs font-semibold">
-                        60% OFF Early Cohort Pass
+                      <Badge className="bg-primary/10 text-primary border-0 text-xs font-semibold">
+                        90% OFF Community Pass
                       </Badge>
                     </div>
 
                     <a
-                      href={AI_MASTERCLASS_URL}
+                      href={FASHION_MASTERCLASS_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block w-full"
                     >
                       <Button size="lg" className="w-full gap-2 font-medium bg-foreground text-background hover:bg-foreground/90">
-                        Reserve Your Seat (₹1,999) <ExternalLink size={16} />
+                        Reserve Your Seat (₹299) <ExternalLink size={16} />
                       </Button>
                     </a>
                   </div>
@@ -242,10 +243,10 @@ export default function Webinar() {
                 <div className="md:col-span-8 space-y-3">
                   <span className="text-xs font-semibold uppercase tracking-wider text-brand">Meet Your Mentor</span>
                   <h2 className="font-display text-2xl font-bold tracking-tight">
-                    Learn from someone actively managing live systems.
+                    Learn from someone actively managing live fashion brands & ad spend.
                   </h2>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Abdul Navas is a brand consultant and the founder of WePix Digital Media based in Tiruppur. He works directly with brand owners and startups to build scalable online businesses using structured systems combining Shopify, Meta ads, and AI automation.
+                    Abdul Navas is a fashion brand consultant and the founder of WePix Digital Media based in Tiruppur. He works directly with boutique owners, saree brands, and fashion startups to build scalable online businesses using structured systems combining Shopify, Meta ads, and AI automation.
                   </p>
                   <div className="pt-2 flex flex-wrap gap-4 text-xs font-medium text-muted-foreground">
                     <span className="flex items-center gap-1.5 text-foreground"><TrendingUp size={14} className="text-brand" /> ₹2Cr+ Managed Ad Spend</span>
@@ -282,10 +283,10 @@ export default function Webinar() {
       </div>
 
       <CTABanner
-        headline="Ready to build your first AI employee?"
-        subtext="Secure your seat in the live masterclass and walk away with ready-to-use systems, prompts, and templates."
-        ctaLabel="Reserve Seat for 10th Oct (₹1,999)"
-        ctaHref={AI_MASTERCLASS_URL}
+        headline="Ready to build predictable sales for your fashion brand?"
+        subtext="Secure your seat in the live masterclass and walk away with ready-to-use systems, brand SOPs, and templates."
+        ctaLabel="Reserve Seat for 24th Oct (₹299)"
+        ctaHref={FASHION_MASTERCLASS_URL}
         useDialog={false}
       />
     </Layout>
