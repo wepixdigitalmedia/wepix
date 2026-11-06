@@ -51,8 +51,11 @@ export const AI_COURSES: AICourseItem[] = [
   },
 ];
 
+const DEFAULT_HERO_IMAGE = "https://ik.imagekit.io/wpxassets/wepix%20academy/Academy%20banner%20image.webp";
+
 interface NewCoursesSectionProps {
   className?: string;
+  heroImage?: string;
   heroImageLight?: string;
   heroImageDark?: string;
 }
@@ -64,6 +67,7 @@ interface NewCoursesSectionProps {
  */
 export function NewCoursesSection({
   className,
+  heroImage = DEFAULT_HERO_IMAGE,
   heroImageLight,
   heroImageDark,
 }: NewCoursesSectionProps) {
@@ -79,13 +83,35 @@ export function NewCoursesSection({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Left: Image / Visual */}
           <div className="gsap-ai-hero-el opacity-0 rounded-xl overflow-hidden aspect-video sm:aspect-[4/3] lg:aspect-square bg-muted/40 border border-border/60">
-            <ImagePlaceholder
-              label="AI Academy Hero Visual"
-              srcLight={heroImageLight}
-              srcDark={heroImageDark}
-              aspectRatio="square"
-              className="w-full h-full rounded-none border-0"
-            />
+            {heroImageLight && heroImageDark ? (
+              <>
+                <img
+                  src={heroImageLight}
+                  alt="WePix AI Academy"
+                  className="w-full h-full object-cover dark:hidden"
+                  loading="lazy"
+                />
+                <img
+                  src={heroImageDark}
+                  alt="WePix AI Academy"
+                  className="hidden w-full h-full object-cover dark:block"
+                  loading="lazy"
+                />
+              </>
+            ) : heroImage ? (
+              <img
+                src={heroImage}
+                alt="WePix AI Academy"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            ) : (
+              <ImagePlaceholder
+                label="AI Academy Hero Visual"
+                aspectRatio="square"
+                className="w-full h-full rounded-none border-0"
+              />
+            )}
           </div>
 
           {/* Right: Content */}
