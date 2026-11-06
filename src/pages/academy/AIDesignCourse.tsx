@@ -28,9 +28,8 @@ const courseData: AICourseDetailData = {
   duration: "8–10 Weeks (Studio Track)",
   format: "Live Online + Design Portfolio",
   level: "Beginner to Intermediate",
-  heroPlaceholderLabel: "AI + Design Course Visual Preview",
-  heroImageLight: "https://ik.imagekit.io/wpxassets/wepix%20academy/Ai%20Design.webp",
-  heroImageDark: "https://ik.imagekit.io/wpxassets/wepix%20academy/Ai%20Design%20DK.webp",
+  heroPlaceholderLabel: "AI + Design Creative Studio & Typography",
+  heroImage: "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1200&auto=format&fit=crop",
   icon: Palette,
 };
 

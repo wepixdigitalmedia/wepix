@@ -28,9 +28,8 @@ const courseData: AICourseDetailData = {
   duration: "10–12 Weeks (Cohort)",
   format: "Live Online + Real Campaigns",
   level: "Beginner to Advanced",
-  heroPlaceholderLabel: "AI + Marketing Course Visual Preview",
-  heroImageLight: "https://ik.imagekit.io/wpxassets/wepix%20academy/Ai%20Marketing.webp",
-  heroImageDark: "https://ik.imagekit.io/wpxassets/wepix%20academy/Ai%20Marketing%20DK.webp",
+  heroPlaceholderLabel: "AI + Marketing Workspace & Strategy",
+  heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
   icon: Megaphone,
 };
 

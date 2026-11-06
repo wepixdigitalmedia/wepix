@@ -31,6 +31,7 @@ import KickstartCourse from "./pages/academy/KickstartCourse";
 import AIMarketingCourse from "./pages/academy/AIMarketingCourse";
 import AIDesignCourse from "./pages/academy/AIDesignCourse";
 import AIVideoEditingCourse from "./pages/academy/AIVideoEditingCourse";
+import AcademySuccess from "./pages/academy/AcademySuccess";
 import Business from "./pages/business/Business";
 import AIAgents from "./pages/business/AIAgents";
 import Mentorship from "./pages/business/Mentorship";
@@ -82,6 +83,8 @@ const App = () => (
             <Route path="/academy/ai-marketing" element={<AIMarketingCourse />} />
             <Route path="/academy/ai-design" element={<AIDesignCourse />} />
             <Route path="/academy/ai-video-editing" element={<AIVideoEditingCourse />} />
+            <Route path="/academy/success" element={<AcademySuccess />} />
+            <Route path="/academy/application-success" element={<AcademySuccess />} />
             <Route path="/academy/webinar" element={<Webinar />} />
             <Route path="/academy/masterclass" element={<Webinar />} />
             <Route path="/academy/masterclasses" element={<Webinar />} />

@@ -4,7 +4,6 @@ import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { CTABanner } from "@/components/shared/CTABanner";
 import { BookingFormDialog } from "@/components/shared/BookingFormDialog";
 import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
@@ -37,6 +36,7 @@ export interface AICourseDetailData {
   level?: string;
   scholarshipNotice?: string;
   heroPlaceholderLabel?: string;
+  heroImage?: string;
   heroImageLight?: string;
   heroImageDark?: string;
   icon: React.ComponentType<{ className?: string; size?: number }>;
@@ -124,6 +124,7 @@ export function AICourseDetailTemplate({ course }: AICourseDetailTemplateProps) 
               <div className="gsap-hero-cta opacity-0 rounded-2xl overflow-hidden aspect-video lg:aspect-[4/3] bg-muted/40 border border-border shadow-sm">
                 <ImagePlaceholder
                   label={course.heroPlaceholderLabel || `${course.title} Visual Preview`}
+                  src={course.heroImage}
                   srcLight={course.heroImageLight}
                   srcDark={course.heroImageDark}
                   aspectRatio="video"
@@ -224,12 +225,23 @@ export function AICourseDetailTemplate({ course }: AICourseDetailTemplateProps) 
         <WhatsAppButton />
       </div>
 
-      <CTABanner
-        headline={`Ready to advance your career with ${course.title}?`}
-        subtext="Apply for the upcoming cohort or connect with an admissions counselor to check scholarship eligibility."
-        ctaLabel="Apply Now"
-        useDialog={true}
-      />
+      <section className="border-t border-border py-12 sm:py-16 md:py-20">
+        <div className="container text-center">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight max-w-2xl mx-auto">
+            Ready to advance your career with {course.title}?
+          </h2>
+          <p className="mt-4 text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed max-w-xl mx-auto">
+            Apply for the upcoming cohort or submit your profile to check scholarship eligibility.
+          </p>
+          <div className="mt-8 flex justify-center">
+            <BookingFormDialog
+              triggerLabel="Apply Now"
+              showArrow
+              triggerSize="lg"
+            />
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }

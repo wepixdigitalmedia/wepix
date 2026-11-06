@@ -28,9 +28,8 @@ const courseData: AICourseDetailData = {
   duration: "8–10 Weeks (Creator Track)",
   format: "Live Online + Real Brand Projects",
   level: "Beginner to Advanced",
-  heroPlaceholderLabel: "AI + Video Editing Course Visual Preview",
-  heroImageLight: "https://ik.imagekit.io/wpxassets/wepix%20academy/Ai%20Video.webp",
-  heroImageDark: "https://ik.imagekit.io/wpxassets/wepix%20academy/Ai%20Video%20DK.webp",
+  heroPlaceholderLabel: "AI + Video Editing Studio & Timeline",
+  heroImage: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1200&auto=format&fit=crop",
   icon: Film,
 };
 
