@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder";
-import { BookingFormDialog } from "@/components/shared/BookingFormDialog";
+import { AICourseApplicationDialog } from "@/components/academy/AICourseApplicationDialog";
 import { ArrowRight, Megaphone, Palette, Film } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -109,7 +109,8 @@ export function NewCoursesSection({
                   Scholarships Open
                 </p>
               </div>
-              <BookingFormDialog
+              <AICourseApplicationDialog
+                courseName="AI Specialization Cohort"
                 triggerLabel="Apply for AI Cohort"
                 showArrow
                 triggerSize="lg"

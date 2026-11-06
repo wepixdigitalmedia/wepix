@@ -4,7 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { BookingFormDialog } from "@/components/shared/BookingFormDialog";
+import { AICourseApplicationDialog } from "@/components/academy/AICourseApplicationDialog";
 import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { useGSAP, heroReveal, scrollFadeIn } from "@/hooks/useGSAP";
@@ -108,7 +108,8 @@ export function AICourseDetailTemplate({ course }: AICourseDetailTemplateProps) 
 
                 {/* Enrollment & Inquiries CTA */}
                 <div className="gsap-hero-cta mt-8 flex flex-col sm:flex-row sm:items-center gap-4 opacity-0 border-t border-border/50 pt-6">
-                  <BookingFormDialog
+                  <AICourseApplicationDialog
+                    courseName={course.title}
                     triggerLabel="Apply for Scholarship / Cohort"
                     showArrow
                     triggerSize="lg"
@@ -234,7 +235,8 @@ export function AICourseDetailTemplate({ course }: AICourseDetailTemplateProps) 
             Apply for the upcoming cohort or submit your profile to check scholarship eligibility.
           </p>
           <div className="mt-8 flex justify-center">
-            <BookingFormDialog
+            <AICourseApplicationDialog
+              courseName={course.title}
               triggerLabel="Apply Now"
               showArrow
               triggerSize="lg"
