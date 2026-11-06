@@ -1,321 +1,179 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder";
 import { BookingFormDialog } from "@/components/shared/BookingFormDialog";
-import {
-  Megaphone,
-  Palette,
-  Film,
-  Check,
-  Briefcase,
-  Clock,
-  Sparkles,
-  ArrowRight,
-  GraduationCap,
-  Calendar,
-  FileText,
-} from "lucide-react";
+import { ArrowRight, Megaphone, Palette, Film } from "lucide-react";
+import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { useGSAP, scrollFadeIn } from "@/hooks/useGSAP";
 
-/**
- * CourseItem interface - Template definition for academy courses.
- * Any course (current or future) can conform to this schema.
- */
-export interface CourseItem {
-  id: string;
+export interface AICourseItem {
+  icon: React.ComponentType<{ className?: string; size?: number }>;
   title: string;
-  badge?: string;
-  badgeVariant?: "default" | "secondary" | "outline";
-  icon?: React.ComponentType<{ className?: string; size?: number }>;
-  objective: string;
-  skillsCovered: string[];
-  careerRoles: string[];
-  // Customizable placeholder fields
-  duration?: string;
-  format?: string;
-  level?: string;
-  scholarshipAvailable?: boolean;
-  imagePlaceholderLabel?: string;
-  imageSrcLight?: string;
-  imageSrcDark?: string;
-  ctaText?: string;
-  ctaAction?: "dialog" | "link";
-  ctaHref?: string;
+  description: string;
+  href: string;
+  imgPlaceholderLabel: string;
+  srcLight?: string;
+  srcDark?: string;
 }
 
-/**
- * Default new courses data derived from ref_docs.md
- */
-export const DEFAULT_NEW_COURSES: CourseItem[] = [
+export const AI_COURSES: AICourseItem[] = [
   {
-    id: "ai-marketing",
-    title: "AI + Marketing",
-    badge: "New AI Track",
-    badgeVariant: "default",
     icon: Megaphone,
-    duration: "10-12 Weeks (Placeholder)",
-    format: "Hands-on Live Cohort (Placeholder)",
-    level: "Beginner to Advanced",
-    scholarshipAvailable: true,
-    imagePlaceholderLabel: "AI + Marketing Course Preview",
-    objective:
-      "Train students to use AI tools and modern digital marketing techniques to plan, create, execute and analyse marketing activities.",
-    skillsCovered: [
-      "AI tools and prompt engineering for marketing",
-      "Content creation and copywriting",
-      "Social media strategy and management",
-      "Meta Ads and Google Ads fundamentals",
-      "Search Engine Optimisation (SEO)",
-      "Marketing automation and analytics",
-      "Campaign planning and performance analysis",
-    ],
-    careerRoles: [
-      "Digital Marketing Executive",
-      "Performance Marketing Associate",
-      "SEO Executive",
-      "Social Media Executive",
-      "Marketing Automation Associate",
-    ],
-    ctaText: "Apply / Join Waitlist",
-    ctaAction: "dialog",
+    title: "AI + Marketing",
+    description:
+      "Train to use AI tools and modern digital marketing techniques to plan, create, execute and analyse marketing activities. Master prompt engineering, SEO, and Meta/Google Ads.",
+    href: "/academy/ai-marketing",
+    imgPlaceholderLabel: "AI + Marketing course preview",
+    srcLight: "https://ik.imagekit.io/wpxassets/wepix%20academy/Ai%20Marketing.webp",
+    srcDark: "https://ik.imagekit.io/wpxassets/wepix%20academy/Ai%20Marketing%20DK.webp",
   },
   {
-    id: "ai-design",
-    title: "AI + Design",
-    badge: "Creative Tech Track",
-    badgeVariant: "default",
     icon: Palette,
-    duration: "8-10 Weeks (Placeholder)",
-    format: "Studio & Portfolio Driven (Placeholder)",
-    level: "Beginner to Intermediate",
-    scholarshipAvailable: true,
-    imagePlaceholderLabel: "AI + Design Course Preview",
-    objective:
-      "Train students to combine AI-powered tools with creative design skills to produce professional visual content and brand communication materials.",
-    skillsCovered: [
-      "AI-powered image generation",
-      "Graphic design fundamentals",
-      "Visual communication and typography",
-      "Branding and visual identity",
-      "Social media creatives and advertisements",
-      "AI-assisted design workflows",
-      "Creative development and design thinking",
-    ],
-    careerRoles: [
-      "Graphic Designer",
-      "Creative Designer",
-      "Brand Design Associate",
-      "AI Visual Content Creator",
-      "Social Media Designer",
-    ],
-    ctaText: "Apply / Join Waitlist",
-    ctaAction: "dialog",
+    title: "AI + Design",
+    description:
+      "Combine AI-powered tools with creative design skills to produce professional visual content, branding identities, social media creatives, and commercial brand assets.",
+    href: "/academy/ai-design",
+    imgPlaceholderLabel: "AI + Design course preview",
+    srcLight: "https://ik.imagekit.io/wpxassets/wepix%20academy/Ai%20Design.webp",
+    srcDark: "https://ik.imagekit.io/wpxassets/wepix%20academy/Ai%20Design%20DK.webp",
   },
   {
-    id: "ai-video-editing",
-    title: "AI + Video Editing",
-    badge: "Creator Track",
-    badgeVariant: "default",
     icon: Film,
-    duration: "8-10 Weeks (Placeholder)",
-    format: "Live Projects & Viral Formats (Placeholder)",
-    level: "Beginner to Advanced",
-    scholarshipAvailable: true,
-    imagePlaceholderLabel: "AI + Video Editing Course Preview",
-    objective:
-      "Train students to use AI-powered tools and professional editing techniques to create engaging video content for digital platforms and brands.",
-    skillsCovered: [
-      "Video editing fundamentals",
-      "AI-assisted video generation",
-      "Short-form content and reels creation",
-      "Video storytelling and sequencing",
-      "Motion graphics fundamentals",
-      "Audio and visual editing",
-      "AI-powered video production workflows",
-    ],
-    careerRoles: [
-      "Video Editor",
-      "Reels Editor",
-      "Video Content Creator",
-      "Motion Graphics Associate",
-      "AI Video Production Associate",
-    ],
-    ctaText: "Apply / Join Waitlist",
-    ctaAction: "dialog",
+    title: "AI + Video Editing",
+    description:
+      "Use AI-powered tools and professional editing techniques to create engaging video content, viral reels, video sequencing, and end-to-end production pipelines.",
+    href: "/academy/ai-video-editing",
+    imgPlaceholderLabel: "AI + Video Editing course preview",
+    srcLight: "https://ik.imagekit.io/wpxassets/wepix%20academy/Ai%20Video.webp",
+    srcDark: "https://ik.imagekit.io/wpxassets/wepix%20academy/Ai%20Video%20DK.webp",
   },
 ];
 
-export interface NewCoursesSectionProps {
-  id?: string;
-  tag?: string;
-  title?: string;
-  description?: string;
-  courses?: CourseItem[];
+interface NewCoursesSectionProps {
   className?: string;
+  heroImageLight?: string;
+  heroImageDark?: string;
 }
 
 /**
- * Reusable NewCoursesSection Component.
- * Acts as a configurable template to showcase new AI-focused career programs
- * or any upcoming academy courses with standardized metadata, skills, and career roles.
+ * Reusable AI Courses Section
+ * - Hero visual block: Left image, Right content
+ * - Course cards block: 3-column grid for desktop following the exact UI of previous course cards
  */
 export function NewCoursesSection({
-  id = "new-ai-courses",
-  tag = "New Specializations",
-  title = "AI-Powered Career Programs",
-  description = "Future-proof your career with industry-led cohorts that merge generative AI tools with core marketing, design, and video production disciplines.",
-  courses = DEFAULT_NEW_COURSES,
   className,
+  heroImageLight,
+  heroImageDark,
 }: NewCoursesSectionProps) {
+  const sectionRef = useGSAP((container) => {
+    scrollFadeIn(".gsap-ai-hero-el", container, { stagger: 0.1, y: 25 });
+    scrollFadeIn(".gsap-new-course-card", container, { stagger: 0.12, y: 30 });
+  });
+
   return (
-    <section id={id} className={cn("py-12 md:py-20 lg:py-28 border-t border-border bg-muted/10", className)}>
-      <div className="container max-w-7xl">
-        <SectionHeading tag={tag} title={title} description={description} align="center" />
+    <section ref={sectionRef} className={cn("py-12 md:py-20 lg:py-28 border-t border-border", className)}>
+      {/* 1. Hero visual: Left Image, Right Content */}
+      <div className="container mb-14 md:mb-20 lg:mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+          {/* Left: Image / Visual */}
+          <div className="gsap-ai-hero-el opacity-0 rounded-xl overflow-hidden aspect-video sm:aspect-[4/3] lg:aspect-square bg-muted/40 border border-border/60">
+            <ImagePlaceholder
+              label="AI Academy Hero Visual"
+              srcLight={heroImageLight}
+              srcDark={heroImageDark}
+              aspectRatio="square"
+              className="w-full h-full rounded-none border-0"
+            />
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-10">
-          {courses.map((course) => {
-            const Icon = course.icon || GraduationCap;
-            return (
-              <div key={course.id} className="gsap-new-course-card opacity-0 flex">
-                <Card className="flex flex-col justify-between w-full rounded-2xl border-border bg-card hover:shadow-xl transition-all duration-300 overflow-hidden group">
-                  <div>
-                    {/* Visual Media / Image Placeholder */}
-                    <div className="relative overflow-hidden bg-muted/40 border-b border-border/60">
-                      <ImagePlaceholder
-                        label={course.imagePlaceholderLabel || `${course.title} Preview`}
-                        srcLight={course.imageSrcLight}
-                        srcDark={course.imageSrcDark}
-                        aspectRatio="video"
-                        className="rounded-none border-0"
-                      />
-                      <div className="absolute top-3 left-3 flex flex-wrap gap-2">
-                        {course.badge && (
-                          <Badge variant={course.badgeVariant || "secondary"} className="shadow-sm backdrop-blur-md font-medium text-xs">
-                            {course.badge}
-                          </Badge>
-                        )}
-                        {course.scholarshipAvailable && (
-                          <Badge variant="outline" className="bg-background/80 backdrop-blur-md text-xs font-normal border-border gap-1 hidden sm:inline-flex">
-                            <Sparkles size={11} className="text-amber-500" />
-                            Scholarship Open
-                          </Badge>
-                        )}
-                      </div>
-                    </div>
+          {/* Right: Content */}
+          <div>
+            <span className="gsap-ai-hero-el inline-block text-sm font-medium text-muted-foreground mb-4 opacity-0 px-3 py-1 rounded-full border border-border bg-muted">
+              WePix AI Academy
+            </span>
+            <h2 className="gsap-ai-hero-el font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] opacity-0">
+              Master Generative AI for Modern Marketing, Design & Video
+            </h2>
+            <p className="gsap-ai-hero-el mt-5 text-base text-muted-foreground opacity-0">
+              Tools like ChatGPT, Midjourney, and AI video suites are redefining the creative landscape. But tools without strategy produce mediocre work. Our AI specialization cohorts train you to integrate AI workflows into high-impact digital marketing, brand design, and video production — so you build real portfolios and land high-demand commercial roles.
+            </p>
 
-                    <CardContent className="p-6">
-                      {/* Header: Icon & Title */}
-                      <div className="flex items-start gap-3.5 mb-3">
-                        <div className="p-2.5 rounded-xl bg-primary/10 text-primary border border-primary/20 shrink-0 mt-0.5">
-                          <Icon size={22} />
-                        </div>
-                        <div>
-                          <h3 className="font-display text-xl sm:text-2xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">
-                            {course.title}
-                          </h3>
-                          <div className="flex items-center gap-2 mt-1 text-xs text-muted-foreground">
-                            {course.duration && (
-                              <span className="flex items-center gap-1">
-                                <Clock size={12} />
-                                {course.duration}
-                              </span>
-                            )}
-                          </div>
-                        </div>
-                      </div>
+            <div className="gsap-ai-hero-el mt-8 flex flex-col sm:flex-row sm:items-center gap-6 opacity-0 border-t border-border/50 pt-6 max-w-md">
+              <div>
+                <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1 font-semibold">
+                  Admissions
+                </p>
+                <p className="font-display text-2xl md:text-3xl font-bold text-foreground">
+                  Scholarships Open
+                </p>
+              </div>
+              <BookingFormDialog
+                triggerLabel="Apply for AI Cohort"
+                showArrow
+                triggerSize="lg"
+                triggerClassName="font-medium"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
 
-                      {/* Course Objective */}
-                      <div className="mt-3 p-3.5 rounded-xl bg-muted/30 border border-border/40">
-                        <p className="text-xs uppercase tracking-wider font-semibold text-muted-foreground mb-1">
-                          Objective
-                        </p>
-                        <p className="text-sm text-foreground/90 leading-relaxed">
-                          {course.objective}
-                        </p>
-                      </div>
+      {/* 2. Course Cards: 3 grid for desktop, matching existing offerings UI */}
+      <div className="container">
+        <SectionHeading
+          tag="AI Career Tracks"
+          title="Programs to build your AI advantage"
+        />
 
-                      {/* Skills Covered */}
-                      <div className="mt-5">
-                        <p className="text-xs uppercase tracking-wider font-semibold text-muted-foreground mb-2.5 flex items-center gap-1.5">
-                          <Check size={14} className="text-emerald-500" />
-                          Skills Covered
-                        </p>
-                        <ul className="space-y-1.5">
-                          {course.skillsCovered.map((skill, index) => (
-                            <li key={index} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
-                              <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0 mt-1.5" />
-                              <span>{skill}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Potential Career Roles */}
-                      <div className="mt-5 pt-4 border-t border-border/60">
-                        <p className="text-xs uppercase tracking-wider font-semibold text-muted-foreground mb-2.5 flex items-center gap-1.5">
-                          <Briefcase size={14} className="text-primary" />
-                          Potential Career Roles
-                        </p>
-                        <div className="flex flex-wrap gap-1.5">
-                          {course.careerRoles.map((role, index) => (
-                            <span
-                              key={index}
-                              className="inline-flex items-center rounded-md bg-muted px-2.5 py-1 text-xs font-medium text-foreground/80 border border-border/50"
-                            >
-                              {role}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </CardContent>
-                  </div>
-
-                  {/* Action Footer */}
-                  <div className="p-6 pt-0 mt-2 border-t border-border/40 flex flex-col gap-2">
-                    {course.ctaAction === "dialog" ? (
-                      <BookingFormDialog
-                        triggerLabel={course.ctaText || "Apply / Join Waitlist"}
-                        triggerSize="default"
-                        triggerClassName="w-full justify-center text-sm font-medium mt-4"
-                        showArrow
-                      />
-                    ) : course.ctaHref ? (
-                      <a href={course.ctaHref} className="w-full mt-4">
-                        <Button className="w-full justify-center text-sm font-medium gap-2">
-                          {course.ctaText || "Learn More"}
-                          <ArrowRight size={14} />
-                        </Button>
-                      </a>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {AI_COURSES.map((course) => (
+            <div key={course.title} className="gsap-new-course-card opacity-0">
+              <Link to={course.href}>
+                <Card className="h-full hover:shadow-md transition-all rounded-xl border-border group overflow-hidden">
+                  <div className="bg-muted/40 flex flex-col items-center justify-center gap-3 aspect-video rounded-none border-0 overflow-hidden">
+                    {course.srcLight && course.srcDark ? (
+                      <>
+                        <img
+                          src={course.srcLight}
+                          alt={course.title}
+                          className="w-full h-full object-cover dark:hidden"
+                          loading="lazy"
+                        />
+                        <img
+                          src={course.srcDark}
+                          alt={course.title}
+                          className="hidden w-full h-full object-cover dark:block"
+                          loading="lazy"
+                        />
+                      </>
                     ) : (
-                      <BookingFormDialog
-                        triggerLabel={course.ctaText || "Apply / Join Waitlist"}
-                        triggerSize="default"
-                        triggerClassName="w-full justify-center text-sm font-medium mt-4"
-                        showArrow
+                      <ImagePlaceholder
+                        label={course.imgPlaceholderLabel}
+                        aspectRatio="video"
+                        className="rounded-none border-0 border-b"
                       />
                     )}
-
-                    <div className="flex items-center justify-between text-[11px] text-muted-foreground/70 px-1 pt-1">
-                      <span className="flex items-center gap-1">
-                        <Calendar size={11} />
-                        Next Cohort: Placeholder
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <FileText size={11} />
-                        Syllabus on request
-                      </span>
-                    </div>
                   </div>
+                  <CardContent className="p-6">
+                    <course.icon className="text-foreground mb-4" size={24} />
+                    <h3 className="font-display text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                      {course.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground line-clamp-3 leading-relaxed">
+                      {course.description}
+                    </p>
+                    <div className="mt-4 flex items-center text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                      Learn more <ArrowRight size={14} className="ml-1" />
+                    </div>
+                  </CardContent>
                 </Card>
-              </div>
-            );
-          })}
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
-
