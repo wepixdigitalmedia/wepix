@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, CheckCircle2, ArrowRight, ExternalLink, Sparkles } from "lucide-react";
+import { Calendar, Clock, CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import { BookingFormDialog } from "@/components/shared/BookingFormDialog";
 
-export const FASHION_MASTERCLASS_URL = "https://lp.abdulnavas.com/masterclass-b6";
+export const FASHION_MASTERCLASS_URL = "https://lp.abdulnavas.com";
 export const AI_MASTERCLASS_URL = "https://lp.abdulnavas.com/ai-masterclass-b1";
 
 interface MasterclassPopupProps {
@@ -27,18 +27,8 @@ export function MasterclassPopup({ open: controlledOpen, onOpenChange: controlle
     }
   };
 
-  // Auto show after 4 seconds on first visit of session
-  useEffect(() => {
-    if (isControlled) return;
-    const hasSeen = sessionStorage.getItem("wepix_masterclass_popup_seen");
-    if (!hasSeen) {
-      const timer = setTimeout(() => {
-        setInternalOpen(true);
-        sessionStorage.setItem("wepix_masterclass_popup_seen", "true");
-      }, 4000);
-      return () => clearTimeout(timer);
-    }
-  }, [isControlled]);
+  // NOTE: Auto-show on page load has been removed as outdated masterclass details were cleared.
+  // The popup now only opens when explicitly triggered.
 
   // Listen to custom trigger event
   useEffect(() => {
@@ -54,17 +44,19 @@ export function MasterclassPopup({ open: controlledOpen, onOpenChange: controlle
       <DialogContent className="sm:max-w-lg max-h-[92vh] overflow-y-auto p-0 border-border bg-card text-card-foreground shadow-2xl rounded-2xl">
         <DialogTitle className="sr-only">Live Fashion Masterclass by Abdul Navas</DialogTitle>
         <DialogDescription className="sr-only">
-          Build Your Fashion Brand Online — Live 3-hour hands-on masterclass on 24th October 2026.
+          Join the waitlist for the upcoming live masterclass with Abdul Navas.
         </DialogDescription>
 
         {/* Header Banner */}
         <div className="relative p-5 sm:p-6 pb-4 bg-gradient-to-br from-primary/15 via-primary/5 to-transparent border-b border-border">
           <div className="flex items-center justify-between gap-2 mb-2">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-semibold">
-              <Sparkles size={12} />
-              BATCH 6 · UPCOMING LIVE
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-muted border border-border text-foreground text-xs font-semibold">
+              <Sparkles size={12} className="text-primary" />
+              NEXT COHORT · COMING SOON
             </div>
-            <span className="text-xs text-muted-foreground font-medium">Tamil (தமிழ்) Live</span>
+            <Badge variant="outline" className="text-xs font-normal">
+              Waitlist Open
+            </Badge>
           </div>
 
           <h2 className="font-display text-xl sm:text-2xl font-bold tracking-tight">
@@ -80,20 +72,20 @@ export function MasterclassPopup({ open: controlledOpen, onOpenChange: controlle
           {/* Timing */}
           <div className="flex items-center justify-between gap-2 p-3 rounded-xl bg-muted/40 border border-border text-xs sm:text-sm">
             <span className="flex items-center gap-1.5 font-medium text-foreground">
-              <Calendar size={15} className="text-primary" /> 24th October 2026
+              <Calendar size={15} className="text-primary" /> Next Date: To Be Announced
             </span>
             <span className="flex items-center gap-1.5 text-muted-foreground">
-              <Clock size={15} className="text-primary" /> 5:00 PM IST (3 hrs)
+              <Clock size={15} className="text-primary" /> 3-Hour Live Session
             </span>
           </div>
 
           <div>
             <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-              Stop relying on random Instagram DMs. Learn the structured operating system fashion brands use to generate consistent online sales with Shopify, Content, and Meta Ads.
+              Stop relying on random Instagram DMs and guesswork. Learn the structured operating system fashion brands use to generate consistent online sales with Shopify, Content, and Meta Ads.
             </p>
           </div>
 
-          {/* 3 Simple Hooked Points */}
+          {/* Core Takeaways */}
           <div className="space-y-2 text-xs sm:text-sm">
             <div className="flex items-start gap-2">
               <CheckCircle2 size={16} className="text-primary shrink-0 mt-0.5" />
@@ -112,26 +104,18 @@ export function MasterclassPopup({ open: controlledOpen, onOpenChange: controlle
           {/* Pricing & CTA */}
           <div className="pt-3 border-t border-border flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div>
-              <div className="flex items-baseline gap-2">
-                <span className="font-display text-2xl font-bold text-foreground">₹299</span>
-                <span className="text-xs text-muted-foreground line-through">₹2,999</span>
-                <Badge className="text-[10px] bg-primary/10 text-primary border-0 font-semibold">
-                  90% OFF
-                </Badge>
-              </div>
-              <p className="text-[11px] text-muted-foreground">Community pass · Batch 6</p>
+              <p className="font-semibold text-sm text-foreground">Priority Waitlist</p>
+              <p className="text-[11px] text-muted-foreground">Get notified first when registrations open.</p>
             </div>
 
-            <a
-              href={FASHION_MASTERCLASS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto"
-            >
-              <Button className="w-full sm:w-auto gap-2 font-medium bg-foreground text-background hover:bg-foreground/90">
-                Reserve Seat (₹299) <ExternalLink size={14} />
-              </Button>
-            </a>
+            <div onClick={() => setOpen(false)}>
+              <BookingFormDialog
+                triggerLabel="Join Waitlist"
+                showArrow
+                triggerSize="default"
+                triggerClassName="w-full sm:w-auto"
+              />
+            </div>
           </div>
         </div>
 
@@ -142,7 +126,7 @@ export function MasterclassPopup({ open: controlledOpen, onOpenChange: controlle
             onClick={() => setOpen(false)}
             className="hover:text-foreground font-medium inline-flex items-center gap-1 transition-colors"
           >
-            View full details & curriculum <ArrowRight size={12} />
+            View past sessions & curriculum <ArrowRight size={12} />
           </Link>
           <button
             onClick={() => setOpen(false)}

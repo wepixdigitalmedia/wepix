@@ -4,11 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { CTABanner } from "@/components/shared/CTABanner";
+import { BookingFormDialog } from "@/components/shared/BookingFormDialog";
 import { useGSAP, heroReveal, scrollFadeIn } from "@/hooks/useGSAP";
 import {
   Calendar,
   Clock,
-  ExternalLink,
   CheckCircle2,
   Sparkles,
   Video,
@@ -16,9 +16,9 @@ import {
   TrendingUp,
   Award,
 } from "lucide-react";
-import { FASHION_MASTERCLASS_URL } from "@/components/shared/MasterclassPopup";
 
 const pastWebinars = [
+  { title: "Build Your Fashion Brand Online (Batch 6)", date: "24th Oct 2026", attendees: "180+ Founders" },
   { title: "Build Your First AI Employee (Batch 1)", date: "10th Oct 2026", attendees: "120+ Founders" },
   { title: "Build Your Fashion Brand Online (Batch 5)", date: "19th Sep 2026", attendees: "150+ Founders" },
   { title: "Meta Ads in 2024: What Actually Works (and what's just hype)", date: "March 2024", attendees: "250+" },
@@ -89,29 +89,29 @@ export default function Webinar() {
         <section id="masterclasses" className="py-12 md:py-20 lg:py-24 border-t border-border bg-muted/30">
           <div className="container max-w-4xl">
             <SectionHeading
-              tag="Upcoming Masterclass"
-              title="Build Your Fashion Brand Online"
-              description="Direct 3-hour hands-on live session with Abdul Navas. Taught in Tamil (தமிழ்), backed by real numbers, live stores, and production campaigns."
+              tag="Live Masterclasses"
+              title="Interactive Live Masterclasses & Workshops"
+              description="Direct hands-on live sessions with Abdul Navas. Real numbers, live stores, and production campaigns. Dates for the next batch will be announced soon."
             />
 
             <div className="mt-8 max-w-3xl mx-auto">
-              {/* Featured Card: Fashion Brand Masterclass (24 Oct) */}
+              {/* Featured Card: Next Batch Waitlist */}
               <div className="gsap-masterclass-card opacity-0">
                 <Card className="rounded-2xl border-border bg-card shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden">
                   <div>
                     {/* Top Status Header */}
                     <div className="p-4 sm:p-5 bg-gradient-to-r from-primary/15 via-primary/5 to-transparent border-b border-border flex items-center justify-between gap-2">
                       <div className="flex items-center gap-2">
-                        <span className="px-2.5 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
-                          <Sparkles size={12} />
-                          Batch 6 · Upcoming Live
+                        <span className="px-2.5 py-1 rounded-full bg-muted border border-border text-foreground text-xs font-semibold uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
+                          <Sparkles size={12} className="text-primary" />
+                          Next Cohort · Coming Soon
                         </span>
                         <Badge variant="outline" className="text-xs font-semibold">
                           Fashion & Meta Ads
                         </Badge>
                       </div>
                       <span className="text-xs font-medium text-muted-foreground">
-                        Tamil (தமிழ்) Live
+                        Live Interactive Workshop
                       </span>
                     </div>
 
@@ -119,20 +119,20 @@ export default function Webinar() {
                     <div className="p-6 sm:p-8 space-y-6">
                       <div className="flex items-center gap-4 text-xs sm:text-sm text-muted-foreground font-medium">
                         <span className="flex items-center gap-1.5 text-foreground">
-                          <Calendar size={15} className="text-primary" /> 24th October 2026
+                          <Calendar size={15} className="text-primary" /> Next Date: To Be Announced
                         </span>
                         <span>•</span>
                         <span className="flex items-center gap-1.5">
-                          <Clock size={15} className="text-primary" /> 5:00 PM IST (3 hrs)
+                          <Clock size={15} className="text-primary" /> 3-Hour Intensive Live Session
                         </span>
                       </div>
 
                       <div>
                         <h3 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
-                          Build Your Fashion Brand Online
+                          Build Your Fashion Brand Online & Scale with Meta Ads
                         </h3>
                         <p className="text-muted-foreground text-sm sm:text-base mt-2 leading-relaxed">
-                          Stop relying on random Instagram DMs. Learn the structured operating system fashion brands use to generate ₹20+ Lakhs/month with Shopify, Content, and Meta Ads.
+                          Stop relying on random Instagram DMs and guesswork. Learn the structured operating system fashion brands use to generate consistent online sales with Shopify, Content, and Meta Ads.
                         </p>
                       </div>
 
@@ -154,28 +154,20 @@ export default function Webinar() {
                     </div>
                   </div>
 
-                  {/* Pricing & CTA Footer */}
-                  <div className="p-6 sm:p-8 pt-4 border-t border-border/70 bg-muted/20 space-y-4">
-                    <div className="flex items-baseline justify-between">
-                      <div className="flex items-baseline gap-2">
-                        <span className="font-display text-3xl font-bold text-foreground">₹299</span>
-                        <span className="text-sm text-muted-foreground line-through">₹2,999</span>
-                      </div>
-                      <Badge className="bg-primary/10 text-primary border-0 text-xs font-semibold">
-                        90% OFF Community Pass
-                      </Badge>
+                  {/* Waitlist CTA Footer */}
+                  <div className="p-6 sm:p-8 pt-4 border-t border-border/70 bg-muted/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                      <p className="font-semibold text-foreground text-base">Priority Cohort Waitlist</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">
+                        Join the waitlist to receive priority access and early-bird notifications for the next batch.
+                      </p>
                     </div>
-
-                    <a
-                      href={FASHION_MASTERCLASS_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full"
-                    >
-                      <Button size="lg" className="w-full gap-2 font-medium bg-foreground text-background hover:bg-foreground/90">
-                        Reserve Your Seat (₹299) <ExternalLink size={16} />
-                      </Button>
-                    </a>
+                    <BookingFormDialog
+                      triggerLabel="Join Masterclass Waitlist"
+                      showArrow
+                      triggerSize="lg"
+                      triggerClassName="w-full sm:w-auto px-6 whitespace-nowrap"
+                    />
                   </div>
                 </Card>
               </div>
@@ -284,10 +276,9 @@ export default function Webinar() {
 
       <CTABanner
         headline="Ready to build predictable sales for your fashion brand?"
-        subtext="Secure your seat in the live masterclass and walk away with ready-to-use systems, brand SOPs, and templates."
-        ctaLabel="Reserve Seat for 24th Oct (₹299)"
-        ctaHref={FASHION_MASTERCLASS_URL}
-        useDialog={false}
+        subtext="Join the priority waitlist for our next live masterclass and walk away with ready-to-use systems, brand SOPs, and templates."
+        ctaLabel="Join Masterclass Waitlist"
+        useDialog={true}
       />
     </Layout>
   );

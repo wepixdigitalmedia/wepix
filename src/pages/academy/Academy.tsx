@@ -8,11 +8,12 @@ import { ArrowRight, GraduationCap, Video, Users, Check, Rocket } from "lucide-r
 import { Link } from "react-router-dom";
 import { useGSAP, heroReveal, scrollFadeIn, gsap } from "@/hooks/useGSAP";
 import { KickstartEnrollButton } from "@/components/academy/KickstartEnrollButton";
+import { NewCoursesSection } from "@/components/academy/NewCoursesSection";
 
 const offerings = [
   { icon: Rocket, title: "WePix Kickstart Course", description: "The flagship program. Build, launch, and scale your D2C fashion brand with the complete system - store, content, Meta Ads, and scaling. ₹79,999.", href: "/academy/kickstart-course", img: "Kickstart course" },
   { icon: GraduationCap, title: "Meta Ads Mastery Course", description: "Learn the real way to run profitable Meta Ads. This isn't some textbook theory. We’re talking about actual experience from running real campaigns. No fluff, just results.", href: "/academy/meta-ads-course", img: "Course preview" },
-  { icon: Video, title: "Live Masterclasses", description: "Direct 3-hour live sessions with Abdul Navas. Upcoming: Build Your Fashion Brand Online (24th Oct 2026, ₹299).", href: "/academy/webinar", img: "Webinar screenshot" },
+  { icon: Video, title: "Live Masterclasses", description: "Direct hands-on live sessions and intensive workshops with Abdul Navas. Real systems, live campaign breakdowns, and actionable Q&As.", href: "/academy/webinar", img: "Webinar screenshot" },
   { icon: Users, title: "Skool Community", description: "Join a group of 500+ marketers and brand owners where we share wins, losses, and everything in between. It’s like a group chat, but full of knowledge and support.", href: "/academy/community", img: "Community screenshot" },
 ];
 
@@ -28,6 +29,7 @@ export default function Academy() {
   const containerRef = useGSAP((container) => {
     heroReveal(container);
     scrollFadeIn(".gsap-offering-card", container, { stagger: 0.1, y: 30 });
+    scrollFadeIn(".gsap-new-course-card", container, { stagger: 0.12, y: 30 });
     gsap.fromTo(container.querySelectorAll(".gsap-check-item"), { opacity: 0, x: -20 }, {
       opacity: 1, x: 0, duration: 0.4, stagger: 0.06, ease: "power2.out",
       scrollTrigger: { trigger: container.querySelector(".gsap-checklist"), start: "top 80%", toggleActions: "play none none none" },
@@ -159,6 +161,9 @@ export default function Academy() {
             </div>
           </div>
         </section>
+
+        {/* New AI-Powered Courses Section (Reusable Template) */}
+        <NewCoursesSection />
 
         <section className="py-10 md:py-16 lg:py-24 bg-muted/30">
           <div className="container max-w-3xl gsap-checklist">
